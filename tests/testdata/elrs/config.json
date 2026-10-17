@@ -1,0 +1,16 @@
+{
+  "decoder": "elrs",
+  "channels": {},
+  "options": {},
+  "stack": [
+    {
+      "id": "uart",
+      "channels": {
+        "rx": 0
+      }
+    }
+  ],
+  "samplerate": 12000000,
+  "num_channels": 1,
+  "sample_count": 76262
+}
