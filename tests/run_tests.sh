@@ -146,8 +146,11 @@ for decoder in "${DECODERS_TO_TEST[@]}"; do
         found_case=1
         # Run the test
         cmd="$DECODER_TEST -d $decoder -t $case_dir $TOLERANCE_ARG"
-        output=$($cmd 2>&1) || true
-        exit_code=$?
+        if output=$($cmd 2>&1); then
+            exit_code=0
+        else
+            exit_code=$?
+        fi
 
         if [[ $exit_code -eq 0 ]]; then
             PASS_COUNT=$((PASS_COUNT + 1))

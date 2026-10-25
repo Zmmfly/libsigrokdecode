@@ -912,6 +912,10 @@ int main(int argc, char **argv)
                 exit_code = compare_annotations(&ann_list, &exl, args.tolerance);
                 if (exit_code == 0) printf("PASS\n");
                 ann_list_free(&exl); cJSON_Delete(ej);
+            } else {
+                /* Do not let an unreadable reference pass the test. */
+                fprintf(stderr, "Error: failed to parse %s\n", ep);
+                exit_code = 2;
             }
         }
         free(ep);

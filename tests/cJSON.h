@@ -224,8 +224,17 @@ static int parse_string(cJSON *item, parse_buffer *buf)
     while (*p != '\"') {
         if (*p == '\0') return 0;
         if (*p == '\\') {
+            /* The escape takes two input characters, \uXXXX six. */
             p++;
+            input_len++;
             if (*p == '\0') return 0;
+            if (*p == 'u') {
+                for (int k = 0; k < 4; k++) {
+                    p++;
+                    input_len++;
+                    if (*p == '\0') return 0;
+                }
+            }
         }
         output_len++;
         input_len++;
