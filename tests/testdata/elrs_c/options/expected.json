@@ -1,0 +1,455 @@
+{
+	"decoder": "elrs",
+	"samplerate": 11520000,
+	"num_annotations": 48,
+	"annotations": [
+		{
+			"start_sample": 200,
+			"end_sample": 1200,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Flight controller", 
+				"0xc8"
+			]
+		}, 
+		{
+			"start_sample": 26200,
+			"end_sample": 27200,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Checksum 0xb6 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 200,
+			"end_sample": 27200,
+			"ann_class": 2,
+			"ann_type": 9,
+			"texts": [
+				"RC channels: 23 byte(s)", 
+				"RC channels"
+			]
+		}, 
+		{
+			"start_sample": 200,
+			"end_sample": 27200,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"Armed: no, arm via CH5: yes", 
+				"Armed no, CH5 arm yes"
+			]
+		}, 
+		{
+			"start_sample": 200,
+			"end_sample": 27200,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"172 992 1811 0 2047 1000 1500 500 992 992 992 992 992 992 992 992"
+			]
+		}, 
+		{
+			"start_sample": 200,
+			"end_sample": 27200,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"CH1: 172"
+			]
+		}, 
+		{
+			"start_sample": 200,
+			"end_sample": 27200,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"CH2: 992"
+			]
+		}, 
+		{
+			"start_sample": 200,
+			"end_sample": 27200,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"CH3: 1811"
+			]
+		}, 
+		{
+			"start_sample": 200,
+			"end_sample": 27200,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"CH4: 0"
+			]
+		}, 
+		{
+			"start_sample": 200,
+			"end_sample": 27200,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"CH5: 2047"
+			]
+		}, 
+		{
+			"start_sample": 200,
+			"end_sample": 27200,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"CH6: 1000"
+			]
+		}, 
+		{
+			"start_sample": 200,
+			"end_sample": 27200,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"CH7: 1500"
+			]
+		}, 
+		{
+			"start_sample": 200,
+			"end_sample": 27200,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"CH8: 500"
+			]
+		}, 
+		{
+			"start_sample": 200,
+			"end_sample": 27200,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"CH9: 992"
+			]
+		}, 
+		{
+			"start_sample": 200,
+			"end_sample": 27200,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"CH10: 992"
+			]
+		}, 
+		{
+			"start_sample": 200,
+			"end_sample": 27200,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"CH11: 992"
+			]
+		}, 
+		{
+			"start_sample": 200,
+			"end_sample": 27200,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"CH12: 992"
+			]
+		}, 
+		{
+			"start_sample": 200,
+			"end_sample": 27200,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"CH13: 992"
+			]
+		}, 
+		{
+			"start_sample": 200,
+			"end_sample": 27200,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"CH14: 992"
+			]
+		}, 
+		{
+			"start_sample": 200,
+			"end_sample": 27200,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"CH15: 992"
+			]
+		}, 
+		{
+			"start_sample": 200,
+			"end_sample": 27200,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"CH16: 992"
+			]
+		}, 
+		{
+			"start_sample": 27200,
+			"end_sample": 28200,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Flight controller", 
+				"0xc8"
+			]
+		}, 
+		{
+			"start_sample": 40200,
+			"end_sample": 41200,
+			"ann_class": 6,
+			"ann_type": 13,
+			"texts": [
+				"Checksum 0x31, expected 0xce", 
+				"Checksum mismatch", 
+				"CRC error"
+			]
+		}, 
+		{
+			"start_sample": 27200,
+			"end_sample": 41200,
+			"ann_class": 2,
+			"ann_type": 9,
+			"texts": [
+				"Link statistics: 10 byte(s)", 
+				"Link statistics"
+			]
+		}, 
+		{
+			"start_sample": 27200,
+			"end_sample": 41200,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"Uplink: RSSI1 -60 dBm, RSSI2 -62 dBm, LQ 100%, SNR 8 dB", 
+				"Up -60 / -62 dBm, 100%, 8 dB"
+			]
+		}, 
+		{
+			"start_sample": 27200,
+			"end_sample": 41200,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"Mode 2.4 GHz 250 Hz, antenna 1, TX power 100 mW", 
+				"2.4 GHz 250 Hz, ant 1, 100 mW"
+			]
+		}, 
+		{
+			"start_sample": 27200,
+			"end_sample": 41200,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"Downlink: RSSI -55 dBm, LQ 97%, SNR 5 dB", 
+				"Down -55 dBm, 97%, 5 dB"
+			]
+		}, 
+		{
+			"start_sample": 41200,
+			"end_sample": 42200,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Flight controller", 
+				"0xc8"
+			]
+		}, 
+		{
+			"start_sample": 67200,
+			"end_sample": 68200,
+			"ann_class": 6,
+			"ann_type": 13,
+			"texts": [
+				"Checksum 0x49, expected 0x1c", 
+				"Checksum mismatch", 
+				"CRC error"
+			]
+		}, 
+		{
+			"start_sample": 41200,
+			"end_sample": 68200,
+			"ann_class": 2,
+			"ann_type": 9,
+			"texts": [
+				"RC channels: 23 byte(s)", 
+				"RC channels"
+			]
+		}, 
+		{
+			"start_sample": 41200,
+			"end_sample": 68200,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"Armed: yes, arm via CH5: no", 
+				"Armed yes, CH5 arm no"
+			]
+		}, 
+		{
+			"start_sample": 41200,
+			"end_sample": 68200,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"172 992 1811 0 2047 1000 1500 500 992 992 992 992 992 992 992 992"
+			]
+		}, 
+		{
+			"start_sample": 41200,
+			"end_sample": 68200,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"CH1: 172"
+			]
+		}, 
+		{
+			"start_sample": 41200,
+			"end_sample": 68200,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"CH2: 992"
+			]
+		}, 
+		{
+			"start_sample": 41200,
+			"end_sample": 68200,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"CH3: 1811"
+			]
+		}, 
+		{
+			"start_sample": 41200,
+			"end_sample": 68200,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"CH4: 0"
+			]
+		}, 
+		{
+			"start_sample": 41200,
+			"end_sample": 68200,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"CH5: 2047"
+			]
+		}, 
+		{
+			"start_sample": 41200,
+			"end_sample": 68200,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"CH6: 1000"
+			]
+		}, 
+		{
+			"start_sample": 41200,
+			"end_sample": 68200,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"CH7: 1500"
+			]
+		}, 
+		{
+			"start_sample": 41200,
+			"end_sample": 68200,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"CH8: 500"
+			]
+		}, 
+		{
+			"start_sample": 41200,
+			"end_sample": 68200,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"CH9: 992"
+			]
+		}, 
+		{
+			"start_sample": 41200,
+			"end_sample": 68200,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"CH10: 992"
+			]
+		}, 
+		{
+			"start_sample": 41200,
+			"end_sample": 68200,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"CH11: 992"
+			]
+		}, 
+		{
+			"start_sample": 41200,
+			"end_sample": 68200,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"CH12: 992"
+			]
+		}, 
+		{
+			"start_sample": 41200,
+			"end_sample": 68200,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"CH13: 992"
+			]
+		}, 
+		{
+			"start_sample": 41200,
+			"end_sample": 68200,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"CH14: 992"
+			]
+		}, 
+		{
+			"start_sample": 41200,
+			"end_sample": 68200,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"CH15: 992"
+			]
+		}, 
+		{
+			"start_sample": 41200,
+			"end_sample": 68200,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"CH16: 992"
+			]
+		}
+	]
+}

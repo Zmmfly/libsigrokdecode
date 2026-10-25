@@ -1,0 +1,646 @@
+{
+	"decoder": "dshot",
+	"samplerate": 24000000,
+	"num_annotations": 62,
+	"annotations": [
+		{
+			"start_sample": 200,
+			"end_sample": 830,
+			"ann_class": 6,
+			"ann_type": 13,
+			"texts": [
+				"Measured DShot600 instead of configured DShot300", 
+				"Measured DShot600, not DShot300", 
+				"Rate mismatch"
+			]
+		}, 
+		{
+			"start_sample": 200,
+			"end_sample": 830,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M8 DShot600 0x3e85", 
+				"M8"
+			]
+		}, 
+		{
+			"start_sample": 200,
+			"end_sample": 830,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Throttle 500 (3D reverse 45.2%)", 
+				"500 reverse 45%"
+			]
+		}, 
+		{
+			"start_sample": 200,
+			"end_sample": 830,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0x5 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 2840,
+			"end_sample": 3455,
+			"ann_class": 6,
+			"ann_type": 13,
+			"texts": [
+				"Measured DShot600 instead of configured DShot300", 
+				"Measured DShot600, not DShot300", 
+				"Rate mismatch"
+			]
+		}, 
+		{
+			"start_sample": 2840,
+			"end_sample": 3455,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M8 DShot600 0xbb88", 
+				"M8"
+			]
+		}, 
+		{
+			"start_sample": 2840,
+			"end_sample": 3455,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Throttle 1500 (3D forward 45.2%)", 
+				"1500 forward 45%"
+			]
+		}, 
+		{
+			"start_sample": 2840,
+			"end_sample": 3455,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0x8 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 5480,
+			"end_sample": 6095,
+			"ann_class": 6,
+			"ann_type": 13,
+			"texts": [
+				"Measured DShot600 instead of configured DShot300", 
+				"Measured DShot600, not DShot300", 
+				"Rate mismatch"
+			]
+		}, 
+		{
+			"start_sample": 5480,
+			"end_sample": 6095,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M8 DShot600 0x82e4", 
+				"M8"
+			]
+		}, 
+		{
+			"start_sample": 5480,
+			"end_sample": 6095,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Throttle 1047 (3D reverse 100.0%)", 
+				"1047 reverse 100%"
+			]
+		}, 
+		{
+			"start_sample": 5480,
+			"end_sample": 6095,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0x4 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 8120,
+			"end_sample": 8750,
+			"ann_class": 6,
+			"ann_type": 13,
+			"texts": [
+				"Measured DShot600 instead of configured DShot300", 
+				"Measured DShot600, not DShot300", 
+				"Rate mismatch"
+			]
+		}, 
+		{
+			"start_sample": 8120,
+			"end_sample": 8750,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M8 DShot600 0x830b", 
+				"M8"
+			]
+		}, 
+		{
+			"start_sample": 8120,
+			"end_sample": 8750,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Throttle 1048 (3D forward 0.0%)", 
+				"1048 forward 0%"
+			]
+		}, 
+		{
+			"start_sample": 8120,
+			"end_sample": 8750,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0xb correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 10760,
+			"end_sample": 11390,
+			"ann_class": 6,
+			"ann_type": 13,
+			"texts": [
+				"Measured DShot600 instead of configured DShot300", 
+				"Measured DShot600, not DShot300", 
+				"Rate mismatch"
+			]
+		}, 
+		{
+			"start_sample": 10760,
+			"end_sample": 11390,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M8 DShot600 0xffff", 
+				"M8"
+			]
+		}, 
+		{
+			"start_sample": 10760,
+			"end_sample": 11390,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Throttle 2047 (3D forward 100.0%)", 
+				"2047 forward 100%"
+			]
+		}, 
+		{
+			"start_sample": 10760,
+			"end_sample": 11390,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0xf correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 10760,
+			"end_sample": 11390,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"Telemetry requested", 
+				"TLM req"
+			]
+		}, 
+		{
+			"start_sample": 13400,
+			"end_sample": 14015,
+			"ann_class": 6,
+			"ann_type": 13,
+			"texts": [
+				"Measured DShot600 instead of configured DShot300", 
+				"Measured DShot600, not DShot300", 
+				"Rate mismatch"
+			]
+		}, 
+		{
+			"start_sample": 13400,
+			"end_sample": 14015,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M8 DShot600 0x0606", 
+				"M8"
+			]
+		}, 
+		{
+			"start_sample": 13400,
+			"end_sample": 14015,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Throttle 48 (3D reverse 0.0%)", 
+				"48 reverse 0%"
+			]
+		}, 
+		{
+			"start_sample": 13400,
+			"end_sample": 14015,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0x6 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 16040,
+			"end_sample": 16655,
+			"ann_class": 6,
+			"ann_type": 13,
+			"texts": [
+				"Measured DShot600 instead of configured DShot300", 
+				"Measured DShot600, not DShot300", 
+				"Rate mismatch"
+			]
+		}, 
+		{
+			"start_sample": 16040,
+			"end_sample": 16655,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M8 DShot600 0x0000", 
+				"M8"
+			]
+		}, 
+		{
+			"start_sample": 16040,
+			"end_sample": 16655,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Motor stop (0)", 
+				"Stop"
+			]
+		}, 
+		{
+			"start_sample": 16040,
+			"end_sample": 16655,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0x0 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 18680,
+			"end_sample": 19310,
+			"ann_class": 6,
+			"ann_type": 13,
+			"texts": [
+				"Measured DShot600 instead of configured DShot300", 
+				"Measured DShot600, not DShot300", 
+				"Rate mismatch"
+			]
+		}, 
+		{
+			"start_sample": 18680,
+			"end_sample": 19310,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M8 DShot600 0x0505", 
+				"M8"
+			]
+		}, 
+		{
+			"start_sample": 18680,
+			"end_sample": 19310,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Reserved value 40", 
+				"Reserved"
+			]
+		}, 
+		{
+			"start_sample": 18680,
+			"end_sample": 19310,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0x5 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 21320,
+			"end_sample": 21935,
+			"ann_class": 6,
+			"ann_type": 13,
+			"texts": [
+				"Measured DShot600 instead of configured DShot300", 
+				"Measured DShot600, not DShot300", 
+				"Rate mismatch"
+			]
+		}, 
+		{
+			"start_sample": 21320,
+			"end_sample": 21935,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M8 DShot600 0x0220", 
+				"M8"
+			]
+		}, 
+		{
+			"start_sample": 21320,
+			"end_sample": 21935,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Reserved value 17", 
+				"Reserved"
+			]
+		}, 
+		{
+			"start_sample": 21320,
+			"end_sample": 21935,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0x0 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 23960,
+			"end_sample": 24575,
+			"ann_class": 6,
+			"ann_type": 13,
+			"texts": [
+				"Measured DShot600 instead of configured DShot300", 
+				"Measured DShot600, not DShot300", 
+				"Rate mismatch"
+			]
+		}, 
+		{
+			"start_sample": 23960,
+			"end_sample": 24575,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M8 DShot600 0x0022", 
+				"M8"
+			]
+		}, 
+		{
+			"start_sample": 23960,
+			"end_sample": 24575,
+			"ann_class": 2,
+			"ann_type": 9,
+			"texts": [
+				"Command 1 (Beep 1)", 
+				"1 (Beep 1)", 
+				"Beep 1"
+			]
+		}, 
+		{
+			"start_sample": 23960,
+			"end_sample": 24575,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0x2 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 26600,
+			"end_sample": 27215,
+			"ann_class": 6,
+			"ann_type": 13,
+			"texts": [
+				"Measured DShot600 instead of configured DShot300", 
+				"Measured DShot600, not DShot300", 
+				"Rate mismatch"
+			]
+		}, 
+		{
+			"start_sample": 26600,
+			"end_sample": 27215,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M8 DShot600 0x02a8", 
+				"M8"
+			]
+		}, 
+		{
+			"start_sample": 26600,
+			"end_sample": 27215,
+			"ann_class": 2,
+			"ann_type": 9,
+			"texts": [
+				"Command 21 (Spin direction reversed)", 
+				"21 (Spin direction reversed)", 
+				"Spin direction reversed"
+			]
+		}, 
+		{
+			"start_sample": 26600,
+			"end_sample": 27215,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0x8 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 29240,
+			"end_sample": 29870,
+			"ann_class": 6,
+			"ann_type": 13,
+			"texts": [
+				"Measured DShot600 instead of configured DShot300", 
+				"Measured DShot600, not DShot300", 
+				"Rate mismatch"
+			]
+		}, 
+		{
+			"start_sample": 29240,
+			"end_sample": 29870,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M8 DShot600 0x03ed", 
+				"M8"
+			]
+		}, 
+		{
+			"start_sample": 29240,
+			"end_sample": 29870,
+			"ann_class": 2,
+			"ann_type": 9,
+			"texts": [
+				"Command 31 (Silent mode on/off)", 
+				"31 (Silent mode on/off)", 
+				"Silent mode on/off"
+			]
+		}, 
+		{
+			"start_sample": 29240,
+			"end_sample": 29870,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0xd correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 31880,
+			"end_sample": 32495,
+			"ann_class": 6,
+			"ann_type": 13,
+			"texts": [
+				"Measured DShot600 instead of configured DShot300", 
+				"Measured DShot600, not DShot300", 
+				"Rate mismatch"
+			]
+		}, 
+		{
+			"start_sample": 31880,
+			"end_sample": 32495,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M8 DShot600 0x01ba", 
+				"M8"
+			]
+		}, 
+		{
+			"start_sample": 31880,
+			"end_sample": 32495,
+			"ann_class": 2,
+			"ann_type": 9,
+			"texts": [
+				"Command 13 (Extended telemetry enable)", 
+				"13 (Extended telemetry enable)", 
+				"Extended telemetry enable"
+			]
+		}, 
+		{
+			"start_sample": 31880,
+			"end_sample": 32495,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0xa correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 31880,
+			"end_sample": 32495,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"Telemetry requested", 
+				"TLM req"
+			]
+		}, 
+		{
+			"start_sample": 34520,
+			"end_sample": 35135,
+			"ann_class": 6,
+			"ann_type": 13,
+			"texts": [
+				"Measured DShot600 instead of configured DShot300", 
+				"Measured DShot600, not DShot300", 
+				"Rate mismatch"
+			]
+		}, 
+		{
+			"start_sample": 34520,
+			"end_sample": 35135,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M8 DShot600 0x790a", 
+				"M8"
+			]
+		}, 
+		{
+			"start_sample": 34520,
+			"end_sample": 35135,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Throttle 968 (3D reverse 92.1%)", 
+				"968 reverse 92%"
+			]
+		}, 
+		{
+			"start_sample": 34520,
+			"end_sample": 35135,
+			"ann_class": 6,
+			"ann_type": 13,
+			"texts": [
+				"Checksum mismatch, got 0xa expected 0xe", 
+				"Checksum mismatch", 
+				"CRC error"
+			]
+		}, 
+		{
+			"start_sample": 34520,
+			"end_sample": 35135,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0xa, expected 0xe", 
+				"CRC bad"
+			]
+		}, 
+		{
+			"start_sample": 37160,
+			"end_sample": 38390,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M8 DShot300 0x7d0a", 
+				"M8"
+			]
+		}, 
+		{
+			"start_sample": 37160,
+			"end_sample": 38390,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Throttle 1000 (3D reverse 95.3%)", 
+				"1000 reverse 95%"
+			]
+		}, 
+		{
+			"start_sample": 37160,
+			"end_sample": 38390,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0xa correct", 
+				"CRC ok"
+			]
+		}
+	]
+}

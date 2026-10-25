@@ -1,0 +1,12 @@
+{
+  "decoder": "dshot_c",
+  "channels": {
+    "data": 0
+  },
+  "options": {
+    "tlm": "off"
+  },
+  "samplerate": 24000000,
+  "num_channels": 1,
+  "sample_count": 10000
+}

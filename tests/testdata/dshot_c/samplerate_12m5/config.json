@@ -1,0 +1,10 @@
+{
+  "decoder": "dshot_c",
+  "channels": {
+    "data": 0
+  },
+  "options": {},
+  "samplerate": 12500000,
+  "num_channels": 1,
+  "sample_count": 9492
+}

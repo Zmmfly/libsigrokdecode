@@ -1,0 +1,186 @@
+{
+	"decoder": "dshot",
+	"samplerate": 24000000,
+	"num_annotations": 17,
+	"annotations": [
+		{
+			"start_sample": 200,
+			"end_sample": 590,
+			"ann_class": 6,
+			"ann_type": 13,
+			"texts": [
+				"Unexpected burst, 10 high and 9 low pulses", 
+				"Unexpected burst, 10 / 9 pulses", 
+				"Unexpected burst"
+			]
+		}, 
+		{
+			"start_sample": 2600,
+			"end_sample": 4590,
+			"ann_class": 6,
+			"ann_type": 13,
+			"texts": [
+				"Unexpected burst, 50 high and 49 low pulses", 
+				"Unexpected burst, 50 / 49 pulses", 
+				"Unexpected burst"
+			]
+		}, 
+		{
+			"start_sample": 6600,
+			"end_sample": 7215,
+			"ann_class": 6,
+			"ann_type": 13,
+			"texts": [
+				"2 symbol(s) with ambiguous duty cycle", 
+				"2 ambiguous symbol(s)", 
+				"Ambiguous timing"
+			]
+		}, 
+		{
+			"start_sample": 6600,
+			"end_sample": 7215,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M1 DShot600 0x7d0a", 
+				"M1"
+			]
+		}, 
+		{
+			"start_sample": 6600,
+			"end_sample": 7215,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Throttle 1000 (47.6%)", 
+				"1000 (48%)", 
+				"48%"
+			]
+		}, 
+		{
+			"start_sample": 6600,
+			"end_sample": 7215,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0xa correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 9240,
+			"end_sample": 10055,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M1 unknown rate 0x7d0a", 
+				"M1"
+			]
+		}, 
+		{
+			"start_sample": 9240,
+			"end_sample": 10055,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Throttle 1000 (47.6%)", 
+				"1000 (48%)", 
+				"48%"
+			]
+		}, 
+		{
+			"start_sample": 9240,
+			"end_sample": 10055,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0xa correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 12088,
+			"end_sample": 14608,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M1 DShot150 0x258f", 
+				"M1"
+			]
+		}, 
+		{
+			"start_sample": 12088,
+			"end_sample": 14608,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Throttle 300 (12.6%)", 
+				"300 (13%)", 
+				"13%"
+			]
+		}, 
+		{
+			"start_sample": 12088,
+			"end_sample": 14608,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0xf correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 16648,
+			"end_sample": 16963,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M1 DShot1200 0xfa05", 
+				"M1"
+			]
+		}, 
+		{
+			"start_sample": 16648,
+			"end_sample": 16963,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Throttle 2000 (97.6%)", 
+				"2000 (98%)", 
+				"98%"
+			]
+		}, 
+		{
+			"start_sample": 16648,
+			"end_sample": 16963,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0x5 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 19288,
+			"end_sample": 20103,
+			"ann_class": 6,
+			"ann_type": 13,
+			"texts": [
+				"Telemetry response without valid symbols or checksum", 
+				"Undecodable telemetry response", 
+				"TLM error"
+			]
+		}, 
+		{
+			"start_sample": 24448,
+			"end_sample": 25263,
+			"ann_class": 6,
+			"ann_type": 13,
+			"texts": [
+				"Telemetry response without valid symbols or checksum", 
+				"Undecodable telemetry response", 
+				"TLM error"
+			]
+		}
+	]
+}

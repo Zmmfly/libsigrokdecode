@@ -1,0 +1,1913 @@
+{
+	"decoder": "elrs",
+	"samplerate": 11520000,
+	"num_annotations": 192,
+	"annotations": [
+		{
+			"start_sample": 1200,
+			"end_sample": 2200,
+			"ann_class": 6,
+			"ann_type": 13,
+			"texts": [
+				"Invalid frame length 85", 
+				"Invalid length 85", 
+				"Bad length"
+			]
+		}, 
+		{
+			"start_sample": 3200,
+			"end_sample": 4200,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Flight controller", 
+				"0xc8"
+			]
+		}, 
+		{
+			"start_sample": 29200,
+			"end_sample": 30200,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Checksum 0x63 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 3200,
+			"end_sample": 30200,
+			"ann_class": 2,
+			"ann_type": 9,
+			"texts": [
+				"RC channels: 23 byte(s)", 
+				"RC channels"
+			]
+		}, 
+		{
+			"start_sample": 3200,
+			"end_sample": 30200,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"Armed: yes, arm via CH5: yes", 
+				"Armed yes, CH5 arm yes"
+			]
+		}, 
+		{
+			"start_sample": 3200,
+			"end_sample": 30200,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"988us 1500us 2012us 881us 2159us 1505us 1818us 1193us 1500us 1500us 1500us 1500us 1500us 1500us 1500us 1500us"
+			]
+		}, 
+		{
+			"start_sample": 30200,
+			"end_sample": 31200,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Flight controller", 
+				"0xc8"
+			]
+		}, 
+		{
+			"start_sample": 55200,
+			"end_sample": 56200,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Checksum 0xad correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 30200,
+			"end_sample": 56200,
+			"ann_class": 2,
+			"ann_type": 9,
+			"texts": [
+				"RC channels: 22 byte(s)", 
+				"RC channels"
+			]
+		}, 
+		{
+			"start_sample": 30200,
+			"end_sample": 56200,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"1500us 1500us 1500us 1500us 1500us 1500us 1500us 1500us 1500us 1500us 1500us 1500us 1500us 1500us 1500us 1500us"
+			]
+		}, 
+		{
+			"start_sample": 56200,
+			"end_sample": 57200,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Flight controller", 
+				"0xc8"
+			]
+		}, 
+		{
+			"start_sample": 69200,
+			"end_sample": 70200,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Checksum 0x52 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 56200,
+			"end_sample": 70200,
+			"ann_class": 2,
+			"ann_type": 9,
+			"texts": [
+				"RC channels: 10 byte(s)", 
+				"RC channels"
+			]
+		}, 
+		{
+			"start_sample": 56200,
+			"end_sample": 70200,
+			"ann_class": 6,
+			"ann_type": 13,
+			"texts": [
+				"RC channels frame is too short (10 byte(s))", 
+				"Short channel frame"
+			]
+		}, 
+		{
+			"start_sample": 70200,
+			"end_sample": 71200,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Flight controller", 
+				"0xc8"
+			]
+		}, 
+		{
+			"start_sample": 83200,
+			"end_sample": 84200,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Checksum 0xce correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 70200,
+			"end_sample": 84200,
+			"ann_class": 2,
+			"ann_type": 9,
+			"texts": [
+				"Link statistics: 10 byte(s)", 
+				"Link statistics"
+			]
+		}, 
+		{
+			"start_sample": 70200,
+			"end_sample": 84200,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"Uplink: RSSI1 -60 dBm, RSSI2 -62 dBm, LQ 100%, SNR 8 dB", 
+				"Up -60 / -62 dBm, 100%, 8 dB"
+			]
+		}, 
+		{
+			"start_sample": 70200,
+			"end_sample": 84200,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"Mode 2.4 GHz 250 Hz, antenna 1, TX power 100 mW", 
+				"2.4 GHz 250 Hz, ant 1, 100 mW"
+			]
+		}, 
+		{
+			"start_sample": 70200,
+			"end_sample": 84200,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"Downlink: RSSI -55 dBm, LQ 97%, SNR 5 dB", 
+				"Down -55 dBm, 97%, 5 dB"
+			]
+		}, 
+		{
+			"start_sample": 84200,
+			"end_sample": 85200,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Radio transmitter", 
+				"0xea"
+			]
+		}, 
+		{
+			"start_sample": 97200,
+			"end_sample": 98200,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Checksum 0x61 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 84200,
+			"end_sample": 98200,
+			"ann_class": 2,
+			"ann_type": 9,
+			"texts": [
+				"Link statistics: 10 byte(s)", 
+				"Link statistics"
+			]
+		}, 
+		{
+			"start_sample": 84200,
+			"end_sample": 98200,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"Uplink: RSSI1 -100 dBm, RSSI2 0 dBm, LQ 50%, SNR -10 dB", 
+				"Up -100 / 0 dBm, 50%, -10 dB"
+			]
+		}, 
+		{
+			"start_sample": 84200,
+			"end_sample": 98200,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"Mode mode 50, antenna 2, TX power level 9", 
+				"mode 50, ant 2, level 9"
+			]
+		}, 
+		{
+			"start_sample": 84200,
+			"end_sample": 98200,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"Downlink: RSSI -120 dBm, LQ 10%, SNR -128 dB", 
+				"Down -120 dBm, 10%, -128 dB"
+			]
+		}, 
+		{
+			"start_sample": 98200,
+			"end_sample": 99200,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Flight controller", 
+				"0xc8"
+			]
+		}, 
+		{
+			"start_sample": 104200,
+			"end_sample": 105200,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Checksum 0x50 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 98200,
+			"end_sample": 105200,
+			"ann_class": 2,
+			"ann_type": 9,
+			"texts": [
+				"Link statistics: 3 byte(s)", 
+				"Link statistics"
+			]
+		}, 
+		{
+			"start_sample": 98200,
+			"end_sample": 105200,
+			"ann_class": 6,
+			"ann_type": 13,
+			"texts": [
+				"Link statistics frame is too short (3 byte(s))", 
+				"Short link frame"
+			]
+		}, 
+		{
+			"start_sample": 105200,
+			"end_sample": 106200,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Radio transmitter", 
+				"0xea"
+			]
+		}, 
+		{
+			"start_sample": 122200,
+			"end_sample": 123200,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Checksum 0xee correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 105200,
+			"end_sample": 123200,
+			"ann_class": 2,
+			"ann_type": 9,
+			"texts": [
+				"ELRS status: CRSF transmitter -> Radio transmitter, 12 byte(s)", 
+				"ELRS status"
+			]
+		}, 
+		{
+			"start_sample": 105200,
+			"end_sample": 123200,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"ELRS status: 0 bad, 5 good packet(s), flags 0x00", 
+				"0 bad / 5 good, 0x00"
+			]
+		}, 
+		{
+			"start_sample": 105200,
+			"end_sample": 123200,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"Status flags: none", 
+				"no flags"
+			]
+		}, 
+		{
+			"start_sample": 105200,
+			"end_sample": 123200,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"Message: Café ok", 
+				"Café ok"
+			]
+		}, 
+		{
+			"start_sample": 123200,
+			"end_sample": 124200,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Radio transmitter", 
+				"0xea"
+			]
+		}, 
+		{
+			"start_sample": 133200,
+			"end_sample": 134200,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Checksum 0x19 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 123200,
+			"end_sample": 134200,
+			"ann_class": 2,
+			"ann_type": 9,
+			"texts": [
+				"ELRS status: CRSF transmitter -> Radio transmitter, 5 byte(s)", 
+				"ELRS status"
+			]
+		}, 
+		{
+			"start_sample": 123200,
+			"end_sample": 134200,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"ELRS status: 255 bad, 65535 good packet(s), flags 0xff", 
+				"255 bad / 65535 good, 0xff"
+			]
+		}, 
+		{
+			"start_sample": 123200,
+			"end_sample": 134200,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"Status flags: connected, status 1, model mismatch, armed, warning 1, not while connected, baud rate too low, critical warning 2", 
+				"connected, status 1, model mismatch, armed, warning 1, not while connected, baud rate too low, critical warning 2"
+			]
+		}, 
+		{
+			"start_sample": 134200,
+			"end_sample": 135200,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Radio transmitter", 
+				"0xea"
+			]
+		}, 
+		{
+			"start_sample": 141200,
+			"end_sample": 142200,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Checksum 0xf2 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 134200,
+			"end_sample": 142200,
+			"ann_class": 2,
+			"ann_type": 9,
+			"texts": [
+				"ELRS status: CRSF transmitter -> Radio transmitter, 2 byte(s)", 
+				"ELRS status"
+			]
+		}, 
+		{
+			"start_sample": 134200,
+			"end_sample": 142200,
+			"ann_class": 6,
+			"ann_type": 13,
+			"texts": [
+				"ELRS status frame is too short (2 byte(s))", 
+				"Short status frame"
+			]
+		}, 
+		{
+			"start_sample": 142200,
+			"end_sample": 143200,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Radio transmitter", 
+				"0xea"
+			]
+		}, 
+		{
+			"start_sample": 175200,
+			"end_sample": 176200,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Checksum 0xbd correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 142200,
+			"end_sample": 176200,
+			"ann_class": 2,
+			"ann_type": 9,
+			"texts": [
+				"Device info: CRSF receiver -> Radio transmitter, 28 byte(s)", 
+				"Device info"
+			]
+		}, 
+		{
+			"start_sample": 142200,
+			"end_sample": 176200,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"Device \"ExpressLRS RX\", version 3.4.2, serial 0x11223344", 
+				"\"ExpressLRS RX\" 3.4.2"
+			]
+		}, 
+		{
+			"start_sample": 142200,
+			"end_sample": 176200,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"Hardware 0x55667788, 35 parameter(s), parameter version 7"
+			]
+		}, 
+		{
+			"start_sample": 176200,
+			"end_sample": 177200,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Radio transmitter", 
+				"0xea"
+			]
+		}, 
+		{
+			"start_sample": 198200,
+			"end_sample": 199200,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Checksum 0x8c correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 176200,
+			"end_sample": 199200,
+			"ann_class": 2,
+			"ann_type": 9,
+			"texts": [
+				"Device info: CRSF receiver -> Radio transmitter, 17 byte(s)", 
+				"Device info"
+			]
+		}, 
+		{
+			"start_sample": 176200,
+			"end_sample": 199200,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"Device \"Röx\", version 1.2.3, serial 0x11223344", 
+				"\"Röx\" 1.2.3"
+			]
+		}, 
+		{
+			"start_sample": 176200,
+			"end_sample": 199200,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"Hardware 0x55667788, 4 parameter(s)"
+			]
+		}, 
+		{
+			"start_sample": 199200,
+			"end_sample": 200200,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Radio transmitter", 
+				"0xea"
+			]
+		}, 
+		{
+			"start_sample": 213200,
+			"end_sample": 214200,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Checksum 0x27 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 199200,
+			"end_sample": 214200,
+			"ann_class": 2,
+			"ann_type": 9,
+			"texts": [
+				"Device info: CRSF receiver -> Radio transmitter, 9 byte(s)", 
+				"Device info"
+			]
+		}, 
+		{
+			"start_sample": 199200,
+			"end_sample": 214200,
+			"ann_class": 6,
+			"ann_type": 13,
+			"texts": [
+				"Truncated device info frame", 
+				"Short device info"
+			]
+		}, 
+		{
+			"start_sample": 214200,
+			"end_sample": 215200,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Radio transmitter", 
+				"0xea"
+			]
+		}, 
+		{
+			"start_sample": 224200,
+			"end_sample": 225200,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Checksum 0x74 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 214200,
+			"end_sample": 225200,
+			"ann_class": 2,
+			"ann_type": 9,
+			"texts": [
+				"Device info: CRSF receiver -> Radio transmitter, 5 byte(s)", 
+				"Device info"
+			]
+		}, 
+		{
+			"start_sample": 214200,
+			"end_sample": 225200,
+			"ann_class": 6,
+			"ann_type": 13,
+			"texts": [
+				"Device info without a device name", 
+				"Short device info"
+			]
+		}, 
+		{
+			"start_sample": 225200,
+			"end_sample": 226200,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Radio transmitter", 
+				"0xea"
+			]
+		}, 
+		{
+			"start_sample": 266200,
+			"end_sample": 267200,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Checksum 0x3e correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 225200,
+			"end_sample": 267200,
+			"ann_class": 2,
+			"ann_type": 9,
+			"texts": [
+				"Parameter settings entry: CRSF transmitter -> Radio transmitter, 36 byte(s)", 
+				"Parameter settings entry"
+			]
+		}, 
+		{
+			"start_sample": 225200,
+			"end_sample": 267200,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"Parameter 3, \"Packet Rate\", type 9"
+			]
+		}, 
+		{
+			"start_sample": 267200,
+			"end_sample": 268200,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Radio transmitter", 
+				"0xea"
+			]
+		}, 
+		{
+			"start_sample": 282200,
+			"end_sample": 283200,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Checksum 0xaf correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 267200,
+			"end_sample": 283200,
+			"ann_class": 2,
+			"ann_type": 9,
+			"texts": [
+				"Parameter settings entry: CRSF transmitter -> Radio transmitter, 10 byte(s)", 
+				"Parameter settings entry"
+			]
+		}, 
+		{
+			"start_sample": 267200,
+			"end_sample": 283200,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"Parameter 5, \"Telem\", type 9, parent 2, hidden, 1 more chunk(s)"
+			]
+		}, 
+		{
+			"start_sample": 283200,
+			"end_sample": 284200,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Radio transmitter", 
+				"0xea"
+			]
+		}, 
+		{
+			"start_sample": 293200,
+			"end_sample": 294200,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Checksum 0xe7 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 283200,
+			"end_sample": 294200,
+			"ann_class": 2,
+			"ann_type": 9,
+			"texts": [
+				"Parameter settings entry: CRSF transmitter -> Radio transmitter, 5 byte(s)", 
+				"Parameter settings entry"
+			]
+		}, 
+		{
+			"start_sample": 283200,
+			"end_sample": 294200,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"Parameter 6, \"<no name>\", type 1"
+			]
+		}, 
+		{
+			"start_sample": 294200,
+			"end_sample": 295200,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Radio transmitter", 
+				"0xea"
+			]
+		}, 
+		{
+			"start_sample": 304200,
+			"end_sample": 305200,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Checksum 0xa9 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 294200,
+			"end_sample": 305200,
+			"ann_class": 2,
+			"ann_type": 9,
+			"texts": [
+				"Parameter settings entry: CRSF transmitter -> Radio transmitter, 5 byte(s)", 
+				"Parameter settings entry"
+			]
+		}, 
+		{
+			"start_sample": 294200,
+			"end_sample": 305200,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"Parameter 7, chunk with 2 more chunk(s), 3 byte(s)"
+			]
+		}, 
+		{
+			"start_sample": 305200,
+			"end_sample": 306200,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Radio transmitter", 
+				"0xea"
+			]
+		}, 
+		{
+			"start_sample": 311200,
+			"end_sample": 312200,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Checksum 0x2d correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 305200,
+			"end_sample": 312200,
+			"ann_class": 2,
+			"ann_type": 9,
+			"texts": [
+				"Parameter settings entry: CRSF transmitter -> Radio transmitter, 1 byte(s)", 
+				"Parameter settings entry"
+			]
+		}, 
+		{
+			"start_sample": 305200,
+			"end_sample": 312200,
+			"ann_class": 6,
+			"ann_type": 13,
+			"texts": [
+				"Parameter frame is too short", 
+				"Short parameter frame"
+			]
+		}, 
+		{
+			"start_sample": 312200,
+			"end_sample": 313200,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Flight controller", 
+				"0xc8"
+			]
+		}, 
+		{
+			"start_sample": 319200,
+			"end_sample": 320200,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Checksum 0xe5 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 312200,
+			"end_sample": 320200,
+			"ann_class": 2,
+			"ann_type": 9,
+			"texts": [
+				"Command: Flight controller -> CRSF receiver, 2 byte(s)", 
+				"Command"
+			]
+		}, 
+		{
+			"start_sample": 312200,
+			"end_sample": 320200,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"RX command: bind", 
+				"RX command"
+			]
+		}, 
+		{
+			"start_sample": 320200,
+			"end_sample": 321200,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Flight controller", 
+				"0xc8"
+			]
+		}, 
+		{
+			"start_sample": 327200,
+			"end_sample": 328200,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Checksum 0x1b correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 320200,
+			"end_sample": 328200,
+			"ann_class": 2,
+			"ann_type": 9,
+			"texts": [
+				"Command: Flight controller -> CRSF receiver, 2 byte(s)", 
+				"Command"
+			]
+		}, 
+		{
+			"start_sample": 320200,
+			"end_sample": 328200,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"RX command: model select", 
+				"RX command"
+			]
+		}, 
+		{
+			"start_sample": 328200,
+			"end_sample": 329200,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Flight controller", 
+				"0xc8"
+			]
+		}, 
+		{
+			"start_sample": 335200,
+			"end_sample": 336200,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Checksum 0x64 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 328200,
+			"end_sample": 336200,
+			"ann_class": 2,
+			"ann_type": 9,
+			"texts": [
+				"Command: Flight controller -> CRSF receiver, 2 byte(s)", 
+				"Command"
+			]
+		}, 
+		{
+			"start_sample": 328200,
+			"end_sample": 336200,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"RX command: subcommand 0x07", 
+				"RX command"
+			]
+		}, 
+		{
+			"start_sample": 336200,
+			"end_sample": 337200,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"CRSF transmitter", 
+				"0xee"
+			]
+		}, 
+		{
+			"start_sample": 343200,
+			"end_sample": 344200,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Checksum 0x19 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 336200,
+			"end_sample": 344200,
+			"ann_class": 2,
+			"ann_type": 9,
+			"texts": [
+				"Command: Radio transmitter -> CRSF transmitter, 2 byte(s)", 
+				"Command"
+			]
+		}, 
+		{
+			"start_sample": 336200,
+			"end_sample": 344200,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"Model select", 
+				"Model select"
+			]
+		}, 
+		{
+			"start_sample": 344200,
+			"end_sample": 345200,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"CRSF transmitter", 
+				"0xee"
+			]
+		}, 
+		{
+			"start_sample": 350200,
+			"end_sample": 351200,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Checksum 0x66 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 344200,
+			"end_sample": 351200,
+			"ann_class": 2,
+			"ann_type": 9,
+			"texts": [
+				"Command: Radio transmitter -> CRSF transmitter, 1 byte(s)", 
+				"Command"
+			]
+		}, 
+		{
+			"start_sample": 344200,
+			"end_sample": 351200,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"command 0x09", 
+				"command 0x09"
+			]
+		}, 
+		{
+			"start_sample": 351200,
+			"end_sample": 352200,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Flight controller", 
+				"0xc8"
+			]
+		}, 
+		{
+			"start_sample": 357200,
+			"end_sample": 358200,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Checksum 0xb8 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 351200,
+			"end_sample": 358200,
+			"ann_class": 2,
+			"ann_type": 9,
+			"texts": [
+				"Command: Flight controller -> CRSF receiver, 1 byte(s)", 
+				"Command"
+			]
+		}, 
+		{
+			"start_sample": 351200,
+			"end_sample": 358200,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"RX command", 
+				"RX command"
+			]
+		}, 
+		{
+			"start_sample": 358200,
+			"end_sample": 359200,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Flight controller", 
+				"0xc8"
+			]
+		}, 
+		{
+			"start_sample": 363200,
+			"end_sample": 364200,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Checksum 0x76 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 358200,
+			"end_sample": 364200,
+			"ann_class": 2,
+			"ann_type": 9,
+			"texts": [
+				"Command: Flight controller -> CRSF receiver, 0 byte(s)", 
+				"Command"
+			]
+		}, 
+		{
+			"start_sample": 364200,
+			"end_sample": 365200,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Radio transmitter", 
+				"0xea"
+			]
+		}, 
+		{
+			"start_sample": 373200,
+			"end_sample": 374200,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Checksum 0x72 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 364200,
+			"end_sample": 374200,
+			"ann_class": 2,
+			"ann_type": 9,
+			"texts": [
+				"Attitude: 6 byte(s)", 
+				"Attitude"
+			]
+		}, 
+		{
+			"start_sample": 364200,
+			"end_sample": 374200,
+			"ann_class": 2,
+			"ann_type": 9,
+			"texts": [
+				"Attitude: pitch -7.07 deg, roll 32.53 deg, yaw -179.99 deg"
+			]
+		}, 
+		{
+			"start_sample": 374200,
+			"end_sample": 375200,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Radio transmitter", 
+				"0xea"
+			]
+		}, 
+		{
+			"start_sample": 380200,
+			"end_sample": 381200,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Checksum 0x8d correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 374200,
+			"end_sample": 381200,
+			"ann_class": 2,
+			"ann_type": 9,
+			"texts": [
+				"Attitude: 3 byte(s)", 
+				"Attitude"
+			]
+		}, 
+		{
+			"start_sample": 381200,
+			"end_sample": 382200,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Radio transmitter", 
+				"0xea"
+			]
+		}, 
+		{
+			"start_sample": 399200,
+			"end_sample": 400200,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Checksum 0x43 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 381200,
+			"end_sample": 400200,
+			"ann_class": 2,
+			"ann_type": 9,
+			"texts": [
+				"GPS: 15 byte(s)", 
+				"GPS"
+			]
+		}, 
+		{
+			"start_sample": 381200,
+			"end_sample": 400200,
+			"ann_class": 2,
+			"ann_type": 9,
+			"texts": [
+				"GPS: -3.3856000, 151.2150000, 12.3 km/h, heading 270.00 deg, 100 m, 12 satellite(s)"
+			]
+		}, 
+		{
+			"start_sample": 400200,
+			"end_sample": 401200,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Radio transmitter", 
+				"0xea"
+			]
+		}, 
+		{
+			"start_sample": 406200,
+			"end_sample": 407200,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Checksum 0xb5 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 400200,
+			"end_sample": 407200,
+			"ann_class": 2,
+			"ann_type": 9,
+			"texts": [
+				"GPS: 3 byte(s)", 
+				"GPS"
+			]
+		}, 
+		{
+			"start_sample": 407200,
+			"end_sample": 408200,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Radio transmitter", 
+				"0xea"
+			]
+		}, 
+		{
+			"start_sample": 418200,
+			"end_sample": 419200,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Checksum 0x7b correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 407200,
+			"end_sample": 419200,
+			"ann_class": 2,
+			"ann_type": 9,
+			"texts": [
+				"Battery sensor: 8 byte(s)", 
+				"Battery sensor"
+			]
+		}, 
+		{
+			"start_sample": 407200,
+			"end_sample": 419200,
+			"ann_class": 2,
+			"ann_type": 9,
+			"texts": [
+				"Battery: 16.8 V, 12.5 A, 1300 mAh, 75%"
+			]
+		}, 
+		{
+			"start_sample": 419200,
+			"end_sample": 420200,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Radio transmitter", 
+				"0xea"
+			]
+		}, 
+		{
+			"start_sample": 429200,
+			"end_sample": 430200,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Checksum 0x36 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 419200,
+			"end_sample": 430200,
+			"ann_class": 2,
+			"ann_type": 9,
+			"texts": [
+				"Battery sensor: 7 byte(s)", 
+				"Battery sensor"
+			]
+		}, 
+		{
+			"start_sample": 419200,
+			"end_sample": 430200,
+			"ann_class": 2,
+			"ann_type": 9,
+			"texts": [
+				"Battery: 11.1 V, 0.5 A, 7 mAh"
+			]
+		}, 
+		{
+			"start_sample": 430200,
+			"end_sample": 431200,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Radio transmitter", 
+				"0xea"
+			]
+		}, 
+		{
+			"start_sample": 438200,
+			"end_sample": 439200,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Checksum 0x55 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 430200,
+			"end_sample": 439200,
+			"ann_class": 2,
+			"ann_type": 9,
+			"texts": [
+				"Battery sensor: 5 byte(s)", 
+				"Battery sensor"
+			]
+		}, 
+		{
+			"start_sample": 439200,
+			"end_sample": 440200,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Radio transmitter", 
+				"0xea"
+			]
+		}, 
+		{
+			"start_sample": 447200,
+			"end_sample": 448200,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Checksum 0x80 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 439200,
+			"end_sample": 448200,
+			"ann_class": 2,
+			"ann_type": 9,
+			"texts": [
+				"Flight mode: 5 byte(s)", 
+				"Flight mode"
+			]
+		}, 
+		{
+			"start_sample": 439200,
+			"end_sample": 448200,
+			"ann_class": 2,
+			"ann_type": 9,
+			"texts": [
+				"Flight mode: ACRO"
+			]
+		}, 
+		{
+			"start_sample": 448200,
+			"end_sample": 449200,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Radio transmitter", 
+				"0xea"
+			]
+		}, 
+		{
+			"start_sample": 452200,
+			"end_sample": 453200,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Checksum 0xbe correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 448200,
+			"end_sample": 453200,
+			"ann_class": 2,
+			"ann_type": 9,
+			"texts": [
+				"Flight mode: 1 byte(s)", 
+				"Flight mode"
+			]
+		}, 
+		{
+			"start_sample": 453200,
+			"end_sample": 454200,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Flight controller", 
+				"0xc8"
+			]
+		}, 
+		{
+			"start_sample": 465200,
+			"end_sample": 466200,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Checksum 0x92 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 453200,
+			"end_sample": 466200,
+			"ann_class": 2,
+			"ann_type": 9,
+			"texts": [
+				"MSP request: Radio transmitter -> Flight controller, 7 byte(s)", 
+				"MSP request"
+			]
+		}, 
+		{
+			"start_sample": 453200,
+			"end_sample": 466200,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"MSP request: function 0x0064, status 0x30, 2 byte(s)", 
+				"MSP request 0x0064"
+			]
+		}, 
+		{
+			"start_sample": 466200,
+			"end_sample": 467200,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Radio transmitter", 
+				"0xea"
+			]
+		}, 
+		{
+			"start_sample": 476200,
+			"end_sample": 477200,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Checksum 0x08 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 466200,
+			"end_sample": 477200,
+			"ann_class": 2,
+			"ann_type": 9,
+			"texts": [
+				"MSP response: Flight controller -> Radio transmitter, 5 byte(s)", 
+				"MSP response"
+			]
+		}, 
+		{
+			"start_sample": 466200,
+			"end_sample": 477200,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"MSP response: function 0x012c, status 0x31, 0 byte(s)", 
+				"MSP response 0x012c"
+			]
+		}, 
+		{
+			"start_sample": 477200,
+			"end_sample": 478200,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Flight controller", 
+				"0xc8"
+			]
+		}, 
+		{
+			"start_sample": 488200,
+			"end_sample": 489200,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Checksum 0x3c correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 477200,
+			"end_sample": 489200,
+			"ann_class": 2,
+			"ann_type": 9,
+			"texts": [
+				"MSP write: Radio transmitter -> Flight controller, 6 byte(s)", 
+				"MSP write"
+			]
+		}, 
+		{
+			"start_sample": 477200,
+			"end_sample": 489200,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"MSP write: function 0x0005, status 0x32, 1 byte(s)", 
+				"MSP write 0x0005"
+			]
+		}, 
+		{
+			"start_sample": 489200,
+			"end_sample": 490200,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Flight controller", 
+				"0xc8"
+			]
+		}, 
+		{
+			"start_sample": 496200,
+			"end_sample": 497200,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Checksum 0xe0 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 489200,
+			"end_sample": 497200,
+			"ann_class": 2,
+			"ann_type": 9,
+			"texts": [
+				"MSP request: Radio transmitter -> Flight controller, 2 byte(s)", 
+				"MSP request"
+			]
+		}, 
+		{
+			"start_sample": 489200,
+			"end_sample": 497200,
+			"ann_class": 2,
+			"ann_type": 9,
+			"texts": [
+				"MSP frame with 2 byte(s)"
+			]
+		}, 
+		{
+			"start_sample": 497200,
+			"end_sample": 498200,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Flight controller", 
+				"0xc8"
+			]
+		}, 
+		{
+			"start_sample": 503200,
+			"end_sample": 504200,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Checksum 0xd2 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 497200,
+			"end_sample": 504200,
+			"ann_class": 2,
+			"ann_type": 9,
+			"texts": [
+				"Unknown type 0x55: Unknown address 0x02 -> Unknown address 0x01, 1 byte(s)", 
+				"Unknown type 0x55"
+			]
+		}, 
+		{
+			"start_sample": 497200,
+			"end_sample": 504200,
+			"ann_class": 2,
+			"ann_type": 9,
+			"texts": [
+				"Payload: 03"
+			]
+		}, 
+		{
+			"start_sample": 504200,
+			"end_sample": 505200,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Flight controller", 
+				"0xc8"
+			]
+		}, 
+		{
+			"start_sample": 509200,
+			"end_sample": 510200,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Checksum 0x8a correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 504200,
+			"end_sample": 510200,
+			"ann_class": 2,
+			"ann_type": 9,
+			"texts": [
+				"Unknown type 0x05: 2 byte(s)", 
+				"Unknown type 0x05"
+			]
+		}, 
+		{
+			"start_sample": 504200,
+			"end_sample": 510200,
+			"ann_class": 2,
+			"ann_type": 9,
+			"texts": [
+				"Payload: 09 08"
+			]
+		}, 
+		{
+			"start_sample": 510200,
+			"end_sample": 511200,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Flight controller", 
+				"0xc8"
+			]
+		}, 
+		{
+			"start_sample": 514200,
+			"end_sample": 515200,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Checksum 0xb6 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 510200,
+			"end_sample": 515200,
+			"ann_class": 2,
+			"ann_type": 9,
+			"texts": [
+				"Device ping: 1 byte(s)", 
+				"Device ping"
+			]
+		}, 
+		{
+			"start_sample": 510200,
+			"end_sample": 515200,
+			"ann_class": 2,
+			"ann_type": 9,
+			"texts": [
+				"Payload: c8"
+			]
+		}, 
+		{
+			"start_sample": 515200,
+			"end_sample": 516200,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Broadcast", 
+				"0x00"
+			]
+		}, 
+		{
+			"start_sample": 520200,
+			"end_sample": 521200,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Checksum 0x54 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 515200,
+			"end_sample": 521200,
+			"ann_class": 2,
+			"ann_type": 9,
+			"texts": [
+				"Device ping: Radio transmitter -> Broadcast, 0 byte(s)", 
+				"Device ping"
+			]
+		}, 
+		{
+			"start_sample": 521200,
+			"end_sample": 522200,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Flight controller", 
+				"0xc8"
+			]
+		}, 
+		{
+			"start_sample": 526200,
+			"end_sample": 527200,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Checksum 0x44 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 521200,
+			"end_sample": 527200,
+			"ann_class": 2,
+			"ann_type": 9,
+			"texts": [
+				"Device ping: Unknown address 0x66 -> Unknown address 0x55, 0 byte(s)", 
+				"Device ping"
+			]
+		}, 
+		{
+			"start_sample": 527200,
+			"end_sample": 528200,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Flight controller", 
+				"0xc8"
+			]
+		}, 
+		{
+			"start_sample": 590200,
+			"end_sample": 591200,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Checksum 0x10 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 527200,
+			"end_sample": 591200,
+			"ann_class": 2,
+			"ann_type": 9,
+			"texts": [
+				"Heartbeat: 60 byte(s)", 
+				"Heartbeat"
+			]
+		}, 
+		{
+			"start_sample": 527200,
+			"end_sample": 591200,
+			"ann_class": 2,
+			"ann_type": 9,
+			"texts": [
+				"Payload: 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f 10 11 12 13 14 15 16 17 18 19 1a 1b 1c 1d 1e 1f 20 21 22 23 24 25 26 27 28 29 2a 2b 2c 2d 2e 2f 30 31 32 33 34 35 36 37 38 39 3a 3b"
+			]
+		}, 
+		{
+			"start_sample": 591200,
+			"end_sample": 592200,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Flight controller", 
+				"0xc8"
+			]
+		}, 
+		{
+			"start_sample": 594200,
+			"end_sample": 595200,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Checksum 0x83 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 591200,
+			"end_sample": 595200,
+			"ann_class": 2,
+			"ann_type": 9,
+			"texts": [
+				"Heartbeat: 0 byte(s)", 
+				"Heartbeat"
+			]
+		}, 
+		{
+			"start_sample": 595200,
+			"end_sample": 596200,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Flight controller", 
+				"0xc8"
+			]
+		}, 
+		{
+			"start_sample": 608200,
+			"end_sample": 609200,
+			"ann_class": 6,
+			"ann_type": 13,
+			"texts": [
+				"Checksum 0x31, expected 0xce", 
+				"Checksum mismatch", 
+				"CRC error"
+			]
+		}, 
+		{
+			"start_sample": 595200,
+			"end_sample": 609200,
+			"ann_class": 2,
+			"ann_type": 9,
+			"texts": [
+				"Link statistics: 10 byte(s)", 
+				"Link statistics"
+			]
+		}, 
+		{
+			"start_sample": 610200,
+			"end_sample": 611200,
+			"ann_class": 6,
+			"ann_type": 13,
+			"texts": [
+				"Invalid frame length 1", 
+				"Invalid length 1", 
+				"Bad length"
+			]
+		}, 
+		{
+			"start_sample": 612200,
+			"end_sample": 613200,
+			"ann_class": 6,
+			"ann_type": 13,
+			"texts": [
+				"Invalid frame length 238", 
+				"Invalid length 238", 
+				"Bad length"
+			]
+		}, 
+		{
+			"start_sample": 612200,
+			"end_sample": 613200,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"CRSF transmitter", 
+				"0xee"
+			]
+		}, 
+		{
+			"start_sample": 619200,
+			"end_sample": 620200,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Checksum 0x8e correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 612200,
+			"end_sample": 620200,
+			"ann_class": 2,
+			"ann_type": 9,
+			"texts": [
+				"Command: Radio transmitter -> CRSF transmitter, 2 byte(s)", 
+				"Command"
+			]
+		}, 
+		{
+			"start_sample": 612200,
+			"end_sample": 620200,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"RX command: bind", 
+				"RX command"
+			]
+		}
+	]
+}

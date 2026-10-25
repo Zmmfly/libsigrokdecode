@@ -1,0 +1,21 @@
+{
+  "decoder": "elrs_c",
+  "channels": {},
+  "options": {
+    "crc": "on",
+    "channels": "on",
+    "usec": "off"
+  },
+  "stack": [
+    {
+      "id": "uart_c",
+      "channels": {
+        "rx": 0
+      }
+    }
+  ],
+  "top_only": true,
+  "samplerate": 11520000,
+  "num_channels": 1,
+  "sample_count": 68600
+}

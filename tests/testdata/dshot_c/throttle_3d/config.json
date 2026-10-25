@@ -1,0 +1,14 @@
+{
+  "decoder": "dshot_c",
+  "channels": {
+    "data": 0
+  },
+  "options": {
+    "3d": "on",
+    "rate": "DShot300",
+    "motor": "8"
+  },
+  "samplerate": 24000000,
+  "num_channels": 1,
+  "sample_count": 42440
+}
