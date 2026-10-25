@@ -83,10 +83,15 @@ static void ann_list_free(annotation_list *list)
     list->capacity = 0;
 }
 
+/* When set, only annotations of this decoder instance are collected. */
+static struct srd_decoder_inst *collect_only_di = NULL;
+
 /* Callback for srd_pd_output_callback_add */
 static void collect_callback(struct srd_proto_data *pdata, void *cb_data)
 {
     if (!pdata || !pdata->data) return;
+    if (collect_only_di && (!pdata->pdo || pdata->pdo->di != collect_only_di))
+        return;
 
     annotation_list *list = (annotation_list *)cb_data;
     struct srd_proto_data_annotation *ann =
@@ -417,6 +422,7 @@ typedef struct {
     int tolerance;
     int generate_only;
     int python_mode;
+    int top_only;
 } cmdline_args;
 
 static int parse_args(int argc, char **argv, cmdline_args *args)
@@ -439,6 +445,8 @@ static int parse_args(int argc, char **argv, cmdline_args *args)
             args->generate_only = 1;
         } else if (strcmp(argv[i], "--python") == 0) {
             args->python_mode = 1;
+        } else if (strcmp(argv[i], "--top-only") == 0) {
+            args->top_only = 1;
         } else {
             fprintf(stderr, "Unknown option: %s\n", argv[i]);
             return -1;
@@ -463,13 +471,15 @@ static void print_usage(const char *prog)
 {
     fprintf(stderr,
         "Usage: %s -d <decoder_name> -t <testdata_dir> [-o <output_dir>] "
-        "[--tolerance N] [--generate-only] [--python]\n\n"
+        "[--tolerance N] [--generate-only] [--python] [--top-only]\n\n"
         "  -d <decoder_name>   Decoder ID (e.g. \"spi_c\" for C, \"spi\" for Python)\n"
         "  -t <testdata_dir>   Directory containing config.json, input.bin, expected.json\n"
         "  -o <output_dir>     Output directory for actual.json (default: same as testdata_dir)\n"
         "  --tolerance N       Sample range tolerance for comparison (default: 0)\n"
         "  --generate-only     Only run decoder and output actual.json, skip comparison\n"
-        "  --python            Run Python decoder instead of C decoder\n",
+        "  --python            Run Python decoder instead of C decoder\n"
+        "  --top-only          Only collect the annotations of the -d decoder, not those\n"
+        "                      of the decoders below it (also \"top_only\": true in config.json)\n",
         prog);
 }
 
@@ -748,6 +758,12 @@ int main(int argc, char **argv)
         srd_session_destroy(sess); free(inbuf); free(inbuf_const); free(input_data); cJSON_Delete(config);
         return 2;
     }
+
+    /* A stacked run also reports the annotations of the decoders below,
+     * which belong to the test cases of those decoders. */
+    cJSON *j_top_only = cJSON_GetObjectItem(config, "top_only");
+    if (args.top_only || (j_top_only && cJSON_IsTrue(j_top_only)))
+        collect_only_di = di;
 
     GHashTable *ch_hash = g_hash_table_new_full(g_str_hash, g_str_equal, g_free, (GDestroyNotify)g_variant_unref);
     if (j_channels && cJSON_IsObject(j_channels)) {
