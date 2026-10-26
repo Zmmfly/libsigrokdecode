@@ -34,6 +34,11 @@ The elrs_c/two_lines case is the exception: the Python decoder mixes the
 bytes of both UART lines, the port assembles them separately. Its
 reference is the output of elrs_c, and its config sets
 "expected_deviations". Generate it with -d elrs_c instead of -d elrs.
+
+The dshot_c/capture_* cases are not generated: they are cropped from logic
+analyzer captures of real hardware (an N32H474 DShot generator with
+injected errors, decimated to 25 MHz). Their reference is the output of
+the Python decoder as well.
 """
 
 import json

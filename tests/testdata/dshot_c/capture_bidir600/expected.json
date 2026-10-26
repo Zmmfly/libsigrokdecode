@@ -1,0 +1,327 @@
+{
+	"decoder": "dshot",
+	"samplerate": 25000000,
+	"num_annotations": 30,
+	"annotations": [
+		{
+			"start_sample": 2500,
+			"end_sample": 3166,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M4 DShot600 bidir 0x8153", 
+				"M4 0x8153", 
+				"M4"
+			]
+		}, 
+		{
+			"start_sample": 2500,
+			"end_sample": 3166,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Throttle 1034 (49.3%)", 
+				"1034 (49%)", 
+				"49%"
+			]
+		}, 
+		{
+			"start_sample": 2500,
+			"end_sample": 3166,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0x3 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 2500,
+			"end_sample": 3166,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"Telemetry requested", 
+				"TLM req"
+			]
+		}, 
+		{
+			"start_sample": 3917,
+			"end_sample": 4617,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"eRPM 80863 (period 742 us, raw 0x373) (checksum error)", 
+				"eRPM 80863 (742 us)", 
+				"80863 eRPM"
+			]
+		}, 
+		{
+			"start_sample": 3917,
+			"end_sample": 4617,
+			"ann_class": 6,
+			"ann_type": 13,
+			"texts": [
+				"Telemetry checksum mismatch, nibble XOR 0xa", 
+				"Telemetry checksum error", 
+				"TLM CRC error"
+			]
+		}, 
+		{
+			"start_sample": 27501,
+			"end_sample": 28167,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M4 DShot600 bidir 0xdcf1", 
+				"M4 0xdcf1", 
+				"M4"
+			]
+		}, 
+		{
+			"start_sample": 27501,
+			"end_sample": 28167,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Throttle 1767 (86.0%)", 
+				"1767 (86%)", 
+				"86%"
+			]
+		}, 
+		{
+			"start_sample": 27501,
+			"end_sample": 28167,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0x1 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 27501,
+			"end_sample": 28167,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"Telemetry requested", 
+				"TLM req"
+			]
+		}, 
+		{
+			"start_sample": 28918,
+			"end_sample": 29617,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"eRPM 80863 (period 742 us, raw 0x373)", 
+				"eRPM 80863 (742 us)", 
+				"80863 eRPM"
+			]
+		}, 
+		{
+			"start_sample": 52502,
+			"end_sample": 53168,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M4 DShot600 bidir 0x3e8b", 
+				"M4 0x3e8b", 
+				"M4"
+			]
+		}, 
+		{
+			"start_sample": 52502,
+			"end_sample": 53168,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Throttle 500 (22.6%)", 
+				"500 (23%)", 
+				"23%"
+			]
+		}, 
+		{
+			"start_sample": 52502,
+			"end_sample": 53168,
+			"ann_class": 6,
+			"ann_type": 13,
+			"texts": [
+				"Checksum mismatch, got 0xb expected 0xa", 
+				"Checksum mismatch", 
+				"CRC error"
+			]
+		}, 
+		{
+			"start_sample": 52502,
+			"end_sample": 53168,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0xb, expected 0xa", 
+				"CRC bad"
+			]
+		}, 
+		{
+			"start_sample": 53919,
+			"end_sample": 54618,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"eRPM 80645 (period 744 us, raw 0x374)", 
+				"eRPM 80645 (744 us)", 
+				"80645 eRPM"
+			]
+		}, 
+		{
+			"start_sample": 77503,
+			"end_sample": 78169,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M4 DShot600 bidir 0x9a2e", 
+				"M4 0x9a2e", 
+				"M4"
+			]
+		}, 
+		{
+			"start_sample": 77503,
+			"end_sample": 78169,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Throttle 1233 (59.3%)", 
+				"1233 (59%)", 
+				"59%"
+			]
+		}, 
+		{
+			"start_sample": 77503,
+			"end_sample": 78169,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0xe correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 78169,
+			"end_sample": 79669,
+			"ann_class": 6,
+			"ann_type": 13,
+			"texts": [
+				"No telemetry response", 
+				"No response", 
+				"No TLM"
+			]
+		}, 
+		{
+			"start_sample": 102504,
+			"end_sample": 103170,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M4 DShot600 bidir 0xf5d8", 
+				"M4 0xf5d8", 
+				"M4"
+			]
+		}, 
+		{
+			"start_sample": 102504,
+			"end_sample": 103170,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Throttle 1966 (95.9%)", 
+				"1966 (96%)", 
+				"96%"
+			]
+		}, 
+		{
+			"start_sample": 102504,
+			"end_sample": 103170,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0x8 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 102504,
+			"end_sample": 103170,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"Telemetry requested", 
+				"TLM req"
+			]
+		}, 
+		{
+			"start_sample": 103920,
+			"end_sample": 104620,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"eRPM 80429 (period 746 us, raw 0x375)", 
+				"eRPM 80429 (746 us)", 
+				"80429 eRPM"
+			]
+		}, 
+		{
+			"start_sample": 127504,
+			"end_sample": 128170,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M4 DShot600 bidir 0x577a", 
+				"M4 0x577a", 
+				"M4"
+			]
+		}, 
+		{
+			"start_sample": 127504,
+			"end_sample": 128170,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Throttle 699 (32.6%)", 
+				"699 (33%)", 
+				"33%"
+			]
+		}, 
+		{
+			"start_sample": 127504,
+			"end_sample": 128170,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0xa correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 127504,
+			"end_sample": 128170,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"Telemetry requested", 
+				"TLM req"
+			]
+		}, 
+		{
+			"start_sample": 128921,
+			"end_sample": 129620,
+			"ann_class": 6,
+			"ann_type": 13,
+			"texts": [
+				"Invalid GCR symbol 0x00 in telemetry response", 
+				"Invalid GCR symbol", 
+				"GCR error"
+			]
+		}
+	]
+}
