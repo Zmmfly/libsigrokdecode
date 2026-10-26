@@ -1,0 +1,20 @@
+{
+  "decoder": "crsf_c",
+  "channels": {},
+  "options": {},
+  "stack": [
+    {
+      "id": "uart_c",
+      "channels": {
+        "rx": 0
+      },
+      "options": {
+        "baudrate": 420000
+      }
+    }
+  ],
+  "top_only": true,
+  "samplerate": 42000000,
+  "num_channels": 1,
+  "sample_count": 25000
+}

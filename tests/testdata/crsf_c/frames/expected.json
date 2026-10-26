@@ -1,0 +1,3011 @@
+{
+	"decoder": "crsf",
+	"samplerate": 42000000,
+	"num_annotations": 328,
+	"annotations": [
+		{
+			"start_sample": 300,
+			"end_sample": 1100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Unknown packet type0"
+			]
+		}, 
+		{
+			"start_sample": 1300,
+			"end_sample": 2100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Unknown packet type85"
+			]
+		}, 
+		{
+			"start_sample": 2300,
+			"end_sample": 3100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"To Flight Controller", 
+				"To FC"
+			]
+		}, 
+		{
+			"start_sample": 3300,
+			"end_sample": 4100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Num of bytes succeeding: 22"
+			]
+		}, 
+		{
+			"start_sample": 4300,
+			"end_sample": 5100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"CRSF_FRAMETYPE_RC_CHANNELS_PACKED"
+			]
+		}, 
+		{
+			"start_sample": 5300,
+			"end_sample": 6600,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Chan:0 Value:172"
+			]
+		}, 
+		{
+			"start_sample": 6600,
+			"end_sample": 7900,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Chan:1 Value:992"
+			]
+		}, 
+		{
+			"start_sample": 7900,
+			"end_sample": 9400,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Chan:2 Value:1811"
+			]
+		}, 
+		{
+			"start_sample": 9400,
+			"end_sample": 10700,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Chan:3 Value:0"
+			]
+		}, 
+		{
+			"start_sample": 10700,
+			"end_sample": 12000,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Chan:4 Value:2047"
+			]
+		}, 
+		{
+			"start_sample": 12000,
+			"end_sample": 13500,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Chan:5 Value:1000"
+			]
+		}, 
+		{
+			"start_sample": 13500,
+			"end_sample": 14800,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Chan:6 Value:1500"
+			]
+		}, 
+		{
+			"start_sample": 14800,
+			"end_sample": 16100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Chan:7 Value:500"
+			]
+		}, 
+		{
+			"start_sample": 16300,
+			"end_sample": 17600,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Chan:8 Value:992"
+			]
+		}, 
+		{
+			"start_sample": 17600,
+			"end_sample": 18900,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Chan:9 Value:992"
+			]
+		}, 
+		{
+			"start_sample": 18900,
+			"end_sample": 20400,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Chan:10 Value:992"
+			]
+		}, 
+		{
+			"start_sample": 20400,
+			"end_sample": 21700,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Chan:11 Value:992"
+			]
+		}, 
+		{
+			"start_sample": 21700,
+			"end_sample": 23000,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Chan:12 Value:992"
+			]
+		}, 
+		{
+			"start_sample": 23000,
+			"end_sample": 24500,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Chan:13 Value:992"
+			]
+		}, 
+		{
+			"start_sample": 24500,
+			"end_sample": 25800,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Chan:14 Value:992"
+			]
+		}, 
+		{
+			"start_sample": 25800,
+			"end_sample": 27100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Chan:15 Value:992"
+			]
+		}, 
+		{
+			"start_sample": 27300,
+			"end_sample": 28100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Checksum crc8 poly 0xD5."
+			]
+		}, 
+		{
+			"start_sample": 28300,
+			"end_sample": 29100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"To Flight Controller", 
+				"To FC"
+			]
+		}, 
+		{
+			"start_sample": 29300,
+			"end_sample": 30100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Num of bytes succeeding: 23"
+			]
+		}, 
+		{
+			"start_sample": 30300,
+			"end_sample": 31100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"CRSF_FRAMETYPE_RC_CHANNELS_PACKED"
+			]
+		}, 
+		{
+			"start_sample": 31300,
+			"end_sample": 32600,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Chan:0 Value:992"
+			]
+		}, 
+		{
+			"start_sample": 32600,
+			"end_sample": 33900,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Chan:1 Value:992"
+			]
+		}, 
+		{
+			"start_sample": 33900,
+			"end_sample": 35400,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Chan:2 Value:992"
+			]
+		}, 
+		{
+			"start_sample": 35400,
+			"end_sample": 36700,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Chan:3 Value:992"
+			]
+		}, 
+		{
+			"start_sample": 36700,
+			"end_sample": 38000,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Chan:4 Value:992"
+			]
+		}, 
+		{
+			"start_sample": 38000,
+			"end_sample": 39500,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Chan:5 Value:992"
+			]
+		}, 
+		{
+			"start_sample": 39500,
+			"end_sample": 40800,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Chan:6 Value:992"
+			]
+		}, 
+		{
+			"start_sample": 40800,
+			"end_sample": 42100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Chan:7 Value:992"
+			]
+		}, 
+		{
+			"start_sample": 42300,
+			"end_sample": 43600,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Chan:8 Value:992"
+			]
+		}, 
+		{
+			"start_sample": 43600,
+			"end_sample": 44900,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Chan:9 Value:992"
+			]
+		}, 
+		{
+			"start_sample": 44900,
+			"end_sample": 46400,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Chan:10 Value:992"
+			]
+		}, 
+		{
+			"start_sample": 46400,
+			"end_sample": 47700,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Chan:11 Value:992"
+			]
+		}, 
+		{
+			"start_sample": 47700,
+			"end_sample": 49000,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Chan:12 Value:992"
+			]
+		}, 
+		{
+			"start_sample": 49000,
+			"end_sample": 50500,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Chan:13 Value:992"
+			]
+		}, 
+		{
+			"start_sample": 50500,
+			"end_sample": 51800,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Chan:14 Value:992"
+			]
+		}, 
+		{
+			"start_sample": 51800,
+			"end_sample": 53100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Chan:15 Value:992"
+			]
+		}, 
+		{
+			"start_sample": 54300,
+			"end_sample": 55100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Checksum crc8 poly 0xD5."
+			]
+		}, 
+		{
+			"start_sample": 55300,
+			"end_sample": 56100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"To Flight Controller", 
+				"To FC"
+			]
+		}, 
+		{
+			"start_sample": 56300,
+			"end_sample": 57100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Num of bytes succeeding: 10"
+			]
+		}, 
+		{
+			"start_sample": 57300,
+			"end_sample": 58100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"CRSF_FRAMETYPE_RC_CHANNELS_PACKED"
+			]
+		}, 
+		{
+			"start_sample": 58300,
+			"end_sample": 68100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"CRSF_FRAMETYPE_RC_CHANNELS_PACKED (10 bytes payload)"
+			]
+		}, 
+		{
+			"start_sample": 68300,
+			"end_sample": 69100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Checksum crc8 poly 0xD5."
+			]
+		}, 
+		{
+			"start_sample": 69300,
+			"end_sample": 70100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"To Flight Controller", 
+				"To FC"
+			]
+		}, 
+		{
+			"start_sample": 70300,
+			"end_sample": 71100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Num of bytes succeeding: 22"
+			]
+		}, 
+		{
+			"start_sample": 71300,
+			"end_sample": 72100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"CRSF_FRAMETYPE_RC_CHANNELS_PACKED"
+			]
+		}, 
+		{
+			"start_sample": 72300,
+			"end_sample": 73600,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Chan:0 Value:172"
+			]
+		}, 
+		{
+			"start_sample": 73600,
+			"end_sample": 74900,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Chan:1 Value:992"
+			]
+		}, 
+		{
+			"start_sample": 74900,
+			"end_sample": 76400,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Chan:2 Value:1811"
+			]
+		}, 
+		{
+			"start_sample": 76400,
+			"end_sample": 77700,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Chan:3 Value:0"
+			]
+		}, 
+		{
+			"start_sample": 77700,
+			"end_sample": 79000,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Chan:4 Value:2047"
+			]
+		}, 
+		{
+			"start_sample": 79000,
+			"end_sample": 80500,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Chan:5 Value:1000"
+			]
+		}, 
+		{
+			"start_sample": 80500,
+			"end_sample": 81800,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Chan:6 Value:1500"
+			]
+		}, 
+		{
+			"start_sample": 81800,
+			"end_sample": 83100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Chan:7 Value:500"
+			]
+		}, 
+		{
+			"start_sample": 83300,
+			"end_sample": 84600,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Chan:8 Value:992"
+			]
+		}, 
+		{
+			"start_sample": 84600,
+			"end_sample": 85900,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Chan:9 Value:992"
+			]
+		}, 
+		{
+			"start_sample": 85900,
+			"end_sample": 87400,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Chan:10 Value:992"
+			]
+		}, 
+		{
+			"start_sample": 87400,
+			"end_sample": 88700,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Chan:11 Value:992"
+			]
+		}, 
+		{
+			"start_sample": 88700,
+			"end_sample": 90000,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Chan:12 Value:992"
+			]
+		}, 
+		{
+			"start_sample": 90000,
+			"end_sample": 91500,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Chan:13 Value:992"
+			]
+		}, 
+		{
+			"start_sample": 91500,
+			"end_sample": 92800,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Chan:14 Value:992"
+			]
+		}, 
+		{
+			"start_sample": 92800,
+			"end_sample": 94100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Chan:15 Value:992"
+			]
+		}, 
+		{
+			"start_sample": 94300,
+			"end_sample": 95100,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Checksum 0x12, expected 0x47", 
+				"Checksum error"
+			]
+		}, 
+		{
+			"start_sample": 95300,
+			"end_sample": 96100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"To Receiver", 
+				"To RX"
+			]
+		}, 
+		{
+			"start_sample": 96300,
+			"end_sample": 97100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Num of bytes succeeding: 10"
+			]
+		}, 
+		{
+			"start_sample": 97300,
+			"end_sample": 98100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"LINK_STATISTICS"
+			]
+		}, 
+		{
+			"start_sample": 98300,
+			"end_sample": 99100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Uplink RSSI 1: -60dB"
+			]
+		}, 
+		{
+			"start_sample": 99300,
+			"end_sample": 100100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Uplink RSSI 2: -62dB"
+			]
+		}, 
+		{
+			"start_sample": 100300,
+			"end_sample": 101100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Uplink Link Quality: 100"
+			]
+		}, 
+		{
+			"start_sample": 101300,
+			"end_sample": 102100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Uplink SNR: 8dB"
+			]
+		}, 
+		{
+			"start_sample": 102300,
+			"end_sample": 103100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Active Antenna: 0"
+			]
+		}, 
+		{
+			"start_sample": 103300,
+			"end_sample": 104100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"RF Mode: 27"
+			]
+		}, 
+		{
+			"start_sample": 104300,
+			"end_sample": 105100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Uplink TX Power: 100 mW"
+			]
+		}, 
+		{
+			"start_sample": 105300,
+			"end_sample": 106100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Downlink RSSI: -55dB"
+			]
+		}, 
+		{
+			"start_sample": 106300,
+			"end_sample": 107100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Downlink Link Quality: 97"
+			]
+		}, 
+		{
+			"start_sample": 107300,
+			"end_sample": 108100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Downlink SNR: 5dB"
+			]
+		}, 
+		{
+			"start_sample": 108300,
+			"end_sample": 109100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Checksum crc8 poly 0xD5."
+			]
+		}, 
+		{
+			"start_sample": 109300,
+			"end_sample": 110100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"To Handset", 
+				"To HS"
+			]
+		}, 
+		{
+			"start_sample": 110300,
+			"end_sample": 111100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Num of bytes succeeding: 10"
+			]
+		}, 
+		{
+			"start_sample": 111300,
+			"end_sample": 112100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"LINK_STATISTICS"
+			]
+		}, 
+		{
+			"start_sample": 112300,
+			"end_sample": 113100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Uplink RSSI 1: -100dB"
+			]
+		}, 
+		{
+			"start_sample": 113300,
+			"end_sample": 114100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Uplink RSSI 2: -0dB"
+			]
+		}, 
+		{
+			"start_sample": 114300,
+			"end_sample": 115100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Uplink Link Quality: 50"
+			]
+		}, 
+		{
+			"start_sample": 115300,
+			"end_sample": 116100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Uplink SNR: -10dB"
+			]
+		}, 
+		{
+			"start_sample": 116300,
+			"end_sample": 117100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Active Antenna: 1"
+			]
+		}, 
+		{
+			"start_sample": 117300,
+			"end_sample": 118100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"RF Mode: 50"
+			]
+		}, 
+		{
+			"start_sample": 118300,
+			"end_sample": 119100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Uplink TX Power: 250 mW"
+			]
+		}, 
+		{
+			"start_sample": 119300,
+			"end_sample": 120100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Downlink RSSI: -120dB"
+			]
+		}, 
+		{
+			"start_sample": 120300,
+			"end_sample": 121100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Downlink Link Quality: 10"
+			]
+		}, 
+		{
+			"start_sample": 121300,
+			"end_sample": 122100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Downlink SNR: -128dB"
+			]
+		}, 
+		{
+			"start_sample": 122300,
+			"end_sample": 123100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Checksum crc8 poly 0xD5."
+			]
+		}, 
+		{
+			"start_sample": 123300,
+			"end_sample": 124100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"To Handset", 
+				"To HS"
+			]
+		}, 
+		{
+			"start_sample": 124300,
+			"end_sample": 125100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Num of bytes succeeding: 10"
+			]
+		}, 
+		{
+			"start_sample": 125300,
+			"end_sample": 126100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"LINK_STATISTICS"
+			]
+		}, 
+		{
+			"start_sample": 126300,
+			"end_sample": 127100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Uplink RSSI 1: -90dB"
+			]
+		}, 
+		{
+			"start_sample": 127300,
+			"end_sample": 128100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Uplink RSSI 2: -91dB"
+			]
+		}, 
+		{
+			"start_sample": 128300,
+			"end_sample": 129100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Uplink Link Quality: 70"
+			]
+		}, 
+		{
+			"start_sample": 129300,
+			"end_sample": 130100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Uplink SNR: -127dB"
+			]
+		}, 
+		{
+			"start_sample": 130300,
+			"end_sample": 131100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Active Antenna: 0"
+			]
+		}, 
+		{
+			"start_sample": 131300,
+			"end_sample": 132100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"RF Mode: 2"
+			]
+		}, 
+		{
+			"start_sample": 132300,
+			"end_sample": 133100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Uplink TX Power: 50 mW"
+			]
+		}, 
+		{
+			"start_sample": 133300,
+			"end_sample": 134100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Downlink RSSI: -99dB"
+			]
+		}, 
+		{
+			"start_sample": 134300,
+			"end_sample": 135100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Downlink Link Quality: 50"
+			]
+		}, 
+		{
+			"start_sample": 135300,
+			"end_sample": 136100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Downlink SNR: 127dB"
+			]
+		}, 
+		{
+			"start_sample": 136300,
+			"end_sample": 137100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Checksum crc8 poly 0xD5."
+			]
+		}, 
+		{
+			"start_sample": 137300,
+			"end_sample": 138100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"To Handset", 
+				"To HS"
+			]
+		}, 
+		{
+			"start_sample": 138300,
+			"end_sample": 139100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Num of bytes succeeding: 10"
+			]
+		}, 
+		{
+			"start_sample": 139300,
+			"end_sample": 140100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"LINK_STATISTICS"
+			]
+		}, 
+		{
+			"start_sample": 140300,
+			"end_sample": 141100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Uplink RSSI 1: -90dB"
+			]
+		}, 
+		{
+			"start_sample": 141300,
+			"end_sample": 142100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Uplink RSSI 2: -91dB"
+			]
+		}, 
+		{
+			"start_sample": 142300,
+			"end_sample": 143100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Uplink Link Quality: 70"
+			]
+		}, 
+		{
+			"start_sample": 143300,
+			"end_sample": 144100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Uplink SNR: 12dB"
+			]
+		}, 
+		{
+			"start_sample": 144300,
+			"end_sample": 145100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Active Antenna: 0"
+			]
+		}, 
+		{
+			"start_sample": 145300,
+			"end_sample": 146100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"RF Mode: 2"
+			]
+		}, 
+		{
+			"start_sample": 146300,
+			"end_sample": 147100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Uplink TX Power: level 9"
+			]
+		}, 
+		{
+			"start_sample": 147300,
+			"end_sample": 148100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Downlink RSSI: -99dB"
+			]
+		}, 
+		{
+			"start_sample": 148300,
+			"end_sample": 149100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Downlink Link Quality: 50"
+			]
+		}, 
+		{
+			"start_sample": 149300,
+			"end_sample": 150100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Downlink SNR: 0dB"
+			]
+		}, 
+		{
+			"start_sample": 150300,
+			"end_sample": 151100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Checksum crc8 poly 0xD5."
+			]
+		}, 
+		{
+			"start_sample": 151300,
+			"end_sample": 152100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"To Flight Controller", 
+				"To FC"
+			]
+		}, 
+		{
+			"start_sample": 152300,
+			"end_sample": 153100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Num of bytes succeeding: 3"
+			]
+		}, 
+		{
+			"start_sample": 153300,
+			"end_sample": 154100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"LINK_STATISTICS"
+			]
+		}, 
+		{
+			"start_sample": 154300,
+			"end_sample": 157100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"LINK_STATISTICS (3 bytes payload)"
+			]
+		}, 
+		{
+			"start_sample": 157300,
+			"end_sample": 158100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Checksum crc8 poly 0xD5."
+			]
+		}, 
+		{
+			"start_sample": 158300,
+			"end_sample": 159100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"To Handset", 
+				"To HS"
+			]
+		}, 
+		{
+			"start_sample": 159300,
+			"end_sample": 160100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Num of bytes succeeding: 15"
+			]
+		}, 
+		{
+			"start_sample": 160300,
+			"end_sample": 161100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"GPS"
+			]
+		}, 
+		{
+			"start_sample": 161300,
+			"end_sample": 176100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"GPS: -3.3856000, 151.2150000, 12.3 km/h, heading 270.00 deg, 100 m, 12 satellite(s)"
+			]
+		}, 
+		{
+			"start_sample": 176300,
+			"end_sample": 177100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Checksum crc8 poly 0xD5."
+			]
+		}, 
+		{
+			"start_sample": 177300,
+			"end_sample": 178100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"To Handset", 
+				"To HS"
+			]
+		}, 
+		{
+			"start_sample": 178300,
+			"end_sample": 179100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Num of bytes succeeding: 15"
+			]
+		}, 
+		{
+			"start_sample": 179300,
+			"end_sample": 180100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"GPS"
+			]
+		}, 
+		{
+			"start_sample": 180300,
+			"end_sample": 195100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"GPS: 31.1234567, -121.4567890, 0.0 km/h, heading 0.00 deg, -1000 m, 0 satellite(s)"
+			]
+		}, 
+		{
+			"start_sample": 195300,
+			"end_sample": 196100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Checksum crc8 poly 0xD5."
+			]
+		}, 
+		{
+			"start_sample": 196300,
+			"end_sample": 197100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"To Handset", 
+				"To HS"
+			]
+		}, 
+		{
+			"start_sample": 197300,
+			"end_sample": 198100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Num of bytes succeeding: 3"
+			]
+		}, 
+		{
+			"start_sample": 198300,
+			"end_sample": 199100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"GPS"
+			]
+		}, 
+		{
+			"start_sample": 199300,
+			"end_sample": 202100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"GPS (3 bytes payload)"
+			]
+		}, 
+		{
+			"start_sample": 202300,
+			"end_sample": 203100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Checksum crc8 poly 0xD5."
+			]
+		}, 
+		{
+			"start_sample": 203300,
+			"end_sample": 204100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"To Handset", 
+				"To HS"
+			]
+		}, 
+		{
+			"start_sample": 204300,
+			"end_sample": 205100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Num of bytes succeeding: 2"
+			]
+		}, 
+		{
+			"start_sample": 205300,
+			"end_sample": 206100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Vario"
+			]
+		}, 
+		{
+			"start_sample": 206300,
+			"end_sample": 208100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Vario: -0.56 m/s"
+			]
+		}, 
+		{
+			"start_sample": 208300,
+			"end_sample": 209100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Checksum crc8 poly 0xD5."
+			]
+		}, 
+		{
+			"start_sample": 209300,
+			"end_sample": 210100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"To Handset", 
+				"To HS"
+			]
+		}, 
+		{
+			"start_sample": 210300,
+			"end_sample": 211100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Num of bytes succeeding: 2"
+			]
+		}, 
+		{
+			"start_sample": 211300,
+			"end_sample": 212100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Vario"
+			]
+		}, 
+		{
+			"start_sample": 212300,
+			"end_sample": 214100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Vario: 1.99 m/s"
+			]
+		}, 
+		{
+			"start_sample": 214300,
+			"end_sample": 215100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Checksum crc8 poly 0xD5."
+			]
+		}, 
+		{
+			"start_sample": 215300,
+			"end_sample": 216100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"To Handset", 
+				"To HS"
+			]
+		}, 
+		{
+			"start_sample": 216300,
+			"end_sample": 217100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Num of bytes succeeding: 2"
+			]
+		}, 
+		{
+			"start_sample": 217300,
+			"end_sample": 218100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Vario"
+			]
+		}, 
+		{
+			"start_sample": 218300,
+			"end_sample": 220100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Vario: 0.00 m/s"
+			]
+		}, 
+		{
+			"start_sample": 220300,
+			"end_sample": 221100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Checksum crc8 poly 0xD5."
+			]
+		}, 
+		{
+			"start_sample": 221300,
+			"end_sample": 222100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"To Handset", 
+				"To HS"
+			]
+		}, 
+		{
+			"start_sample": 222300,
+			"end_sample": 223100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Num of bytes succeeding: 1"
+			]
+		}, 
+		{
+			"start_sample": 223300,
+			"end_sample": 224100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Vario"
+			]
+		}, 
+		{
+			"start_sample": 224300,
+			"end_sample": 225100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Vario (1 bytes payload)"
+			]
+		}, 
+		{
+			"start_sample": 225300,
+			"end_sample": 226100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Checksum crc8 poly 0xD5."
+			]
+		}, 
+		{
+			"start_sample": 226300,
+			"end_sample": 227100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"To Handset", 
+				"To HS"
+			]
+		}, 
+		{
+			"start_sample": 227300,
+			"end_sample": 228100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Num of bytes succeeding: 2"
+			]
+		}, 
+		{
+			"start_sample": 228300,
+			"end_sample": 229100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Vario"
+			]
+		}, 
+		{
+			"start_sample": 229300,
+			"end_sample": 231100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Vario: -3.00 m/s"
+			]
+		}, 
+		{
+			"start_sample": 231300,
+			"end_sample": 232100,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Checksum 0x2b, expected 0x8e", 
+				"Checksum error"
+			]
+		}, 
+		{
+			"start_sample": 232300,
+			"end_sample": 233100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"To Handset", 
+				"To HS"
+			]
+		}, 
+		{
+			"start_sample": 233300,
+			"end_sample": 234100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Num of bytes succeeding: 8"
+			]
+		}, 
+		{
+			"start_sample": 234300,
+			"end_sample": 235100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Battery sensor"
+			]
+		}, 
+		{
+			"start_sample": 235300,
+			"end_sample": 243100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Battery: 16.8 V, 12.5 A, 1300 mAh, 75%"
+			]
+		}, 
+		{
+			"start_sample": 243300,
+			"end_sample": 244100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Checksum crc8 poly 0xD5."
+			]
+		}, 
+		{
+			"start_sample": 244300,
+			"end_sample": 245100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"To Handset", 
+				"To HS"
+			]
+		}, 
+		{
+			"start_sample": 245300,
+			"end_sample": 246100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Num of bytes succeeding: 7"
+			]
+		}, 
+		{
+			"start_sample": 246300,
+			"end_sample": 247100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Battery sensor"
+			]
+		}, 
+		{
+			"start_sample": 247300,
+			"end_sample": 254100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Battery: 11.1 V, 0.5 A, 7 mAh"
+			]
+		}, 
+		{
+			"start_sample": 254300,
+			"end_sample": 255100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Checksum crc8 poly 0xD5."
+			]
+		}, 
+		{
+			"start_sample": 255300,
+			"end_sample": 256100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"To Handset", 
+				"To HS"
+			]
+		}, 
+		{
+			"start_sample": 256300,
+			"end_sample": 257100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Num of bytes succeeding: 5"
+			]
+		}, 
+		{
+			"start_sample": 257300,
+			"end_sample": 258100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Battery sensor"
+			]
+		}, 
+		{
+			"start_sample": 258300,
+			"end_sample": 263100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Battery sensor (5 bytes payload)"
+			]
+		}, 
+		{
+			"start_sample": 263300,
+			"end_sample": 264100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Checksum crc8 poly 0xD5."
+			]
+		}, 
+		{
+			"start_sample": 264300,
+			"end_sample": 265100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"To Handset", 
+				"To HS"
+			]
+		}, 
+		{
+			"start_sample": 265300,
+			"end_sample": 266100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Num of bytes succeeding: 3"
+			]
+		}, 
+		{
+			"start_sample": 266300,
+			"end_sample": 267100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Baro altitude"
+			]
+		}, 
+		{
+			"start_sample": 267300,
+			"end_sample": 270100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Baro altitude: 123.4 m, vertical speed -2.67 m/s"
+			]
+		}, 
+		{
+			"start_sample": 270300,
+			"end_sample": 271100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Checksum crc8 poly 0xD5."
+			]
+		}, 
+		{
+			"start_sample": 271300,
+			"end_sample": 272100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"To Handset", 
+				"To HS"
+			]
+		}, 
+		{
+			"start_sample": 272300,
+			"end_sample": 273100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Num of bytes succeeding: 3"
+			]
+		}, 
+		{
+			"start_sample": 273300,
+			"end_sample": 274100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Baro altitude"
+			]
+		}, 
+		{
+			"start_sample": 274300,
+			"end_sample": 277100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Baro altitude: -5.5 m, vertical speed 0.00 m/s"
+			]
+		}, 
+		{
+			"start_sample": 277300,
+			"end_sample": 278100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Checksum crc8 poly 0xD5."
+			]
+		}, 
+		{
+			"start_sample": 278300,
+			"end_sample": 279100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"To Handset", 
+				"To HS"
+			]
+		}, 
+		{
+			"start_sample": 279300,
+			"end_sample": 280100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Num of bytes succeeding: 3"
+			]
+		}, 
+		{
+			"start_sample": 280300,
+			"end_sample": 281100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Baro altitude"
+			]
+		}, 
+		{
+			"start_sample": 281300,
+			"end_sample": 284100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Baro altitude: 0.0 m, vertical speed 26.17 m/s"
+			]
+		}, 
+		{
+			"start_sample": 284300,
+			"end_sample": 285100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Checksum crc8 poly 0xD5."
+			]
+		}, 
+		{
+			"start_sample": 285300,
+			"end_sample": 286100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"To Handset", 
+				"To HS"
+			]
+		}, 
+		{
+			"start_sample": 286300,
+			"end_sample": 287100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Num of bytes succeeding: 3"
+			]
+		}, 
+		{
+			"start_sample": 287300,
+			"end_sample": 288100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Baro altitude"
+			]
+		}, 
+		{
+			"start_sample": 288300,
+			"end_sample": 291100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Baro altitude: 0.1 m, vertical speed -26.88 m/s"
+			]
+		}, 
+		{
+			"start_sample": 291300,
+			"end_sample": 292100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Checksum crc8 poly 0xD5."
+			]
+		}, 
+		{
+			"start_sample": 292300,
+			"end_sample": 293100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"To Handset", 
+				"To HS"
+			]
+		}, 
+		{
+			"start_sample": 293300,
+			"end_sample": 294100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Num of bytes succeeding: 3"
+			]
+		}, 
+		{
+			"start_sample": 294300,
+			"end_sample": 295100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Baro altitude"
+			]
+		}, 
+		{
+			"start_sample": 295300,
+			"end_sample": 298100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Baro altitude: 0.0 m, vertical speed -0.03 m/s"
+			]
+		}, 
+		{
+			"start_sample": 298300,
+			"end_sample": 299100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Checksum crc8 poly 0xD5."
+			]
+		}, 
+		{
+			"start_sample": 299300,
+			"end_sample": 300100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"To Handset", 
+				"To HS"
+			]
+		}, 
+		{
+			"start_sample": 300300,
+			"end_sample": 301100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Num of bytes succeeding: 3"
+			]
+		}, 
+		{
+			"start_sample": 301300,
+			"end_sample": 302100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Baro altitude"
+			]
+		}, 
+		{
+			"start_sample": 302300,
+			"end_sample": 305100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Baro altitude: 3000 m, vertical speed 0.03 m/s"
+			]
+		}, 
+		{
+			"start_sample": 305300,
+			"end_sample": 306100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Checksum crc8 poly 0xD5."
+			]
+		}, 
+		{
+			"start_sample": 306300,
+			"end_sample": 307100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"To Handset", 
+				"To HS"
+			]
+		}, 
+		{
+			"start_sample": 307300,
+			"end_sample": 308100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Num of bytes succeeding: 2"
+			]
+		}, 
+		{
+			"start_sample": 308300,
+			"end_sample": 309100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Baro altitude"
+			]
+		}, 
+		{
+			"start_sample": 309300,
+			"end_sample": 311100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Baro altitude: -1000.0 m"
+			]
+		}, 
+		{
+			"start_sample": 311300,
+			"end_sample": 312100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Checksum crc8 poly 0xD5."
+			]
+		}, 
+		{
+			"start_sample": 312300,
+			"end_sample": 313100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"To Handset", 
+				"To HS"
+			]
+		}, 
+		{
+			"start_sample": 313300,
+			"end_sample": 314100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Num of bytes succeeding: 4"
+			]
+		}, 
+		{
+			"start_sample": 314300,
+			"end_sample": 315100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Baro altitude"
+			]
+		}, 
+		{
+			"start_sample": 315300,
+			"end_sample": 319100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Baro altitude: 50.0 m"
+			]
+		}, 
+		{
+			"start_sample": 319300,
+			"end_sample": 320100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Checksum crc8 poly 0xD5."
+			]
+		}, 
+		{
+			"start_sample": 320300,
+			"end_sample": 321100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"To Handset", 
+				"To HS"
+			]
+		}, 
+		{
+			"start_sample": 321300,
+			"end_sample": 322100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Num of bytes succeeding: 1"
+			]
+		}, 
+		{
+			"start_sample": 322300,
+			"end_sample": 323100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Baro altitude"
+			]
+		}, 
+		{
+			"start_sample": 323300,
+			"end_sample": 324100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Baro altitude (1 bytes payload)"
+			]
+		}, 
+		{
+			"start_sample": 324300,
+			"end_sample": 325100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Checksum crc8 poly 0xD5."
+			]
+		}, 
+		{
+			"start_sample": 325300,
+			"end_sample": 326100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"To Handset", 
+				"To HS"
+			]
+		}, 
+		{
+			"start_sample": 326300,
+			"end_sample": 327100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Num of bytes succeeding: 6"
+			]
+		}, 
+		{
+			"start_sample": 327300,
+			"end_sample": 328100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Attitude"
+			]
+		}, 
+		{
+			"start_sample": 328300,
+			"end_sample": 334100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Attitude: pitch -0.1234 rad, roll 0.5678 rad, yaw -3.1415 rad"
+			]
+		}, 
+		{
+			"start_sample": 334300,
+			"end_sample": 335100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Checksum crc8 poly 0xD5."
+			]
+		}, 
+		{
+			"start_sample": 335300,
+			"end_sample": 336100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"To Handset", 
+				"To HS"
+			]
+		}, 
+		{
+			"start_sample": 336300,
+			"end_sample": 337100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Num of bytes succeeding: 3"
+			]
+		}, 
+		{
+			"start_sample": 337300,
+			"end_sample": 338100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Attitude"
+			]
+		}, 
+		{
+			"start_sample": 338300,
+			"end_sample": 341100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Attitude (3 bytes payload)"
+			]
+		}, 
+		{
+			"start_sample": 341300,
+			"end_sample": 342100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Checksum crc8 poly 0xD5."
+			]
+		}, 
+		{
+			"start_sample": 342300,
+			"end_sample": 343100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"To Handset", 
+				"To HS"
+			]
+		}, 
+		{
+			"start_sample": 343300,
+			"end_sample": 344100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Num of bytes succeeding: 5"
+			]
+		}, 
+		{
+			"start_sample": 344300,
+			"end_sample": 345100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Flight mode"
+			]
+		}, 
+		{
+			"start_sample": 345300,
+			"end_sample": 350100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Flight mode: ACRO"
+			]
+		}, 
+		{
+			"start_sample": 350300,
+			"end_sample": 351100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Checksum crc8 poly 0xD5."
+			]
+		}, 
+		{
+			"start_sample": 351300,
+			"end_sample": 352100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"To Handset", 
+				"To HS"
+			]
+		}, 
+		{
+			"start_sample": 352300,
+			"end_sample": 353100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Num of bytes succeeding: 6"
+			]
+		}, 
+		{
+			"start_sample": 353300,
+			"end_sample": 354100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Flight mode"
+			]
+		}, 
+		{
+			"start_sample": 354300,
+			"end_sample": 360100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Flight mode: !FS!*"
+			]
+		}, 
+		{
+			"start_sample": 360300,
+			"end_sample": 361100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Checksum crc8 poly 0xD5."
+			]
+		}, 
+		{
+			"start_sample": 361300,
+			"end_sample": 362100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"To Handset", 
+				"To HS"
+			]
+		}, 
+		{
+			"start_sample": 362300,
+			"end_sample": 363100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Num of bytes succeeding: 4"
+			]
+		}, 
+		{
+			"start_sample": 363300,
+			"end_sample": 364100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Flight mode"
+			]
+		}, 
+		{
+			"start_sample": 364300,
+			"end_sample": 368100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Flight mode: Café"
+			]
+		}, 
+		{
+			"start_sample": 368300,
+			"end_sample": 369100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Checksum crc8 poly 0xD5."
+			]
+		}, 
+		{
+			"start_sample": 369300,
+			"end_sample": 370100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"To Handset", 
+				"To HS"
+			]
+		}, 
+		{
+			"start_sample": 370300,
+			"end_sample": 371100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Num of bytes succeeding: 1"
+			]
+		}, 
+		{
+			"start_sample": 371300,
+			"end_sample": 372100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Flight mode"
+			]
+		}, 
+		{
+			"start_sample": 372300,
+			"end_sample": 373100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Flight mode (1 bytes payload)"
+			]
+		}, 
+		{
+			"start_sample": 373300,
+			"end_sample": 374100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Checksum crc8 poly 0xD5."
+			]
+		}, 
+		{
+			"start_sample": 374300,
+			"end_sample": 375100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"To Flight Controller", 
+				"To FC"
+			]
+		}, 
+		{
+			"start_sample": 375300,
+			"end_sample": 376100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Num of bytes succeeding: 2"
+			]
+		}, 
+		{
+			"start_sample": 376300,
+			"end_sample": 377100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"CRSF_FRAMETYPE_DEVICE_PING"
+			]
+		}, 
+		{
+			"start_sample": 377300,
+			"end_sample": 379100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"CRSF_FRAMETYPE_DEVICE_PING (2 bytes payload)"
+			]
+		}, 
+		{
+			"start_sample": 379300,
+			"end_sample": 380100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Checksum crc8 poly 0xD5."
+			]
+		}, 
+		{
+			"start_sample": 380300,
+			"end_sample": 381100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"To Flight Controller", 
+				"To FC"
+			]
+		}, 
+		{
+			"start_sample": 381300,
+			"end_sample": 382100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Num of bytes succeeding: 0"
+			]
+		}, 
+		{
+			"start_sample": 382300,
+			"end_sample": 383100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"CRSF_FRAMETYPE_DEVICE_PING"
+			]
+		}, 
+		{
+			"start_sample": 383300,
+			"end_sample": 384100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Checksum crc8 poly 0xD5."
+			]
+		}, 
+		{
+			"start_sample": 384300,
+			"end_sample": 385100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"To Handset", 
+				"To HS"
+			]
+		}, 
+		{
+			"start_sample": 385300,
+			"end_sample": 386100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Num of bytes succeeding: 30"
+			]
+		}, 
+		{
+			"start_sample": 386300,
+			"end_sample": 387100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"CRSF_FRAMETYPE_DEVICE_INFO"
+			]
+		}, 
+		{
+			"start_sample": 387300,
+			"end_sample": 417100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"CRSF_FRAMETYPE_DEVICE_INFO (30 bytes payload)"
+			]
+		}, 
+		{
+			"start_sample": 417300,
+			"end_sample": 418100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Checksum crc8 poly 0xD5."
+			]
+		}, 
+		{
+			"start_sample": 418300,
+			"end_sample": 419100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"To Flight Controller", 
+				"To FC"
+			]
+		}, 
+		{
+			"start_sample": 419300,
+			"end_sample": 420100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Num of bytes succeeding: 2"
+			]
+		}, 
+		{
+			"start_sample": 420300,
+			"end_sample": 421100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Heartbeat"
+			]
+		}, 
+		{
+			"start_sample": 421300,
+			"end_sample": 423100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Heartbeat (2 bytes payload)"
+			]
+		}, 
+		{
+			"start_sample": 423300,
+			"end_sample": 424100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Checksum crc8 poly 0xD5."
+			]
+		}, 
+		{
+			"start_sample": 424300,
+			"end_sample": 425100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"To Flight Controller", 
+				"To FC"
+			]
+		}, 
+		{
+			"start_sample": 425300,
+			"end_sample": 426100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Num of bytes succeeding: 8"
+			]
+		}, 
+		{
+			"start_sample": 426300,
+			"end_sample": 427100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"OpenTX sync"
+			]
+		}, 
+		{
+			"start_sample": 427300,
+			"end_sample": 435100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"OpenTX sync (8 bytes payload)"
+			]
+		}, 
+		{
+			"start_sample": 435300,
+			"end_sample": 436100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Checksum crc8 poly 0xD5."
+			]
+		}, 
+		{
+			"start_sample": 436300,
+			"end_sample": 437100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"To Handset", 
+				"To HS"
+			]
+		}, 
+		{
+			"start_sample": 437300,
+			"end_sample": 438100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Num of bytes succeeding: 2"
+			]
+		}, 
+		{
+			"start_sample": 438300,
+			"end_sample": 439100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Request settings"
+			]
+		}, 
+		{
+			"start_sample": 439300,
+			"end_sample": 441100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Request settings (2 bytes payload)"
+			]
+		}, 
+		{
+			"start_sample": 441300,
+			"end_sample": 442100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Checksum crc8 poly 0xD5."
+			]
+		}, 
+		{
+			"start_sample": 442300,
+			"end_sample": 443100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"To Handset", 
+				"To HS"
+			]
+		}, 
+		{
+			"start_sample": 443300,
+			"end_sample": 444100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Num of bytes succeeding: 18"
+			]
+		}, 
+		{
+			"start_sample": 444300,
+			"end_sample": 445100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"CRSF_FRAMETYPE_PARAMETER_SETTINGS_ENTRY"
+			]
+		}, 
+		{
+			"start_sample": 445300,
+			"end_sample": 463100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"CRSF_FRAMETYPE_PARAMETER_SETTINGS_ENTRY (18 bytes payload)"
+			]
+		}, 
+		{
+			"start_sample": 463300,
+			"end_sample": 464100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Checksum crc8 poly 0xD5."
+			]
+		}, 
+		{
+			"start_sample": 464300,
+			"end_sample": 465100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"To Transmitter Module", 
+				"To TX Module"
+			]
+		}, 
+		{
+			"start_sample": 465300,
+			"end_sample": 466100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Num of bytes succeeding: 4"
+			]
+		}, 
+		{
+			"start_sample": 466300,
+			"end_sample": 467100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"CRSF_FRAMETYPE_PARAMETER_READ"
+			]
+		}, 
+		{
+			"start_sample": 467300,
+			"end_sample": 471100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"CRSF_FRAMETYPE_PARAMETER_READ (4 bytes payload)"
+			]
+		}, 
+		{
+			"start_sample": 471300,
+			"end_sample": 472100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Checksum crc8 poly 0xD5."
+			]
+		}, 
+		{
+			"start_sample": 472300,
+			"end_sample": 473100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"To Transmitter Module", 
+				"To TX Module"
+			]
+		}, 
+		{
+			"start_sample": 473300,
+			"end_sample": 474100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Num of bytes succeeding: 4"
+			]
+		}, 
+		{
+			"start_sample": 474300,
+			"end_sample": 475100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"CRSF_FRAMETYPE_PARAMETER_WRITE"
+			]
+		}, 
+		{
+			"start_sample": 475300,
+			"end_sample": 479100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"CRSF_FRAMETYPE_PARAMETER_WRITE (4 bytes payload)"
+			]
+		}, 
+		{
+			"start_sample": 479300,
+			"end_sample": 480100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Checksum crc8 poly 0xD5."
+			]
+		}, 
+		{
+			"start_sample": 480300,
+			"end_sample": 481100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"To Flight Controller", 
+				"To FC"
+			]
+		}, 
+		{
+			"start_sample": 481300,
+			"end_sample": 482100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Num of bytes succeeding: 4"
+			]
+		}, 
+		{
+			"start_sample": 482300,
+			"end_sample": 483100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"CRSF_FRAMETYPE_COMMAND"
+			]
+		}, 
+		{
+			"start_sample": 483300,
+			"end_sample": 487100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"CRSF_FRAMETYPE_COMMAND (4 bytes payload)"
+			]
+		}, 
+		{
+			"start_sample": 487300,
+			"end_sample": 488100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Checksum crc8 poly 0xD5."
+			]
+		}, 
+		{
+			"start_sample": 488300,
+			"end_sample": 489100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"To Handset", 
+				"To HS"
+			]
+		}, 
+		{
+			"start_sample": 489300,
+			"end_sample": 490100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Num of bytes succeeding: 3"
+			]
+		}, 
+		{
+			"start_sample": 490300,
+			"end_sample": 491100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Radio"
+			]
+		}, 
+		{
+			"start_sample": 491300,
+			"end_sample": 494100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Radio (3 bytes payload)"
+			]
+		}, 
+		{
+			"start_sample": 494300,
+			"end_sample": 495100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Checksum crc8 poly 0xD5."
+			]
+		}, 
+		{
+			"start_sample": 495300,
+			"end_sample": 496100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"To Flight Controller", 
+				"To FC"
+			]
+		}, 
+		{
+			"start_sample": 496300,
+			"end_sample": 497100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Num of bytes succeeding: 3"
+			]
+		}, 
+		{
+			"start_sample": 497300,
+			"end_sample": 498100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Unknown packet type85"
+			]
+		}, 
+		{
+			"start_sample": 498300,
+			"end_sample": 499100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Unknown packet type1"
+			]
+		}, 
+		{
+			"start_sample": 499300,
+			"end_sample": 500100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Unknown packet type2"
+			]
+		}, 
+		{
+			"start_sample": 500300,
+			"end_sample": 501100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Unknown packet type3"
+			]
+		}, 
+		{
+			"start_sample": 501300,
+			"end_sample": 502100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Unknown packet type210"
+			]
+		}, 
+		{
+			"start_sample": 502300,
+			"end_sample": 503100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"To Flight Controller", 
+				"To FC"
+			]
+		}, 
+		{
+			"start_sample": 503300,
+			"end_sample": 504100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Unknown packet type1"
+			]
+		}, 
+		{
+			"start_sample": 504300,
+			"end_sample": 505100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"To Transmitter Module", 
+				"To TX Module"
+			]
+		}, 
+		{
+			"start_sample": 505300,
+			"end_sample": 506100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Unknown packet type63"
+			]
+		}, 
+		{
+			"start_sample": 506300,
+			"end_sample": 507100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"To Transmitter Module", 
+				"To TX Module"
+			]
+		}, 
+		{
+			"start_sample": 507300,
+			"end_sample": 508100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Num of bytes succeeding: 4"
+			]
+		}, 
+		{
+			"start_sample": 508300,
+			"end_sample": 509100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"CRSF_FRAMETYPE_COMMAND"
+			]
+		}, 
+		{
+			"start_sample": 509300,
+			"end_sample": 513100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"CRSF_FRAMETYPE_COMMAND (4 bytes payload)"
+			]
+		}, 
+		{
+			"start_sample": 513300,
+			"end_sample": 514100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Checksum crc8 poly 0xD5."
+			]
+		}
+	]
+}

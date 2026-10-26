@@ -1,0 +1,145 @@
+{
+	"decoder": "crsf",
+	"samplerate": 42000000,
+	"num_annotations": 15,
+	"annotations": [
+		{
+			"start_sample": 300,
+			"end_sample": 1100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"To Flight Controller", 
+				"To FC"
+			]
+		}, 
+		{
+			"start_sample": 1300,
+			"end_sample": 2100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Num of bytes succeeding: 4"
+			]
+		}, 
+		{
+			"start_sample": 2300,
+			"end_sample": 3100,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"CRSF_FRAMETYPE_COMMAND"
+			]
+		}, 
+		{
+			"start_sample": 3300,
+			"end_sample": 7300,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"CRSF_FRAMETYPE_COMMAND (4 bytes payload)"
+			]
+		}, 
+		{
+			"start_sample": 7500,
+			"end_sample": 8300,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Checksum crc8 poly 0xD5."
+			]
+		}, 
+		{
+			"start_sample": 8500,
+			"end_sample": 9300,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"To Flight Controller", 
+				"To FC"
+			]
+		}, 
+		{
+			"start_sample": 9500,
+			"end_sample": 10300,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Num of bytes succeeding: 4"
+			]
+		}, 
+		{
+			"start_sample": 10500,
+			"end_sample": 11300,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"CRSF_FRAMETYPE_COMMAND"
+			]
+		}, 
+		{
+			"start_sample": 11700,
+			"end_sample": 15500,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"CRSF_FRAMETYPE_COMMAND (4 bytes payload)"
+			]
+		}, 
+		{
+			"start_sample": 15700,
+			"end_sample": 16500,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Checksum crc8 poly 0xD5."
+			]
+		}, 
+		{
+			"start_sample": 16700,
+			"end_sample": 17500,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"To Flight Controller", 
+				"To FC"
+			]
+		}, 
+		{
+			"start_sample": 17700,
+			"end_sample": 18500,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Num of bytes succeeding: 4"
+			]
+		}, 
+		{
+			"start_sample": 18700,
+			"end_sample": 19500,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"CRSF_FRAMETYPE_COMMAND"
+			]
+		}, 
+		{
+			"start_sample": 19700,
+			"end_sample": 23500,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"CRSF_FRAMETYPE_COMMAND (4 bytes payload)"
+			]
+		}, 
+		{
+			"start_sample": 23700,
+			"end_sample": 24500,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"Checksum crc8 poly 0xD5."
+			]
+		}
+	]
+}

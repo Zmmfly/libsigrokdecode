@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate decoder_test testdata for the dshot and elrs decoders.
+"""Generate decoder_test testdata for the dshot, elrs and crsf decoders.
 
 Writes testdata/<name>/{config.json,input.bin} in the format which
 decoder_test.c reads, next to the script. Run decoder_test with the
@@ -15,16 +15,16 @@ output would make this test fail whenever the uart decoder's text
 changes. Generate the reference for the elrs case on demand with
 --generate-only and inspect it instead.
 
-The cases of the native ports live in testdata/dshot_c/<case> and
-testdata/elrs_c/<case>, the layout which run_tests.sh expects. Their
-expected.json is the output of the Python decoder, which the port has
-to reproduce. The elrs_c cases set "top_only", so that decoder_test
-only compares the annotations of the elrs decoder and not those of the
-uart decoder below it. Regenerate the references after changing a
-case, from the directory of this script::
+The cases of the native ports live in testdata/dshot_c/<case>,
+testdata/elrs_c/<case> and testdata/crsf_c/<case>, the layout which
+run_tests.sh expects. Their expected.json is the output of the Python
+decoder, which the port has to reproduce. The elrs_c and crsf_c cases set
+"top_only", so that decoder_test only compares the annotations of the
+top decoder and not those of the uart decoder below it. Regenerate the
+references after changing a case, from the directory of this script::
 
     export PY_DECODERS_PATH=$PWD/../decoders
-    for case in testdata/dshot_c/*/ testdata/elrs_c/*/; do
+    for case in testdata/dshot_c/*/ testdata/elrs_c/*/ testdata/crsf_c/*/; do
         name=$(basename $(dirname $case)); name=${name%_c}
         decoder_test -d $name -t $case --python --generate-only \\
             -f $case/expected.json
@@ -547,8 +547,100 @@ def generate_elrs_c():
                }, num_channels=2)
 
 
+def crsf_case(name, frames, stop_errors=()):
+    # 42 MHz gives exactly 100 samples per bit at 420000 baud, the CRSF
+    # rate. crsf_c splits the data bits of a byte evenly, which matches the
+    # uart decoder exactly only for a whole number of samples per bit.
+    data = b''.join(frames)
+    edges, pos = uart_edges(uart_levels(data, stop_errors))
+    write_case('crsf_c/' + name, 42000000, edges, pos + 400, {
+        'decoder': 'crsf_c',
+        'channels': {},
+        'options': {},
+        'stack': [{'id': 'uart_c', 'channels': {'rx': 0},
+                   'options': {'baudrate': 420000}}],
+        'top_only': True,
+    })
+
+
+def generate_crsf_c():
+    sticks = [172, 992, 1811, 0, 2047, 1000, 1500, 500] + [992] * 8
+    bad_channels = bytearray(crsf(0xc8, b'\x16' + channels_payload(sticks)))
+    bad_channels[-1] ^= 0x55
+    bad_vario = bytearray(crsf(0xea, b'\x07' + be16(-300)))
+    bad_vario[-1] ^= 0xa5
+    frames = [
+        # Noise in front of the first sync byte.
+        bytes([0x00, 0x55]),
+        crsf(0xc8, b'\x16' + channels_payload(sticks)),
+        # ELRS appends the armed state to the channels.
+        crsf(0xc8, b'\x16' + channels_payload([992] * 16, b'\x01')),
+        crsf(0xc8, b'\x16' + bytes(10)),
+        bytes(bad_channels),
+        # Positive and negative SNR, TX power 100, 250, 50 mW and unknown.
+        crsf(0xec, [0x14, 60, 62, 100, 8, 0, 27, 3, 55, 97, 5]),
+        crsf(0xea, [0x14, 100, 0, 50, 0xf6, 1, 50, 7, 120, 10, 0x80]),
+        crsf(0xea, [0x14, 90, 91, 70, 0x81, 0, 2, 8, 99, 50, 0x7f]),
+        crsf(0xea, [0x14, 90, 91, 70, 12, 0, 2, 9, 99, 50, 0]),
+        crsf(0xc8, [0x14, 1, 2, 3]),
+        crsf(0xea, b'\x02' + be32(-33856000) + be32(1512150000) + be16(123) +
+             be16(27000) + be16(1100) + bytes([12])),
+        crsf(0xea, b'\x02' + be32(311234567) + be32(-1214567890) + be16(0) +
+             be16(0) + be16(0) + bytes([0])),
+        crsf(0xea, [0x02, 1, 2, 3]),
+        crsf(0xea, b'\x07' + be16(-56)),
+        crsf(0xea, b'\x07' + be16(199)),
+        crsf(0xea, b'\x07' + be16(0)),
+        crsf(0xea, [0x07, 5]),
+        bytes(bad_vario),
+        crsf(0xea, b'\x08' + be16(168) + be16(125) + (1300).to_bytes(3, 'big') + b'\x4b'),
+        crsf(0xea, b'\x08' + be16(111) + be16(5) + (7).to_bytes(3, 'big')),
+        crsf(0xea, [0x08, 1, 2, 3, 4, 5]),
+        # Barometric altitude in dm + 10000, or in m with the top bit set,
+        # with the packed vertical speed or without it (the 4 byte layout
+        # of TBS carries none).
+        crsf(0xea, b'\x09' + be16(10000 + 1234) + bytes([0xce])),
+        crsf(0xea, b'\x09' + be16(10000 - 55) + bytes([0x00])),
+        crsf(0xea, b'\x09' + be16(10000) + bytes([0x7f])),
+        crsf(0xea, b'\x09' + be16(10001) + bytes([0x80])),
+        crsf(0xea, b'\x09' + be16(10000) + bytes([0xff])),
+        crsf(0xea, b'\x09' + be16(0x8000 | 3000) + bytes([0x01])),
+        crsf(0xea, b'\x09' + be16(0)),
+        crsf(0xea, b'\x09' + be16(10500) + be16(123)),
+        crsf(0xea, [0x09, 0x27]),
+        crsf(0xea, b'\x1e' + be16(-1234) + be16(5678) + be16(-31415)),
+        crsf(0xea, [0x1e, 1, 2, 3]),
+        crsf(0xea, b'\x21ACRO\x00'),
+        crsf(0xea, b'\x21!FS!*\x00'),
+        crsf(0xea, b'\x21Caf\xe9'),
+        crsf(0xea, b'\x21\x00'),
+        crsf(0xc8, [0x28, 0xec, 0xc8]),
+        crsf(0xc8, [0x28]),
+        crsf(0xea, device_info(b'ExpressLRS RX')),
+        crsf(0xc8, b'\x0b' + be16(0xc8)),
+        crsf(0xc8, [0x10] + [0] * 8),
+        crsf(0xea, [0x2a, 0xee, 0xea]),
+        crsf(0xea, [0x2b, 0xea, 0xee, 3, 0, 0, 9] + list(b'Packet Rate\x00')),
+        crsf(0xee, [0x2c, 0xee, 0xea, 3, 0]),
+        crsf(0xee, [0x2d, 0xee, 0xea, 3, 1]),
+        crsf(0xc8, [0x32, 0xec, 0xc8, 0x10, 0x01]),
+        crsf(0xea, [0x3a, 0xea, 0xee, 0x10]),
+        # An unknown type ends the frame, its other bytes are no sync bytes.
+        crsf(0xc8, [0x55, 1, 2, 3]),
+        # Lengths which are no lengths.
+        bytes([0xc8, 0x01]),
+        bytes([0xee, 63]),
+        crsf(0xee, [0x32, 0xee, 0xea, 0x10, 0x01]),
+    ]
+    crsf_case('frames', frames)
+    # A framing error does not drop the byte, the frames still decode.
+    bind = crsf(0xc8, [0x32, 0xec, 0xc8, 0x10, 0x01])
+    crsf_case('uart_error', [bind, bind, bind], stop_errors=(3, 10))
+
+
 if __name__ == '__main__':
     generate_dshot()
     generate_elrs()
     generate_dshot_c()
     generate_elrs_c()
+    generate_crsf_c()
