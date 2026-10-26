@@ -18,15 +18,22 @@
 ## along with this program; if not, see <http://www.gnu.org/licenses/>.
 ##
 
-# This implementation is incomplete. TODO items:
-# Link stats and channel packed has been implimented. More packet 
-# types needs to be implimented. 
-# Needs testing with different CRSF modes
+# Decodes the RC channels and the link statistics field by field, and the
+# GPS, vario, battery, barometric altitude, attitude and flight mode
+# telemetry frames on one line each; other frame types show the size of
+# their payload. The CRC of every frame is checked.
+#
+# c_decoders/crsf_c.c is a port of this decoder and has to produce the
+# same annotations, tests/testdata/crsf_c holds the reference cases.
+#
+# TODO: More packet types need to be implemented, and the decoder needs
+# testing with different CRSF modes.
 
+import math
 import sigrokdecode as srd
 
-RX =0
-TX =0
+# Uplink TX power levels of the link statistics frame, in mW.
+TX_POWERS = (0, 10, 25, 100, 500, 1000, 2000, 250, 50)
 
 class Decoder(srd.Decoder):
     api_version = 3
@@ -74,28 +81,14 @@ class Decoder(srd.Decoder):
     0x3A: ['Radio'],
     }
 
-    sync_byte = 0
-    len_byte = 0
-    count = 0
-    payload = []
-    frame_type = ''
-
     def __init__(self):
         self.reset()
-        self.sync_byte = 0
-        self.len_byte = 0
-        self.count = 0  # Used to count through the serial bytes.
-        self.payload = [] # Holds channel data
-        self.frame_type = ''
 
     def reset(self):
-        self.sync_byte = 0
+        self.state = 'SYNC'
         self.len_byte = 0
-        self.count = 0
-        self.payload = []
-        self.frame_type = ''
-        self.frame_bytes = []  # type, payload and CRC byte values
-        self.frame_ss = 0
+        # (value, ss, es, data bits) of the type, payload and CRC bytes
+        self.body = []
 
     @staticmethod
     def crc8(data):
@@ -107,17 +100,14 @@ class Decoder(srd.Decoder):
                 crc = ((crc << 1) ^ 0xD5) & 0xFF if crc & 0x80 else (crc << 1) & 0xFF
         return crc
 
-    def put_checksum(self, ss, es):
-        crc = self.crc8(self.frame_bytes[:-1])
-        if crc == self.frame_bytes[-1]:
-            self.put(ss, es, self.out_ann, [0, ['Checksum crc8 poly 0xD5.']])
-        else:
-            self.put(ss, es, self.out_ann, [1, [
-                'Checksum 0x{:02x}, expected 0x{:02x}'.format(self.frame_bytes[-1], crc),
-                'Checksum error']])
-
     def start(self):
         self.out_ann = self.register(srd.OUTPUT_ANN)
+
+    def putt(self, ss, es, cls, texts):
+        self.put(ss, es, self.out_ann, [cls, texts])
+
+    def put_unknown(self, ss, es, serial_byte):
+        self.putt(ss, es, 0, ['Unknown packet type' + str(serial_byte)])
 
     def decode(self, ss, es, data):
         ptype, rxtx, pdata = data
@@ -125,92 +115,149 @@ class Decoder(srd.Decoder):
         # For now, ignore all UART packets except the actual data packets.
         if ptype != 'DATA':
             return
-        serial_byte = pdata[0]
+        serial_byte, bits = pdata
 
-        if self.sync_byte == 0: # Start of packet sync byte
-            ann = self.sync_bytes.get(serial_byte,0)
+        if self.state == 'SYNC': # Start of packet sync byte
+            ann = self.sync_bytes.get(serial_byte)
             if ann:
-                self.sync_byte = 1
-                self.frame_ss = ss
-                self.put(ss, es, self.out_ann, [0,ann])
-                self.count = 1
-                return
+                self.putt(ss, es, 0, ann)
+                self.state = 'LEN'
             else:
-                self.put(ss, es, self.out_ann, [0,['Unknown packet type' + str(serial_byte) ]])
-                return
-    
-        if self.count == 1:
-            if serial_byte >= 2 and serial_byte <= 62: # Within range
-                self.put(ss, es, self.out_ann, [0,['Num of bytes succeeding:' + str(serial_byte - 2)]]) # len of payload excludes first two bytes
-                self.len_byte = serial_byte 
-                self.count = 2
-                return
-            else:
-                self.put(ss, es, self.out_ann, [0,['Unknown packet type' + str(serial_byte) ]])
-                self.reset()
-                return
+                self.put_unknown(ss, es, serial_byte)
+            return
 
-        if self.count == 2: #Third byte is type
-            self.frame_type = self.packet_type.get(serial_byte,0)
-            if self.frame_type:
-                self.put(ss, es, self.out_ann, [0,self.frame_type])
-                self.count = 3
-                self.frame_bytes = [serial_byte]
-                if self.len_byte == 2:
-                    # No payload, only the CRC byte follows.
-                    self.frame_type = ['No payload']
-                return
+        if self.state == 'LEN':
+            # The length counts the type, the payload and the CRC byte.
+            if 2 <= serial_byte <= 62: # Within range
+                self.putt(ss, es, 0, ['Num of bytes succeeding: ' + str(serial_byte - 2)])
+                self.len_byte = serial_byte
+                self.state = 'TYPE'
             else:
-                self.put(ss, es, self.out_ann, [0,['Unknown packet type' + str(serial_byte) ]])
+                self.put_unknown(ss, es, serial_byte)
                 self.reset()
-                return
+            return
 
-        self.frame_bytes.append(serial_byte)
-        if self.frame_type[0] == 'CRSF_FRAMETYPE_RC_CHANNELS_PACKED': #Accumilate channel data bits
-            self.payload = self.payload + pdata[1]
-            self.count = self.count + 1
-            if self.count == self.len_byte + 2 : # +1 to collect complete payload.
-                
-                for chan in range(16):
-                    chan11bits = ''
-                    chan_ss = 0
-                    chan_es = 0
-                    for bit in range(11):
-                        if bit == 0:
-                            chan_ss = self.payload[bit + (chan * 11)][1]
-                        if bit == 10:
-                            chan_es = self.payload[bit + (chan * 11)][2]
-                        chan11bits += str(self.payload[bit + (chan * 11)][0])
-                    value = int(chan11bits[::-1], 2)  # little edian 'RC' value
-                    self.put(chan_ss, chan_es, self.out_ann, [0,['Chan:' + str(chan) + ' Value:' + str(value)]])
-                self.put_checksum(ss, es)
+        if self.state == 'TYPE':
+            frame_type = self.packet_type.get(serial_byte)
+            if not frame_type:
+                self.put_unknown(ss, es, serial_byte)
                 self.reset()
                 return
-        elif self.frame_type[0] == 'LINK_STATISTICS':
-            self.payload = self.payload + list(pdata)
-            self.count = self.count + 1
-            if self.count == self.len_byte + 2 : # +1 to collect complete payload.                
-                self.put(self.payload[1][0][1], self.payload[1][7][2], self.out_ann, [0,['Uplink RSSI 1: -' + str(self.payload[0]) + 'dB']])
-                self.put(self.payload[3][0][1], self.payload[3][7][2], self.out_ann, [0,['Uplink RSSI 2: -' + str(self.payload[2]) + 'dB']])
-                self.put(self.payload[5][0][1], self.payload[5][7][2], self.out_ann, [0,['Uplink Link Quality: '+ str(self.payload[4]) ]])
-                self.put(self.payload[7][0][1], self.payload[7][7][2], self.out_ann, [0,['Uplink SNR: ' + str(self.payload[6]) + 'dB']])
-                self.put(self.payload[9][0][1], self.payload[9][7][2], self.out_ann, [0,['Active Antenna: '+ str(self.payload[8]) ]])
-                self.put(self.payload[11][0][1], self.payload[11][7][2], self.out_ann, [0,['RF Mode: '+ str(self.payload[10]) ]])
-                self.put(self.payload[13][0][1], self.payload[13][7][2], self.out_ann, [0,['Uplink TX Power: ' + str(self.payload[12]) + ' mW']])
-                self.put(self.payload[15][0][1], self.payload[15][7][2], self.out_ann, [0,['Downlink RSSI: -' + str(self.payload[14]) + 'dB']])
-                self.put(self.payload[17][0][1], self.payload[17][7][2], self.out_ann, [0,['Downlink Link Quality: ' + str(self.payload[16]) ]])
-                self.put(self.payload[19][0][1], self.payload[19][7][2], self.out_ann, [0,['Downlink SNR: ' + str(self.payload[18]) + 'dB']])
-                self.put_checksum(ss, es)
-                self.reset()
-                return
+            self.putt(ss, es, 0, frame_type)
+            self.state = 'BODY'
+
+        # The uart decoder reuses its list of data bits, keep a copy.
+        self.body.append((serial_byte, ss, es, list(bits)))
+        if len(self.body) == self.len_byte:
+            self.handle_frame()
+            self.reset()
+
+    def handle_frame(self):
+        frame_type = self.body[0][0]
+        payload = self.body[1:-1]
+        values = [item[0] for item in payload]
+        if frame_type == 0x16 and len(payload) >= 22:
+            self.handle_channels(payload)
+        elif frame_type == 0x14 and len(payload) >= 10:
+            self.handle_link_statistics(payload, values)
+        elif payload:
+            # One line over the payload bytes.
+            text = self.telemetry_text(frame_type, values)
+            if text is None:
+                text = '{} ({} bytes payload)'.format(
+                    self.packet_type[frame_type][0], len(payload))
+            self.putt(payload[0][1], payload[-1][2], 0, [text])
+        self.put_checksum()
+
+    def put_checksum(self):
+        crc_byte, ss, es = self.body[-1][:3]
+        crc = self.crc8([item[0] for item in self.body[:-1]])
+        if crc == crc_byte:
+            self.putt(ss, es, 0, ['Checksum crc8 poly 0xD5.'])
         else:
-            # Other frame types: skip the payload by its length, then
-            # check the CRC byte.
-            self.count = self.count + 1
-            if self.count == self.len_byte + 2:
-                if self.frame_type[0] != 'No payload':
-                    self.put(self.frame_ss, es, self.out_ann, [0, ['{} ({} bytes payload)'.format(
-                        self.frame_type[0], self.len_byte - 2)]])
-                self.put_checksum(ss, es)
-                self.reset()
+            self.putt(ss, es, 1, [
+                'Checksum 0x{:02x}, expected 0x{:02x}'.format(crc_byte, crc),
+                'Checksum error'])
 
+    def handle_channels(self, payload):
+        # 16 channels of 11 bits, LSB first. Each channel spans its bits.
+        bits = [bit for item in payload for bit in item[3]]
+        for chan in range(16):
+            chan_bits = bits[chan * 11:chan * 11 + 11]
+            value = sum(bit[0] << idx for idx, bit in enumerate(chan_bits))  # little edian 'RC' value
+            self.putt(chan_bits[0][1], chan_bits[-1][2], 0,
+                      ['Chan:' + str(chan) + ' Value:' + str(value)])
+
+    def handle_link_statistics(self, payload, values):
+        def signed(value):
+            return value - 256 if value > 127 else value
+
+        power = values[6]
+        if power < len(TX_POWERS):
+            power = '{} mW'.format(TX_POWERS[power])
+        else:
+            power = 'level {}'.format(power)
+        texts = (
+            'Uplink RSSI 1: -' + str(values[0]) + 'dB',
+            'Uplink RSSI 2: -' + str(values[1]) + 'dB',
+            'Uplink Link Quality: ' + str(values[2]),
+            'Uplink SNR: ' + str(signed(values[3])) + 'dB',
+            'Active Antenna: ' + str(values[4]),
+            'RF Mode: ' + str(values[5]),
+            'Uplink TX Power: ' + power,
+            'Downlink RSSI: -' + str(values[7]) + 'dB',
+            'Downlink Link Quality: ' + str(values[8]),
+            'Downlink SNR: ' + str(signed(values[9])) + 'dB',
+        )
+        # Each field spans its byte.
+        for item, text in zip(payload, texts):
+            self.putt(item[1], item[2], 0, [text])
+
+    @staticmethod
+    def telemetry_text(frame_type, p):
+        # Multi-byte fields are big-endian. None when the payload does not
+        # fit the layout of the frame type.
+        def be(data, signed=False):
+            return int.from_bytes(bytes(data), byteorder='big', signed=signed)
+
+        if frame_type == 0x02 and len(p) >= 15:
+            # deg * 1e7, km/h * 10, deg * 100, m + 1000
+            return ('GPS: {:.7f}, {:.7f}, {:.1f} km/h, heading {:.2f} deg, '
+                    '{} m, {} satellite(s)').format(
+                be(p[0:4], True) / 1e7, be(p[4:8], True) / 1e7, be(p[8:10]) / 10.0,
+                be(p[10:12]) / 100.0, be(p[12:14]) - 1000, p[14])
+        if frame_type == 0x07 and len(p) >= 2:
+            # cm/s
+            return 'Vario: {:.2f} m/s'.format(be(p[0:2], True) / 100.0)
+        if frame_type == 0x08 and len(p) >= 7:
+            # 0.1 V, 0.1 A, mAh, %
+            text = 'Battery: {:.1f} V, {:.1f} A, {} mAh'.format(
+                be(p[0:2]) / 10.0, be(p[2:4]) / 10.0, be(p[4:7]))
+            if len(p) >= 8:
+                text += ', {}%'.format(p[7])
+            return text
+        if frame_type == 0x09 and len(p) >= 2:
+            altitude = be(p[0:2])
+            if altitude & 0x8000:
+                # m, from 2276.8 m on
+                text = 'Baro altitude: {} m'.format(altitude & 0x7FFF)
+            else:
+                # dm + 10000
+                text = 'Baro altitude: {:.1f} m'.format((altitude - 10000) / 10.0)
+            if len(p) == 3:
+                # Packed vertical speed, sign * (e^(|v| * 0.026) - 1) m/s.
+                packed = p[2] - 256 if p[2] > 127 else p[2]
+                speed = math.exp(abs(packed) * 0.026) - 1.0
+                text += ', vertical speed {:.2f} m/s'.format(-speed if packed < 0 else speed)
+            return text
+        if frame_type == 0x1E and len(p) >= 6:
+            # rad * 10000
+            return 'Attitude: pitch {:.4f} rad, roll {:.4f} rad, yaw {:.4f} rad'.format(
+                be(p[0:2], True) / 10000.0, be(p[2:4], True) / 10000.0,
+                be(p[4:6], True) / 10000.0)
+        if frame_type == 0x21:
+            # Null-terminated string
+            name = bytes(p).split(b'\x00')[0].decode('latin-1')
+            if name:
+                return 'Flight mode: ' + name
+        return None
