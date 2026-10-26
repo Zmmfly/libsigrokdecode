@@ -292,7 +292,9 @@ static void sbus_recv_proto(struct srd_decoder_inst *di, uint64_t start_sample, 
             }
         }
     } else if (strcmp(cmd, "FRAME") == 0) {
-        if (n_fields >= 3 && (fields[1].u8 == 0 || fields[2].u8 == 0)) {
+        /* uart_c sends FRAME as (rxtx, value, valid): only the validity
+         * marks bad data, a 0x00 byte is perfectly valid. */
+        if (n_fields >= 3 && fields[2].i32 == 0) {
             s->failed = 1;
             s->fail_type = FAIL_INVALID_DATA;
         }
