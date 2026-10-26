@@ -193,6 +193,8 @@ static const struct elrs_name elrs_tx_powers[] = {
     {4, "500 mW"},
     {5, "1000 mW"},
     {6, "2000 mW"},
+    {7, "250 mW"},
+    {8, "50 mW"},
 };
 
 /* Warning and status bits of the ELRS status frame. */
