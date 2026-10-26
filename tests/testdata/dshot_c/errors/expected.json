@@ -1,7 +1,7 @@
 {
 	"decoder": "dshot",
 	"samplerate": 24000000,
-	"num_annotations": 17,
+	"num_annotations": 33,
 	"annotations": [
 		{
 			"start_sample": 200,
@@ -9,77 +9,216 @@
 			"ann_class": 6,
 			"ann_type": 13,
 			"texts": [
-				"Unexpected burst, 10 high and 9 low pulses", 
-				"Unexpected burst, 10 / 9 pulses", 
-				"Unexpected burst"
+				"Unexpected burst of 10 pulses, no frame", 
+				"Unexpected burst (10)", 
+				"Burst"
 			]
 		}, 
 		{
 			"start_sample": 2600,
+			"end_sample": 3240,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M1 DShot600 0xffff", 
+				"M1 0xffff", 
+				"M1"
+			]
+		}, 
+		{
+			"start_sample": 2600,
+			"end_sample": 3240,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Throttle 2047 (100.0%)", 
+				"2047 (100%)", 
+				"100%"
+			]
+		}, 
+		{
+			"start_sample": 2600,
+			"end_sample": 3240,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0xf correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 2600,
+			"end_sample": 3240,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"Telemetry requested", 
+				"TLM req"
+			]
+		}, 
+		{
+			"start_sample": 3240,
+			"end_sample": 3880,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M1 DShot600 0xffff", 
+				"M1 0xffff", 
+				"M1"
+			]
+		}, 
+		{
+			"start_sample": 3240,
+			"end_sample": 3880,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Throttle 2047 (100.0%)", 
+				"2047 (100%)", 
+				"100%"
+			]
+		}, 
+		{
+			"start_sample": 3240,
+			"end_sample": 3880,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0xf correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 3240,
+			"end_sample": 3880,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"Telemetry requested", 
+				"TLM req"
+			]
+		}, 
+		{
+			"start_sample": 3880,
+			"end_sample": 4520,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M1 DShot600 0xffff", 
+				"M1 0xffff", 
+				"M1"
+			]
+		}, 
+		{
+			"start_sample": 3880,
+			"end_sample": 4520,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Throttle 2047 (100.0%)", 
+				"2047 (100%)", 
+				"100%"
+			]
+		}, 
+		{
+			"start_sample": 3880,
+			"end_sample": 4520,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0xf correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 3880,
+			"end_sample": 4520,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"Telemetry requested", 
+				"TLM req"
+			]
+		}, 
+		{
+			"start_sample": 4520,
 			"end_sample": 4590,
 			"ann_class": 6,
 			"ann_type": 13,
 			"texts": [
-				"Unexpected burst, 50 high and 49 low pulses", 
-				"Unexpected burst, 50 / 49 pulses", 
-				"Unexpected burst"
+				"Unexpected burst of 2 pulses, no frame", 
+				"Unexpected burst (2)", 
+				"Burst"
 			]
 		}, 
 		{
 			"start_sample": 6600,
-			"end_sample": 7215,
+			"end_sample": 7240,
 			"ann_class": 6,
 			"ann_type": 13,
 			"texts": [
-				"2 symbol(s) with ambiguous duty cycle", 
-				"2 ambiguous symbol(s)", 
+				"1 bit(s) with ambiguous duty cycle", 
+				"1 ambiguous bit(s)", 
 				"Ambiguous timing"
 			]
 		}, 
 		{
 			"start_sample": 6600,
-			"end_sample": 7215,
+			"end_sample": 7240,
 			"ann_class": 0,
 			"ann_type": 7,
 			"texts": [
-				"M1 DShot600 0x7d0a", 
+				"M1 DShot600 0xfd0a", 
+				"M1 0xfd0a", 
 				"M1"
 			]
 		}, 
 		{
 			"start_sample": 6600,
-			"end_sample": 7215,
+			"end_sample": 7240,
 			"ann_class": 1,
 			"ann_type": 8,
 			"texts": [
-				"Throttle 1000 (47.6%)", 
-				"1000 (48%)", 
-				"48%"
+				"Throttle 2024 (98.8%)", 
+				"2024 (99%)", 
+				"99%"
 			]
 		}, 
 		{
 			"start_sample": 6600,
-			"end_sample": 7215,
+			"end_sample": 7240,
+			"ann_class": 6,
+			"ann_type": 13,
+			"texts": [
+				"Checksum mismatch, got 0xa expected 0x2", 
+				"Checksum mismatch", 
+				"CRC error"
+			]
+		}, 
+		{
+			"start_sample": 6600,
+			"end_sample": 7240,
 			"ann_class": 3,
 			"ann_type": 10,
 			"texts": [
-				"Checksum 0xa correct", 
-				"CRC ok"
+				"Checksum 0xa, expected 0x2", 
+				"CRC bad"
 			]
 		}, 
 		{
 			"start_sample": 9240,
-			"end_sample": 10055,
+			"end_sample": 10088,
 			"ann_class": 0,
 			"ann_type": 7,
 			"texts": [
-				"M1 unknown rate 0x7d0a", 
+				"M1 453 kbit/s 0x7d0a", 
+				"M1 0x7d0a", 
 				"M1"
 			]
 		}, 
 		{
 			"start_sample": 9240,
-			"end_sample": 10055,
+			"end_sample": 10088,
 			"ann_class": 1,
 			"ann_type": 8,
 			"texts": [
@@ -90,7 +229,7 @@
 		}, 
 		{
 			"start_sample": 9240,
-			"end_sample": 10055,
+			"end_sample": 10088,
 			"ann_class": 3,
 			"ann_type": 10,
 			"texts": [
@@ -100,17 +239,18 @@
 		}, 
 		{
 			"start_sample": 12088,
-			"end_sample": 14608,
+			"end_sample": 14648,
 			"ann_class": 0,
 			"ann_type": 7,
 			"texts": [
 				"M1 DShot150 0x258f", 
+				"M1 0x258f", 
 				"M1"
 			]
 		}, 
 		{
 			"start_sample": 12088,
-			"end_sample": 14608,
+			"end_sample": 14648,
 			"ann_class": 1,
 			"ann_type": 8,
 			"texts": [
@@ -121,7 +261,7 @@
 		}, 
 		{
 			"start_sample": 12088,
-			"end_sample": 14608,
+			"end_sample": 14648,
 			"ann_class": 3,
 			"ann_type": 10,
 			"texts": [
@@ -131,17 +271,18 @@
 		}, 
 		{
 			"start_sample": 16648,
-			"end_sample": 16963,
+			"end_sample": 16968,
 			"ann_class": 0,
 			"ann_type": 7,
 			"texts": [
 				"M1 DShot1200 0xfa05", 
+				"M1 0xfa05", 
 				"M1"
 			]
 		}, 
 		{
 			"start_sample": 16648,
-			"end_sample": 16963,
+			"end_sample": 16968,
 			"ann_class": 1,
 			"ann_type": 8,
 			"texts": [
@@ -152,7 +293,7 @@
 		}, 
 		{
 			"start_sample": 16648,
-			"end_sample": 16963,
+			"end_sample": 16968,
 			"ann_class": 3,
 			"ann_type": 10,
 			"texts": [
@@ -161,24 +302,56 @@
 			]
 		}, 
 		{
-			"start_sample": 19288,
-			"end_sample": 20103,
+			"start_sample": 20968,
+			"end_sample": 20998,
 			"ann_class": 6,
 			"ann_type": 13,
 			"texts": [
-				"Telemetry response without valid symbols or checksum", 
-				"Undecodable telemetry response", 
-				"TLM error"
+				"Unexpected burst of 1 pulses, no frame", 
+				"Unexpected burst (1)", 
+				"Burst"
 			]
 		}, 
 		{
-			"start_sample": 24448,
-			"end_sample": 25263,
+			"start_sample": 22968,
+			"end_sample": 23608,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M1 DShot600 bidir 0x7080", 
+				"M1 0x7080", 
+				"M1"
+			]
+		}, 
+		{
+			"start_sample": 22968,
+			"end_sample": 23608,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Throttle 900 (42.6%)", 
+				"900 (43%)", 
+				"43%"
+			]
+		}, 
+		{
+			"start_sample": 22968,
+			"end_sample": 23608,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0x0 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 24328,
+			"end_sample": 25096,
 			"ann_class": 6,
 			"ann_type": 13,
 			"texts": [
-				"Telemetry response without valid symbols or checksum", 
-				"Undecodable telemetry response", 
+				"Telemetry response longer than 21 bits", 
+				"Telemetry too long", 
 				"TLM error"
 			]
 		}

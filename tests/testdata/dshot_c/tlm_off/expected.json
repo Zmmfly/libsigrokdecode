@@ -1,21 +1,22 @@
 {
 	"decoder": "dshot",
 	"samplerate": 24000000,
-	"num_annotations": 5,
+	"num_annotations": 12,
 	"annotations": [
 		{
-			"start_sample": 200,
-			"end_sample": 830,
+			"start_sample": 400,
+			"end_sample": 1040,
 			"ann_class": 0,
 			"ann_type": 7,
 			"texts": [
-				"M1 DShot600 0x7d1b", 
+				"M1 DShot600 bidir 0x7d14", 
+				"M1 0x7d14", 
 				"M1"
 			]
 		}, 
 		{
-			"start_sample": 200,
-			"end_sample": 830,
+			"start_sample": 400,
+			"end_sample": 1040,
 			"ann_class": 1,
 			"ann_type": 8,
 			"texts": [
@@ -25,18 +26,18 @@
 			]
 		}, 
 		{
-			"start_sample": 200,
-			"end_sample": 830,
+			"start_sample": 400,
+			"end_sample": 1040,
 			"ann_class": 3,
 			"ann_type": 10,
 			"texts": [
-				"Checksum 0xb correct", 
+				"Checksum 0x4 correct", 
 				"CRC ok"
 			]
 		}, 
 		{
-			"start_sample": 200,
-			"end_sample": 830,
+			"start_sample": 400,
+			"end_sample": 1040,
 			"ann_class": 4,
 			"ann_type": 11,
 			"texts": [
@@ -45,14 +46,87 @@
 			]
 		}, 
 		{
-			"start_sample": 3160,
-			"end_sample": 3975,
-			"ann_class": 6,
-			"ann_type": 13,
+			"start_sample": 4040,
+			"end_sample": 4680,
+			"ann_class": 0,
+			"ann_type": 7,
 			"texts": [
-				"Unexpected burst, 20 high and 21 low pulses", 
-				"Unexpected burst, 20 / 21 pulses", 
-				"Unexpected burst"
+				"M1 DShot600 bidir 0x7d14", 
+				"M1 0x7d14", 
+				"M1"
+			]
+		}, 
+		{
+			"start_sample": 4040,
+			"end_sample": 4680,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Throttle 1000 (47.6%)", 
+				"1000 (48%)", 
+				"48%"
+			]
+		}, 
+		{
+			"start_sample": 4040,
+			"end_sample": 4680,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0x4 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 4040,
+			"end_sample": 4680,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"Telemetry requested", 
+				"TLM req"
+			]
+		}, 
+		{
+			"start_sample": 7680,
+			"end_sample": 8320,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M1 DShot600 bidir 0x7d14", 
+				"M1 0x7d14", 
+				"M1"
+			]
+		}, 
+		{
+			"start_sample": 7680,
+			"end_sample": 8320,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Throttle 1000 (47.6%)", 
+				"1000 (48%)", 
+				"48%"
+			]
+		}, 
+		{
+			"start_sample": 7680,
+			"end_sample": 8320,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0x4 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 7680,
+			"end_sample": 8320,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"Telemetry requested", 
+				"TLM req"
 			]
 		}
 	]

@@ -13,7 +13,9 @@ The checksum implementations are verified against reference values:
  - The DShot checksum is the XOR of the three upper nibbles of a frame.
    The frame used below was computed by hand: throttle 1000 with the
    telemetry request bit set is 0x7d1, which makes the complete frame
-   0x7d1b.
+   0x7d1b, or 0x7d14 with the inverted checksum of bidirectional DShot.
+ - The GCR code of the telemetry response is checked against the decode
+   table of Betaflight's dshot.c.
 
 Usage:
     python3 libsigrokdecode/tests/test_dshot_elrs.py [-v]
@@ -120,10 +122,11 @@ def python_packets(decoder, kind):
 
 #-- DShot signal synthesis ---------------------------------------------
 
-# Copy of the 4b/5b table, kept separate from the decoder so that the
-# tests do not silently inherit a mistake from it.
+# 4b/5b GCR code of the telemetry response, in nibble order. It is kept
+# separate from the decoder so that the tests do not silently inherit a
+# mistake from it; test_dshot_gcr_table checks it against Betaflight.
 GCR_SYMBOLS = (
-    0x19, 0x1b, 0x12, 0x13, 0x1c, 0x15, 0x16, 0x17,
+    0x19, 0x1b, 0x12, 0x13, 0x1d, 0x15, 0x16, 0x17,
     0x1a, 0x09, 0x0a, 0x0b, 0x1e, 0x0d, 0x0e, 0x0f,
 )
 
@@ -137,64 +140,81 @@ def value_to_bits(value, count):
     return [(value >> (count - 1 - idx)) & 1 for idx in range(count)]
 
 
-def gcr_encode(value16, msb_first):
-    """Spread a 16 bit value over 20 GCR coded bits."""
-    nibbles = [(value16 >> (4 * idx)) & 0xf for idx in range(4)]
-    if msb_first:
-        nibbles.reverse()
-    bits = []
-    for nibble in nibbles:
-        symbol = GCR_SYMBOLS[nibble]
-        bits.extend(value_to_bits(symbol, 5))
-    return bits
+def dshot_word(value11, tlm=False, inverted=False):
+    """Request word; bidirectional DShot inverts the checksum."""
+    value12 = (value11 << 1) | int(tlm)
+    crc = dshot_crc4(value12)
+    if inverted:
+        crc ^= 0xf
+    return (value12 << 4) | crc
 
 
-def dshot_symbol_edges(samplerate, rate, bits, start):
-    """Turn symbol bits into edges, one duty cycle per bit period."""
+def dshot_request_edges(samplerate, rate, value16, start=0, inverted=False):
+    """Every bit starts with the active level, which lasts 75 % of the
+    period for a '1' and 37.5 % for a '0'. An inverted line rests high."""
+    active = 0 if inverted else 1
     edges = []
-    period = int(round(samplerate / rate))
+    period = samplerate / rate
     position = start
-    for bit in bits:
-        high = int(round(period * (0.75 if bit else 0.375)))
-        edges.append((position, 1))
-        edges.append((position + high, 0))
+    for bit in value_to_bits(value16, 16):
+        edges.append((int(round(position)), active))
+        edges.append((int(round(position + period * (0.75 if bit else 0.375))),
+                      1 - active))
         position += period
     return edges, position
 
 
-def dshot_request_edges(samplerate, rate, value16, start=0):
-    bits = value_to_bits(value16, 16)
-    return dshot_symbol_edges(samplerate, rate, bits, start)
+def tlm_word(value12, csum_xor=0):
+    """Response word: the XOR of its four nibbles is 0xf."""
+    csum = ~(value12 ^ (value12 >> 4) ^ (value12 >> 8)) & 0xf
+    return (value12 << 4) | (csum ^ csum_xor)
 
 
-def dshot_telemetry_edges(samplerate, rate, value16, start):
-    """Synthesize the inverted GCR response of an ESC."""
-    # The checksum nibble is transmitted first, which means it ends up in
-    # the most significant nibble of the decoded value. That is how the
-    # flight controller firmware assembles the response: the first
-    # received symbol goes into the upper nibble.
-    bits = [0] + gcr_encode(value16, msb_first=True)
-    edges = []
-    period = int(round(samplerate / rate))
-    position = start
-    # The line idles high for a while before the first start bit.
-    edges.append((position, 1))
-    position += int(round(period * 6))
-    for bit in bits:
-        low = int(round(period * (0.75 if bit else 0.375)))
-        edges.append((position, 0))
-        edges.append((position + low, 1))
-        position += period
-    return edges, position
+def gcr_encode(value16):
+    gcr = 0
+    for idx in range(3, -1, -1):
+        gcr = (gcr << 5) | GCR_SYMBOLS[(value16 >> (4 * idx)) & 0xf]
+    return gcr
 
 
-def run_dshot(module, capture, samplerate, options=None):
+def dshot_telemetry_edges(samplerate, rate, value16, start, gcr=None, clock=1.0):
+    """The ESC's response at 5/4 of the bit rate: a low start bit, then
+    the 20 GCR bits as NRZI (a level change is a '1'), then the line is
+    released high."""
+    if gcr is None:
+        gcr = gcr_encode(value16)
+    tb = samplerate / rate * 0.8 * clock
+    edges = [(int(round(start)), 0)]
+    level = 0
+    for idx in range(20):
+        if (gcr >> (19 - idx)) & 1:
+            level ^= 1
+            edges.append((int(round(start + (idx + 1) * tb)), level))
+    if level == 0:
+        edges.append((int(round(start + 21 * tb)), 1))
+    return edges, start + 21 * tb
+
+
+def bidir_exchange(samplerate, rate, request, value16=None, start=100, **kwargs):
+    """Inverted request, then the response 30 us later unless value16 is None."""
+    edges, end = dshot_request_edges(samplerate, rate, request, start, inverted=True)
+    if value16 is not None or 'gcr' in kwargs:
+        reply, end = dshot_telemetry_edges(samplerate, rate, value16, end + 30e-6 * samplerate,
+                                           **kwargs)
+        edges += reply
+    return edges, end
+
+
+def run_dshot(module, capture, samplerate, options=None, idle=0):
+    """The first wait() returns the idle level, end() runs at the end of
+    the capture like srd_session_end() does."""
     decoder = build_decoder(module, options, samplerate)
-    decoder.capture = list(capture)
+    decoder.capture = [(0, idle)] + list(capture)
     try:
         decoder.decode()
     except EndOfCapture:
         pass
+    decoder.end()
     return decoder
 
 
@@ -230,41 +250,33 @@ def test_dshot_checksum():
     assert dshot_crc4(0x7d1) == 0xb
     value16 = (0x7d1 << 4) | dshot_crc4(0x7d1)
     assert value16 == 0x7d1b
+    assert dshot_word(1000, tlm=True) == 0x7d1b
+    assert dshot_word(1000, tlm=True, inverted=True) == 0x7d14
 
 
 def test_dshot_gcr_table(dshot):
-    # Every nibble must survive a round trip through the code table.
-    # The documented nibble order puts the first symbol into the most
-    # significant nibble, which is what the decoder tries first. Only
-    # frames with a matching checksum are considered valid ones.
-    payloads = (0x000, 0x7d1, 0xfff, 0x123, 0xaaa, 0x555, 0x004, 0x800)
-    for payload12 in payloads:
-        value16 = (payload12 << 4) | dshot_crc4(payload12)
-        bits = gcr_encode(value16, msb_first=True)
-        assert len(bits) == 20
-        decoded, order, crc_ok = dshot.Decoder().gcr_to_value(bits)
-        assert decoded == value16, (hex(value16), order)
-        assert crc_ok and order == 'high first'
-    # A nibble swapped frame is not a valid frame, but a four bit
-    # checksum cannot always tell. The decoder therefore trusts the
-    # documented order first, which keeps mis-ordered frames from being
-    # decoded as valid data.
-    swapped = gcr_encode(0x7d1b, msb_first=False)
-    decoded, order, crc_ok = dshot.Decoder().gcr_to_value(swapped)
-    assert order == 'high first' and decoded == 0xb1d7 and crc_ok, \
-        (hex(decoded), order, crc_ok)
-
-    # Symbols outside of the code table are rejected outright, 0b00000 is
-    # not one of the 16 valid five bit codes.
-    assert dshot.Decoder().gcr_to_value([0] * 20) == (None, None, False)
+    # Five bit code -> nibble table of Betaflight (dshot.c,
+    # decode_bb_value()), None marks the invalid codes.
+    iv = None
+    betaflight = [iv, iv, iv, iv, iv, iv, iv, iv, iv, 9, 10, 11, iv, 13, 14, 15,
+                  iv, iv, 2, 3, iv, 5, 6, 7, iv, 0, 8, 1, iv, 4, 12, iv]
+    for nibble, symbol in enumerate(GCR_SYMBOLS):
+        assert betaflight[symbol] == nibble, (nibble, hex(symbol))
+    assert tuple(dshot.GCR_SYMBOLS) == GCR_SYMBOLS
+    # Every nibble survives a round trip through the decoder.
+    samplerate = 24e6
+    for value12 in (0x444, 0x123, 0x567, 0x89a, 0xbcd, 0xef0, 0x004):
+        edges, _ = bidir_exchange(samplerate, 600e3, dshot_word(1000, inverted=True),
+                                  tlm_word(value12))
+        decoder = run_dshot(dshot, edges, samplerate, idle=1)
+        packets = python_packets(decoder, 'TLM')
+        assert len(packets) == 1 and packets[0][2] == value12, \
+            (hex(value12), packets, texts(decoder))
 
 
 def test_dshot600_throttle(dshot):
     samplerate = 24e6
-    value16 = 0x7d1b
-    edges, end = dshot_request_edges(samplerate, 600e3, value16, 0)
-    # A long idle level ends the frame, and a trailing edge flushes it.
-    edges.append((end + 1000, 1))
+    edges, _ = dshot_request_edges(samplerate, 600e3, 0x7d1b, 100)
     decoder = run_dshot(dshot, edges, samplerate)
     assert has_text(decoder, 'Throttle 1000'), texts(decoder)
     assert has_text(decoder, 'Checksum 0xb correct'), texts(decoder)
@@ -277,10 +289,7 @@ def test_dshot600_throttle(dshot):
 def test_dshot300_command(dshot):
     samplerate = 24e6
     # Command 12 (save settings) without a telemetry request.
-    value12 = 12 << 1
-    value16 = (value12 << 4) | dshot_crc4(value12)
-    edges, end = dshot_request_edges(samplerate, 300e3, value16, 0)
-    edges.append((end + 2000, 1))
+    edges, _ = dshot_request_edges(samplerate, 300e3, dshot_word(12), 100)
     decoder = run_dshot(dshot, edges, samplerate)
     assert has_text(decoder, 'Save settings'), texts(decoder)
     assert has_text(decoder, 'DShot300'), texts(decoder)
@@ -288,12 +297,10 @@ def test_dshot300_command(dshot):
     assert not python_packets(decoder, 'THROTTLE')
 
 
-def test_dshot1200_gcr(dshot):
+def test_dshot1200_frame(dshot):
+    # DShot1200 frames have 16 bits like the slower rates.
     samplerate = 48e6
-    value16 = 0x7d1b
-    bits = gcr_encode(value16, msb_first=True)
-    edges, end = dshot_symbol_edges(samplerate, 1.2e6, bits, 0)
-    edges.append((end + 2000, 1))
+    edges, _ = dshot_request_edges(samplerate, 1.2e6, 0x7d1b, 100)
     decoder = run_dshot(dshot, edges, samplerate)
     assert has_text(decoder, 'Checksum 0xb correct'), texts(decoder)
     assert has_text(decoder, 'DShot1200'), texts(decoder)
@@ -302,27 +309,72 @@ def test_dshot1200_gcr(dshot):
 
 def test_dshot_bidirectional_telemetry(dshot):
     samplerate = 24e6
-    # Throttle 1000 asks for telemetry.
-    edges, end = dshot_request_edges(samplerate, 600e3, 0x7d1b, 0)
-    # Mantissa 100, exponent 0 gives a period of 100 and 6000 eRPM.
-    payload = 100
-    value16 = (dshot_crc4(payload) << 12) | payload
-    reply, reply_end = dshot_telemetry_edges(
-        samplerate, 600e3, value16, end + 1000)
-    edges.extend(reply)
-    edges.append((reply_end + 1000, 0))
-    decoder = run_dshot(dshot, edges, samplerate)
-    assert python_packets(decoder, 'TLM') == [('eRPM', 6000, payload)], \
+    request = dshot_word(1000, tlm=True, inverted=True)
+    # Mantissa 100, exponent 0: a period of 100 us is 600000 eRPM.
+    edges, _ = bidir_exchange(samplerate, 600e3, request, tlm_word(100))
+    decoder = run_dshot(dshot, edges, samplerate, idle=1)
+    assert has_text(decoder, 'M1 DShot600 bidir 0x7d14'), texts(decoder)
+    assert has_text(decoder, 'Checksum 0x4 correct'), texts(decoder)
+    assert python_packets(decoder, 'FRAME') == [('1', 1000, True, True, 'DShot600')]
+    assert python_packets(decoder, 'TLM') == [('eRPM', 600000, 100)], \
         python_packets(decoder, 'TLM')
-    assert has_text(decoder, '6000 eRPM'), texts(decoder)
+    assert has_text(decoder, 'eRPM 600000 (period 100 us'), texts(decoder)
+    # 0xfff reports a motor which stands still.
+    edges, _ = bidir_exchange(samplerate, 600e3, request, tlm_word(0xfff))
+    decoder = run_dshot(dshot, edges, samplerate, idle=1)
+    assert python_packets(decoder, 'TLM') == [('eRPM', 0, 0xfff)], texts(decoder)
+
+
+def test_dshot_extended_telemetry(dshot):
+    samplerate = 24e6
+    request = dshot_word(48, inverted=True)
+    for value12, packet, text in (
+            (0x22d, ('Temperature', 45, 0x22d), 'Temperature: 45 degC'),
+            (0x432, ('Voltage', 50, 0x432), 'Voltage: 12.50 V'),
+            (0x614, ('Current', 20, 0x614), 'Current: 20 A'),
+            (0xe03, ('State', 3, 0xe03), 'State: 0x03')):
+        edges, _ = bidir_exchange(samplerate, 600e3, request, tlm_word(value12))
+        decoder = run_dshot(dshot, edges, samplerate, idle=1)
+        assert python_packets(decoder, 'TLM') == [packet], python_packets(decoder, 'TLM')
+        assert has_text(decoder, text), texts(decoder)
+
+
+def test_dshot_telemetry_errors(dshot):
+    samplerate = 24e6
+    request = dshot_word(1000, inverted=True)
+    edges, _ = bidir_exchange(samplerate, 600e3, request, tlm_word(100, csum_xor=5))
+    decoder = run_dshot(dshot, edges, samplerate, idle=1)
+    assert has_text(decoder, 'Telemetry checksum mismatch'), texts(decoder)
+    assert has_text(decoder, '(checksum error)'), texts(decoder)
+    # 0b00000 is not one of the 16 valid five bit codes.
+    gcr = gcr_encode(tlm_word(100)) & ~(0x1f << 15)
+    edges, _ = bidir_exchange(samplerate, 600e3, request, gcr=gcr)
+    decoder = run_dshot(dshot, edges, samplerate, idle=1)
+    assert has_text(decoder, 'Invalid GCR symbol 0x00'), texts(decoder)
+    assert not python_packets(decoder, 'TLM')
+    # A silent ESC is reported once the next frame arrives.
+    edges, end = bidir_exchange(samplerate, 600e3, request, None)
+    more, _ = bidir_exchange(samplerate, 600e3, request, tlm_word(100), start=end + 3000)
+    decoder = run_dshot(dshot, edges + more, samplerate, idle=1)
+    assert has_text(decoder, 'No telemetry response'), texts(decoder)
+    assert len(python_packets(decoder, 'TLM')) == 1
+
+
+def test_dshot_esc_clock_error(dshot):
+    # The response bit time is measured, an ESC clock 6 % off is fine.
+    samplerate = 24e6
+    for clock in (1.06, 0.94):
+        edges, _ = bidir_exchange(samplerate, 300e3, dshot_word(1000, inverted=True),
+                                  tlm_word(0x5f4), clock=clock)
+        decoder = run_dshot(dshot, edges, samplerate, idle=1)
+        assert python_packets(decoder, 'TLM') == [('eRPM', 30000, 0x5f4)], \
+            (clock, texts(decoder))
 
 
 def test_dshot_bad_checksum(dshot):
     samplerate = 24e6
     # Flip the throttle bit, which invalidates the checksum.
-    value16 = 0x7d1b ^ 0x0400
-    edges, end = dshot_request_edges(samplerate, 600e3, value16, 0)
-    edges.append((end + 1000, 1))
+    edges, _ = dshot_request_edges(samplerate, 600e3, 0x7d1b ^ 0x0400, 100)
     decoder = run_dshot(dshot, edges, samplerate)
     assert has_text(decoder, 'Checksum mismatch'), texts(decoder)
     assert python_packets(decoder, 'FRAME')[0][3] is False
@@ -330,12 +382,10 @@ def test_dshot_bad_checksum(dshot):
 
 def test_dshot_unexpected_burst(dshot):
     samplerate = 24e6
-    # Ten symbols are neither a request frame nor a telemetry response.
-    bits = [1] * 10
-    edges, end = dshot_symbol_edges(samplerate, 600e3, bits, 0)
-    edges.append((end + 1000, 1))
-    decoder = run_dshot(dshot, edges, samplerate)
-    assert has_text(decoder, 'Unexpected burst'), texts(decoder)
+    # Ten pulses are no request frame.
+    edges, _ = dshot_request_edges(samplerate, 600e3, 0xffff, 100)
+    decoder = run_dshot(dshot, edges[:20], samplerate)
+    assert has_text(decoder, 'Unexpected burst of 10 pulses'), texts(decoder)
 
 
 def test_crsf_checksum():
@@ -493,9 +543,12 @@ def main():
         ('dshot_gcr_table', lambda: test_dshot_gcr_table(dshot)),
         ('dshot600_throttle', lambda: test_dshot600_throttle(dshot)),
         ('dshot300_command', lambda: test_dshot300_command(dshot)),
-        ('dshot1200_gcr', lambda: test_dshot1200_gcr(dshot)),
+        ('dshot1200_frame', lambda: test_dshot1200_frame(dshot)),
         ('dshot_bidirectional_telemetry',
          lambda: test_dshot_bidirectional_telemetry(dshot)),
+        ('dshot_extended_telemetry', lambda: test_dshot_extended_telemetry(dshot)),
+        ('dshot_telemetry_errors', lambda: test_dshot_telemetry_errors(dshot)),
+        ('dshot_esc_clock_error', lambda: test_dshot_esc_clock_error(dshot)),
         ('dshot_bad_checksum', lambda: test_dshot_bad_checksum(dshot)),
         ('dshot_unexpected_burst', lambda: test_dshot_unexpected_burst(dshot)),
         ('crsf_checksum', lambda: test_crsf_checksum()),

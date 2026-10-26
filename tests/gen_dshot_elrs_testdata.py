@@ -43,7 +43,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, 'testdata')
 
 GCR_SYMBOLS = (
-    0x19, 0x1b, 0x12, 0x13, 0x1c, 0x15, 0x16, 0x17,
+    0x19, 0x1b, 0x12, 0x13, 0x1d, 0x15, 0x16, 0x17,
     0x1a, 0x09, 0x0a, 0x0b, 0x1e, 0x0d, 0x0e, 0x0f,
 )
 
@@ -97,34 +97,87 @@ def crc4(value):
     return (value ^ (value >> 4) ^ (value >> 8)) & 0xf
 
 
-def dshot_bits(value16, count):
+def dshot_word(value11, tlm=False, inverted=False, crc_xor=0):
+    """16 bit request: value, telemetry request bit and checksum, which
+    bidirectional DShot inverts."""
+    value12 = (value11 << 1) | (1 if tlm else 0)
+    crc = crc4(value12)
+    if inverted:
+        crc ^= 0xf
+    return (value12 << 4) | (crc ^ crc_xor)
+
+
+def dshot_bits(value16, count=16):
     return [(value16 >> (count - 1 - idx)) & 1 for idx in range(count)]
 
 
-def dshot_frame(edges, pos, samplerate, rate, value16):
-    period = int(round(samplerate / rate))
-    for bit in dshot_bits(value16, 16):
-        high = int(round(period * (0.75 if bit else 0.375)))
-        edges.append((pos, 1))
-        edges.append((pos + high, 0))
+# T0H/T1H as shares of the bit period: DShot specification, Betaflight
+# timer DMA (7/20, 14/20) and Betaflight bit-banged outputs (1/3, 2/3).
+DUTIES = {'spec': (0.375, 0.75), 'bf': (0.35, 0.70), 'bb': (1 / 3, 2 / 3)}
+
+
+def dshot_request(edges, pos, period, value16, inverted=False, duty='spec',
+                  duties=None):
+    """One request frame. An inverted (bidirectional) line rests high and
+    every bit starts with the low level."""
+    active = 0 if inverted else 1
+    zero, one = DUTIES[duty]
+    for idx, bit in enumerate(dshot_bits(value16)):
+        share = duties[idx] if duties else (one if bit else zero)
+        edges.append((int(round(pos)), active))
+        edges.append((int(round(pos + period * share)), 1 - active))
         pos += period
     return pos
 
 
-def dshot_reply(edges, pos, samplerate, rate, value16):
-    period = int(round(samplerate / rate))
-    nibbles = [(value16 >> (4 * idx)) & 0xf for idx in range(3, -1, -1)]
-    bits = [0]
-    for nibble in nibbles:
-        bits.extend(dshot_bits(GCR_SYMBOLS[nibble], 5))
-    pos += int(round(period * 20))
-    edges.append((pos, 1))
-    pos += int(round(period * 8))
-    for bit in bits:
-        low = int(round(period * (0.75 if bit else 0.375)))
-        edges.append((pos, 0))
-        edges.append((pos + low, 1))
-        pos += period
+def tlm_word(value12, csum_xor=0):
+    """16 bit response word: the four nibbles XOR to 0xf."""
+    csum = ~(value12 ^ (value12 >> 4) ^ (value12 >> 8)) & 0xf
+    return (value12 << 4) | (csum ^ csum_xor)
+
+
+def gcr20(word16, bad_first_symbol=False):
+    gcr = 0
+    for idx in range(3, -1, -1):
+        gcr = (gcr << 5) | GCR_SYMBOLS[(word16 >> (4 * idx)) & 0xf]
+    if bad_first_symbol:
+        gcr &= ~(0x1f << 15)
+    return gcr
+
+
+def dshot_response(edges, pos, tb, gcr):
+    """The ESC's 21 bits: a low start bit, then the 20 GCR bits as NRZI
+    (a level change is a '1'). The line is released high at the end."""
+    level = 0
+    edges.append((int(round(pos)), 0))
+    for idx in range(20):
+        if (gcr >> (19 - idx)) & 1:
+            level ^= 1
+            edges.append((int(round(pos + (idx + 1) * tb)), level))
+    if level == 0:
+        edges.append((int(round(pos + 21 * tb)), 1))
+    return pos + 21 * tb
+
+
+def erpm12(period_us):
+    """eeem mmmm mmmm: commutation period as mantissa << exponent."""
+    exp = 0
+    while (period_us >> exp) > 511:
+        exp += 1
+    return (exp << 9) | (period_us >> exp)
+
+
+def dshot_exchange(edges, pos, samplerate, kbit, value16, value12=None,
+                   delay_us=30.0, clock=1.0, csum_xor=0, bad_gcr=False,
+                   duty='spec'):
+    """Inverted request, then the ESC's response unless value12 is None.
+    `clock` scales the response bit time like an ESC clock error."""
+    period = samplerate / (kbit * 1e3)
+    pos = dshot_request(edges, pos, period, value16, True, duty)
+    if value12 is not None:
+        tb = period * 0.8 * clock
+        dshot_response(edges, pos + samplerate * delay_us * 1e-6, tb,
+                       gcr20(tlm_word(value12, csum_xor), bad_gcr))
     return pos
 
 
@@ -139,25 +192,23 @@ def generate_dshot():
 
 def dshot_mixed_edges():
     samplerate = 24000000
-    rate = 600e3
+    period = samplerate / 600e3
     edges = []
-    # Start with an idle low level, a capture which begins in the middle
-    # of a pulse cannot be decoded.
+    # DShot600 on a line which rests low: throttle 1000 with the
+    # telemetry request bit, the save settings command, motor stop.
     pos = 200
-    # Throttle 1000 with the telemetry request bit, checksum 0xb.
-    throttle = 0x7d1b
-    command = (12 << 1) << 4 | crc4(12 << 1)
-    payload = 100
-    reply = (crc4(payload) << 12) | payload
-    pos = dshot_frame(edges, pos, samplerate, rate, throttle)
-    pos = dshot_reply(edges, pos, samplerate, rate, reply)
+    pos = dshot_request(edges, pos, period, dshot_word(1000, True)) + 3000
+    pos = dshot_request(edges, pos, period, dshot_word(12, True)) + 3000
+    pos = dshot_request(edges, pos, period, dshot_word(0)) + 3000
+    # Bidirectional DShot600: the line rests high, the ESC answers each
+    # frame 30 us later with the commutation period or an EDT frame.
+    edges.append((int(pos), 1))
     pos += 3000
-    edges.append((pos, 0))
-    pos += 3000
-    pos = dshot_frame(edges, pos, samplerate, rate, command)
-    pos += 6000
-    pos = dshot_frame(edges, pos, samplerate, rate, throttle)
-    total = pos + 6000
+    pos = dshot_exchange(edges, pos, samplerate, 600, dshot_word(1000, False, True),
+                         erpm12(2000)) + 3000
+    pos = dshot_exchange(edges, pos, samplerate, 600, dshot_word(48, True, True),
+                         0x200 | 45) + 3000
+    total = int(pos) + 3000
     return samplerate, edges, total
 
 
@@ -218,68 +269,8 @@ def generate_elrs():
 
 #-- Native decoder cases -----------------------------------------------
 
-def symbol_pulses(edges, pos, period, duties, active=1):
-    """One pulse per symbol, active for the given share of the period."""
-    for duty in duties:
-        edges.append((pos, active))
-        edges.append((pos + int(round(period * duty)), 1 - active))
-        pos += period
-    return pos
-
-
-def bit_duties(bits):
-    return [0.75 if bit else 0.375 for bit in bits]
-
-
-def gcr_bits(value16, high_first=True):
-    nibbles = [(value16 >> (4 * idx)) & 0xf for idx in range(4)]
-    if high_first:
-        nibbles.reverse()
-    bits = []
-    for nibble in nibbles:
-        bits.extend(dshot_bits(GCR_SYMBOLS[nibble], 5))
-    return bits
-
-
-def frame16(value12):
-    return (value12 << 4) | crc4(value12)
-
-
-def throttle16(value11, tlm=False):
-    return frame16((value11 << 1) | (1 if tlm else 0))
-
-
-def crc_valid(value16):
-    return (value16 & 0xf) == crc4(value16 >> 4)
-
-
-def request(edges, pos, period, value16, gap):
-    pos = symbol_pulses(edges, pos, period, bit_duties(dshot_bits(value16, 16)))
-    return pos + gap
-
-
-def reply_burst(edges, pos, period, bits, gap, duties=None):
-    """The line rises, then the ESC drives one low pulse per symbol.
-
-    The line returns to the low idle level after the gap, that single
-    edge burst does not produce annotations."""
-    edges.append((pos, 1))
-    pos += period * 8
-    pos = symbol_pulses(edges, pos, period, duties or bit_duties(bits), 0)
-    pos += gap
-    edges.append((pos, 0))
-    return pos + gap
-
-
-def tlm_bits(raw12):
-    return [0] + gcr_bits((crc4(raw12) << 12) | raw12)
-
-
 def dshot_case(name, samplerate, edges, pos, options):
-    # A trailing edge flushes the last burst.
-    edges.append((pos, 1))
-    edges.append((pos + 10, 0))
-    write_case('dshot_c/' + name, samplerate, edges, pos + 2000, {
+    write_case('dshot_c/' + name, samplerate, edges, int(pos) + 2000, {
         'decoder': 'dshot_c',
         'channels': {'data': 0},
         'options': options,
@@ -294,65 +285,100 @@ def generate_dshot_c():
         'options': {},
     })
 
-    # DShot1200 GCR frames, telemetry types and the symbol bits. The XOR
-    # checksum does not depend on the nibble order, so a frame is either
-    # valid in both orders or in none.
-    period, gap, edges, pos = 40, 2000, [], 200
-    no_crc = next(v for v in range(0x10, 0x10000) if not crc_valid(v))
-    for bits in (gcr_bits(0x7d1b), gcr_bits(0x7d1b, high_first=False),
-                 [0] * 20, gcr_bits(no_crc)):
-        pos = symbol_pulses(edges, pos, period, bit_duties(bits)) + gap
-    for raw12 in ((2 << 9) | 300, 0x200 | 45, 0x400 | 50, 0x600 | 20,
-                  0x800 | 7, 0xa00 | 8, 0xc00 | 9, 0xe00 | 3, 0, 0x064):
-        pos = reply_burst(edges, pos, period, tlm_bits(raw12), gap)
-    bits = tlm_bits(0x123)
-    duties = bit_duties(bits)
-    duties[bits.index(0, 1)] = 0.55
-    pos = reply_burst(edges, pos, period, bits, gap, duties)
-    pos = reply_burst(edges, pos, period, [1] + bits[1:], gap)
-    dshot_case('gcr_bits', 48000000, edges, pos, {'bits': 'on', 'motor': '3'})
+    # Bidirectional DShot600 at 48 MHz with the bit annotations: every
+    # exponent of the commutation period, motor stopped, every EDT type,
+    # telemetry checksum and GCR errors, a silent ESC, ESC clocks 5 % off,
+    # early and late responses, and a request with a non-inverted CRC.
+    sr, edges, pos = 48000000, [(0, 1)], 400
+    gap = 6000
+    for period_us in (20, 500, 1000, 5000, 20000, 65000):
+        pos = dshot_exchange(edges, pos, sr, 600, dshot_word(1000, False, True),
+                             erpm12(period_us)) + gap
+    pos = dshot_exchange(edges, pos, sr, 600, dshot_word(0, False, True), 0xfff) + gap
+    for raw12 in (0x200 | 45, 0x400 | 50, 0x600 | 20, 0x800 | 7, 0xa00 | 8,
+                  0xc00 | 9, 0xe00 | 3):
+        pos = dshot_exchange(edges, pos, sr, 600, dshot_word(48, True, True),
+                             raw12) + gap
+    pos = dshot_exchange(edges, pos, sr, 600, dshot_word(700, False, True),
+                         erpm12(3000), csum_xor=0x5) + gap
+    pos = dshot_exchange(edges, pos, sr, 600, dshot_word(700, False, True),
+                         erpm12(3000), bad_gcr=True) + gap
+    pos = dshot_exchange(edges, pos, sr, 600, dshot_word(700, False, True), None) + gap
+    for clock in (1.05, 0.95):
+        pos = dshot_exchange(edges, pos, sr, 600, dshot_word(1500, False, True),
+                             erpm12(777), clock=clock) + gap
+    for delay in (20.0, 45.0):
+        pos = dshot_exchange(edges, pos, sr, 600, dshot_word(1500, False, True),
+                             erpm12(888), delay_us=delay) + gap
+    pos = dshot_exchange(edges, pos, sr, 600, dshot_word(1000, False, False),
+                         erpm12(999)) + gap
+    dshot_case('bidir', sr, edges, pos, {'bits': 'on', 'motor': '3'})
+
+    # Every rate with the three duty cycle schemes, on a line which rests
+    # low and on a bidirectional one.
+    sr, edges, pos = 48000000, [], 400
+    for kbit in (150, 300, 600, 1200):
+        for duty in ('spec', 'bf', 'bb'):
+            pos = dshot_request(edges, pos, sr / (kbit * 1e3), dshot_word(1234, True),
+                                duty=duty) + 4000
+    edges.append((int(pos), 1))
+    pos += 4000
+    for kbit in (150, 300, 600, 1200):
+        for duty in ('spec', 'bf', 'bb'):
+            pos = dshot_exchange(edges, pos, sr, kbit, dshot_word(321, False, True),
+                                 erpm12(1234), duty=duty) + 8000
+    dshot_case('rates', sr, edges, pos, {})
 
     # 3D throttle ranges, commands and a configured rate which does not
     # match the DShot600 frames.
-    period, gap, edges, pos = 40, 2000, [], 200
+    period, edges, pos = 40, [], 200
     for value11, tlm in ((500, False), (1500, False), (1047, False),
                          (1048, False), (2047, True), (48, False), (0, False),
                          (40, False), (17, False), (1, False), (21, False),
-                         (31, False), (13, True)):
-        pos = request(edges, pos, period, throttle16(value11, tlm), gap)
-    pos = request(edges, pos, period, throttle16(1000) ^ 0x0400, gap)
-    pos = request(edges, pos, 80, throttle16(1000), gap)
+                         (31, False), (13, True), (33, True), (47, True)):
+        pos = dshot_request(edges, pos, period, dshot_word(value11, tlm)) + 2000
+    pos = dshot_request(edges, pos, period, dshot_word(1000) ^ 0x0400) + 2000
+    pos = dshot_request(edges, pos, 80, dshot_word(1000)) + 2000
     dshot_case('throttle_3d', 24000000, edges, pos,
                {'3d': 'on', 'rate': 'DShot300', 'motor': '8'})
 
-    # Bursts which are no frames, ambiguous timing, unusual rates.
-    period, gap, edges, pos = 40, 2000, [], 200
-    pos = symbol_pulses(edges, pos, period, [0.75] * 10) + gap
-    pos = symbol_pulses(edges, pos, period, [0.75] * 50) + gap
-    duties = bit_duties(dshot_bits(throttle16(1000), 16))
+    # Bursts which are no frames, ambiguous timing, unusual rates and
+    # responses which do not fit into 21 bits.
+    period, edges, pos = 40, [], 200
+    for count in (10, 50):
+        for _ in range(count):
+            edges.append((int(pos), 1))
+            edges.append((int(pos + period * 0.75), 0))
+            pos += period
+        pos += 2000
+    duties = [0.375 if bit == 0 else 0.75 for bit in dshot_bits(dshot_word(1000))]
     duties[duties.index(0.375)] = 0.55
     duties[duties.index(0.75)] = 0.6
-    pos = symbol_pulses(edges, pos, period, duties) + gap
-    pos = request(edges, pos, 53, throttle16(1000), gap)
-    pos = request(edges, pos, 160, throttle16(300), gap)
-    pos = request(edges, pos, 20, throttle16(2000), gap)
-    pos = reply_burst(edges, pos, period, [1] + tlm_bits(100)[1:], gap)
-    pos = reply_burst(edges, pos, period, [0] * 21, gap)
+    pos = dshot_request(edges, pos, period, dshot_word(1000), duties=duties) + 2000
+    pos = dshot_request(edges, pos, 53, dshot_word(1000)) + 2000
+    pos = dshot_request(edges, pos, 160, dshot_word(300)) + 2000
+    pos = dshot_request(edges, pos, 20, dshot_word(2000)) + 2000
+    edges.append((int(pos), 1))
+    pos += 2000
+    edges.append((int(pos), 0))
+    edges.append((int(pos + 30), 1))
+    pos += 2000
+    pos = dshot_exchange(edges, pos, 24000000, 600, dshot_word(900, False, True), None)
+    start = pos + 720
+    dshot_response(edges, start, 32, gcr20(tlm_word(erpm12(500))))
+    edges.append((int(start + 23 * 32), 0))
+    edges.append((int(start + 24 * 32), 1))
+    pos = start + 6000
     dshot_case('errors', 24000000, edges, pos, {})
 
-    # Without telemetry decoding a response is just another burst.
-    period, gap, edges, pos = 40, 2000, [], 200
-    pos = request(edges, pos, period, throttle16(1000, True), gap)
-    pos = reply_burst(edges, pos, period, tlm_bits(100), gap)
-    dshot_case('tlm_off', 24000000, edges, pos, {'tlm': 'off'})
-
-    # 12.5 MHz makes the idle limit 62.5 samples, which rounds to 62. A
-    # gap of 63 samples separates two frames, one of 62 does not.
-    period, edges, pos = 83, [], 200
-    for gap in (63, 63, 62, 2000):
-        symbol_pulses(edges, pos, period, bit_duties(dshot_bits(throttle16(700), 16)))
-        pos = edges[-1][0] + gap
-    dshot_case('samplerate_12m5', 12500000, edges, pos, {})
+    # Without telemetry decoding the responses are skipped silently.
+    sr, edges, pos = 24000000, [(0, 1)], 400
+    pos = dshot_exchange(edges, pos, sr, 600, dshot_word(1000, True, True),
+                         erpm12(1000)) + 3000
+    pos = dshot_exchange(edges, pos, sr, 600, dshot_word(1000, True, True), None) + 3000
+    pos = dshot_exchange(edges, pos, sr, 600, dshot_word(1000, True, True),
+                         erpm12(1000)) + 3000
+    dshot_case('tlm_off', sr, edges, pos, {'tlm': 'off'})
 
 
 def uart_levels(data, stop_errors=()):

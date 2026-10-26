@@ -1,11 +1,11 @@
 {
 	"decoder": "dshot",
 	"samplerate": 24000000,
-	"num_annotations": 62,
+	"num_annotations": 72,
 	"annotations": [
 		{
 			"start_sample": 200,
-			"end_sample": 830,
+			"end_sample": 840,
 			"ann_class": 6,
 			"ann_type": 13,
 			"texts": [
@@ -16,17 +16,18 @@
 		}, 
 		{
 			"start_sample": 200,
-			"end_sample": 830,
+			"end_sample": 840,
 			"ann_class": 0,
 			"ann_type": 7,
 			"texts": [
 				"M8 DShot600 0x3e85", 
+				"M8 0x3e85", 
 				"M8"
 			]
 		}, 
 		{
 			"start_sample": 200,
-			"end_sample": 830,
+			"end_sample": 840,
 			"ann_class": 1,
 			"ann_type": 8,
 			"texts": [
@@ -36,7 +37,7 @@
 		}, 
 		{
 			"start_sample": 200,
-			"end_sample": 830,
+			"end_sample": 840,
 			"ann_class": 3,
 			"ann_type": 10,
 			"texts": [
@@ -46,7 +47,7 @@
 		}, 
 		{
 			"start_sample": 2840,
-			"end_sample": 3455,
+			"end_sample": 3480,
 			"ann_class": 6,
 			"ann_type": 13,
 			"texts": [
@@ -57,17 +58,18 @@
 		}, 
 		{
 			"start_sample": 2840,
-			"end_sample": 3455,
+			"end_sample": 3480,
 			"ann_class": 0,
 			"ann_type": 7,
 			"texts": [
 				"M8 DShot600 0xbb88", 
+				"M8 0xbb88", 
 				"M8"
 			]
 		}, 
 		{
 			"start_sample": 2840,
-			"end_sample": 3455,
+			"end_sample": 3480,
 			"ann_class": 1,
 			"ann_type": 8,
 			"texts": [
@@ -77,7 +79,7 @@
 		}, 
 		{
 			"start_sample": 2840,
-			"end_sample": 3455,
+			"end_sample": 3480,
 			"ann_class": 3,
 			"ann_type": 10,
 			"texts": [
@@ -87,7 +89,7 @@
 		}, 
 		{
 			"start_sample": 5480,
-			"end_sample": 6095,
+			"end_sample": 6120,
 			"ann_class": 6,
 			"ann_type": 13,
 			"texts": [
@@ -98,17 +100,18 @@
 		}, 
 		{
 			"start_sample": 5480,
-			"end_sample": 6095,
+			"end_sample": 6120,
 			"ann_class": 0,
 			"ann_type": 7,
 			"texts": [
 				"M8 DShot600 0x82e4", 
+				"M8 0x82e4", 
 				"M8"
 			]
 		}, 
 		{
 			"start_sample": 5480,
-			"end_sample": 6095,
+			"end_sample": 6120,
 			"ann_class": 1,
 			"ann_type": 8,
 			"texts": [
@@ -118,7 +121,7 @@
 		}, 
 		{
 			"start_sample": 5480,
-			"end_sample": 6095,
+			"end_sample": 6120,
 			"ann_class": 3,
 			"ann_type": 10,
 			"texts": [
@@ -128,7 +131,7 @@
 		}, 
 		{
 			"start_sample": 8120,
-			"end_sample": 8750,
+			"end_sample": 8760,
 			"ann_class": 6,
 			"ann_type": 13,
 			"texts": [
@@ -139,17 +142,18 @@
 		}, 
 		{
 			"start_sample": 8120,
-			"end_sample": 8750,
+			"end_sample": 8760,
 			"ann_class": 0,
 			"ann_type": 7,
 			"texts": [
 				"M8 DShot600 0x830b", 
+				"M8 0x830b", 
 				"M8"
 			]
 		}, 
 		{
 			"start_sample": 8120,
-			"end_sample": 8750,
+			"end_sample": 8760,
 			"ann_class": 1,
 			"ann_type": 8,
 			"texts": [
@@ -159,7 +163,7 @@
 		}, 
 		{
 			"start_sample": 8120,
-			"end_sample": 8750,
+			"end_sample": 8760,
 			"ann_class": 3,
 			"ann_type": 10,
 			"texts": [
@@ -169,7 +173,7 @@
 		}, 
 		{
 			"start_sample": 10760,
-			"end_sample": 11390,
+			"end_sample": 11400,
 			"ann_class": 6,
 			"ann_type": 13,
 			"texts": [
@@ -180,17 +184,18 @@
 		}, 
 		{
 			"start_sample": 10760,
-			"end_sample": 11390,
+			"end_sample": 11400,
 			"ann_class": 0,
 			"ann_type": 7,
 			"texts": [
 				"M8 DShot600 0xffff", 
+				"M8 0xffff", 
 				"M8"
 			]
 		}, 
 		{
 			"start_sample": 10760,
-			"end_sample": 11390,
+			"end_sample": 11400,
 			"ann_class": 1,
 			"ann_type": 8,
 			"texts": [
@@ -200,7 +205,7 @@
 		}, 
 		{
 			"start_sample": 10760,
-			"end_sample": 11390,
+			"end_sample": 11400,
 			"ann_class": 3,
 			"ann_type": 10,
 			"texts": [
@@ -210,7 +215,7 @@
 		}, 
 		{
 			"start_sample": 10760,
-			"end_sample": 11390,
+			"end_sample": 11400,
 			"ann_class": 4,
 			"ann_type": 11,
 			"texts": [
@@ -220,7 +225,7 @@
 		}, 
 		{
 			"start_sample": 13400,
-			"end_sample": 14015,
+			"end_sample": 14040,
 			"ann_class": 6,
 			"ann_type": 13,
 			"texts": [
@@ -231,17 +236,18 @@
 		}, 
 		{
 			"start_sample": 13400,
-			"end_sample": 14015,
+			"end_sample": 14040,
 			"ann_class": 0,
 			"ann_type": 7,
 			"texts": [
 				"M8 DShot600 0x0606", 
+				"M8 0x0606", 
 				"M8"
 			]
 		}, 
 		{
 			"start_sample": 13400,
-			"end_sample": 14015,
+			"end_sample": 14040,
 			"ann_class": 1,
 			"ann_type": 8,
 			"texts": [
@@ -251,7 +257,7 @@
 		}, 
 		{
 			"start_sample": 13400,
-			"end_sample": 14015,
+			"end_sample": 14040,
 			"ann_class": 3,
 			"ann_type": 10,
 			"texts": [
@@ -261,7 +267,7 @@
 		}, 
 		{
 			"start_sample": 16040,
-			"end_sample": 16655,
+			"end_sample": 16680,
 			"ann_class": 6,
 			"ann_type": 13,
 			"texts": [
@@ -272,17 +278,18 @@
 		}, 
 		{
 			"start_sample": 16040,
-			"end_sample": 16655,
+			"end_sample": 16680,
 			"ann_class": 0,
 			"ann_type": 7,
 			"texts": [
 				"M8 DShot600 0x0000", 
+				"M8 0x0000", 
 				"M8"
 			]
 		}, 
 		{
 			"start_sample": 16040,
-			"end_sample": 16655,
+			"end_sample": 16680,
 			"ann_class": 1,
 			"ann_type": 8,
 			"texts": [
@@ -292,7 +299,7 @@
 		}, 
 		{
 			"start_sample": 16040,
-			"end_sample": 16655,
+			"end_sample": 16680,
 			"ann_class": 3,
 			"ann_type": 10,
 			"texts": [
@@ -302,7 +309,7 @@
 		}, 
 		{
 			"start_sample": 18680,
-			"end_sample": 19310,
+			"end_sample": 19320,
 			"ann_class": 6,
 			"ann_type": 13,
 			"texts": [
@@ -313,17 +320,18 @@
 		}, 
 		{
 			"start_sample": 18680,
-			"end_sample": 19310,
+			"end_sample": 19320,
 			"ann_class": 0,
 			"ann_type": 7,
 			"texts": [
 				"M8 DShot600 0x0505", 
+				"M8 0x0505", 
 				"M8"
 			]
 		}, 
 		{
 			"start_sample": 18680,
-			"end_sample": 19310,
+			"end_sample": 19320,
 			"ann_class": 1,
 			"ann_type": 8,
 			"texts": [
@@ -333,7 +341,7 @@
 		}, 
 		{
 			"start_sample": 18680,
-			"end_sample": 19310,
+			"end_sample": 19320,
 			"ann_class": 3,
 			"ann_type": 10,
 			"texts": [
@@ -343,7 +351,7 @@
 		}, 
 		{
 			"start_sample": 21320,
-			"end_sample": 21935,
+			"end_sample": 21960,
 			"ann_class": 6,
 			"ann_type": 13,
 			"texts": [
@@ -354,17 +362,18 @@
 		}, 
 		{
 			"start_sample": 21320,
-			"end_sample": 21935,
+			"end_sample": 21960,
 			"ann_class": 0,
 			"ann_type": 7,
 			"texts": [
 				"M8 DShot600 0x0220", 
+				"M8 0x0220", 
 				"M8"
 			]
 		}, 
 		{
 			"start_sample": 21320,
-			"end_sample": 21935,
+			"end_sample": 21960,
 			"ann_class": 1,
 			"ann_type": 8,
 			"texts": [
@@ -374,7 +383,7 @@
 		}, 
 		{
 			"start_sample": 21320,
-			"end_sample": 21935,
+			"end_sample": 21960,
 			"ann_class": 3,
 			"ann_type": 10,
 			"texts": [
@@ -384,7 +393,7 @@
 		}, 
 		{
 			"start_sample": 23960,
-			"end_sample": 24575,
+			"end_sample": 24600,
 			"ann_class": 6,
 			"ann_type": 13,
 			"texts": [
@@ -395,17 +404,18 @@
 		}, 
 		{
 			"start_sample": 23960,
-			"end_sample": 24575,
+			"end_sample": 24600,
 			"ann_class": 0,
 			"ann_type": 7,
 			"texts": [
 				"M8 DShot600 0x0022", 
+				"M8 0x0022", 
 				"M8"
 			]
 		}, 
 		{
 			"start_sample": 23960,
-			"end_sample": 24575,
+			"end_sample": 24600,
 			"ann_class": 2,
 			"ann_type": 9,
 			"texts": [
@@ -416,7 +426,7 @@
 		}, 
 		{
 			"start_sample": 23960,
-			"end_sample": 24575,
+			"end_sample": 24600,
 			"ann_class": 3,
 			"ann_type": 10,
 			"texts": [
@@ -426,7 +436,7 @@
 		}, 
 		{
 			"start_sample": 26600,
-			"end_sample": 27215,
+			"end_sample": 27240,
 			"ann_class": 6,
 			"ann_type": 13,
 			"texts": [
@@ -437,17 +447,18 @@
 		}, 
 		{
 			"start_sample": 26600,
-			"end_sample": 27215,
+			"end_sample": 27240,
 			"ann_class": 0,
 			"ann_type": 7,
 			"texts": [
 				"M8 DShot600 0x02a8", 
+				"M8 0x02a8", 
 				"M8"
 			]
 		}, 
 		{
 			"start_sample": 26600,
-			"end_sample": 27215,
+			"end_sample": 27240,
 			"ann_class": 2,
 			"ann_type": 9,
 			"texts": [
@@ -458,7 +469,7 @@
 		}, 
 		{
 			"start_sample": 26600,
-			"end_sample": 27215,
+			"end_sample": 27240,
 			"ann_class": 3,
 			"ann_type": 10,
 			"texts": [
@@ -468,7 +479,7 @@
 		}, 
 		{
 			"start_sample": 29240,
-			"end_sample": 29870,
+			"end_sample": 29880,
 			"ann_class": 6,
 			"ann_type": 13,
 			"texts": [
@@ -479,17 +490,18 @@
 		}, 
 		{
 			"start_sample": 29240,
-			"end_sample": 29870,
+			"end_sample": 29880,
 			"ann_class": 0,
 			"ann_type": 7,
 			"texts": [
 				"M8 DShot600 0x03ed", 
+				"M8 0x03ed", 
 				"M8"
 			]
 		}, 
 		{
 			"start_sample": 29240,
-			"end_sample": 29870,
+			"end_sample": 29880,
 			"ann_class": 2,
 			"ann_type": 9,
 			"texts": [
@@ -500,7 +512,7 @@
 		}, 
 		{
 			"start_sample": 29240,
-			"end_sample": 29870,
+			"end_sample": 29880,
 			"ann_class": 3,
 			"ann_type": 10,
 			"texts": [
@@ -510,7 +522,7 @@
 		}, 
 		{
 			"start_sample": 31880,
-			"end_sample": 32495,
+			"end_sample": 32520,
 			"ann_class": 6,
 			"ann_type": 13,
 			"texts": [
@@ -521,17 +533,18 @@
 		}, 
 		{
 			"start_sample": 31880,
-			"end_sample": 32495,
+			"end_sample": 32520,
 			"ann_class": 0,
 			"ann_type": 7,
 			"texts": [
 				"M8 DShot600 0x01ba", 
+				"M8 0x01ba", 
 				"M8"
 			]
 		}, 
 		{
 			"start_sample": 31880,
-			"end_sample": 32495,
+			"end_sample": 32520,
 			"ann_class": 2,
 			"ann_type": 9,
 			"texts": [
@@ -542,7 +555,7 @@
 		}, 
 		{
 			"start_sample": 31880,
-			"end_sample": 32495,
+			"end_sample": 32520,
 			"ann_class": 3,
 			"ann_type": 10,
 			"texts": [
@@ -552,7 +565,7 @@
 		}, 
 		{
 			"start_sample": 31880,
-			"end_sample": 32495,
+			"end_sample": 32520,
 			"ann_class": 4,
 			"ann_type": 11,
 			"texts": [
@@ -562,7 +575,7 @@
 		}, 
 		{
 			"start_sample": 34520,
-			"end_sample": 35135,
+			"end_sample": 35160,
 			"ann_class": 6,
 			"ann_type": 13,
 			"texts": [
@@ -573,17 +586,124 @@
 		}, 
 		{
 			"start_sample": 34520,
-			"end_sample": 35135,
+			"end_sample": 35160,
 			"ann_class": 0,
 			"ann_type": 7,
 			"texts": [
-				"M8 DShot600 0x790a", 
+				"M8 DShot600 0x0437", 
+				"M8 0x0437", 
 				"M8"
 			]
 		}, 
 		{
 			"start_sample": 34520,
-			"end_sample": 35135,
+			"end_sample": 35160,
+			"ann_class": 2,
+			"ann_type": 9,
+			"texts": [
+				"Command 33 (Signal line telemetry enable)", 
+				"33 (Signal line telemetry enable)", 
+				"Signal line telemetry enable"
+			]
+		}, 
+		{
+			"start_sample": 34520,
+			"end_sample": 35160,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0x7 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 34520,
+			"end_sample": 35160,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"Telemetry requested", 
+				"TLM req"
+			]
+		}, 
+		{
+			"start_sample": 37160,
+			"end_sample": 37800,
+			"ann_class": 6,
+			"ann_type": 13,
+			"texts": [
+				"Measured DShot600 instead of configured DShot300", 
+				"Measured DShot600, not DShot300", 
+				"Rate mismatch"
+			]
+		}, 
+		{
+			"start_sample": 37160,
+			"end_sample": 37800,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M8 DShot600 0x05fa", 
+				"M8 0x05fa", 
+				"M8"
+			]
+		}, 
+		{
+			"start_sample": 37160,
+			"end_sample": 37800,
+			"ann_class": 2,
+			"ann_type": 9,
+			"texts": [
+				"Command 47 (eRPM period telemetry)", 
+				"47 (eRPM period telemetry)", 
+				"eRPM period telemetry"
+			]
+		}, 
+		{
+			"start_sample": 37160,
+			"end_sample": 37800,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0xa correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 37160,
+			"end_sample": 37800,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"Telemetry requested", 
+				"TLM req"
+			]
+		}, 
+		{
+			"start_sample": 39800,
+			"end_sample": 40440,
+			"ann_class": 6,
+			"ann_type": 13,
+			"texts": [
+				"Measured DShot600 instead of configured DShot300", 
+				"Measured DShot600, not DShot300", 
+				"Rate mismatch"
+			]
+		}, 
+		{
+			"start_sample": 39800,
+			"end_sample": 40440,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M8 DShot600 0x790a", 
+				"M8 0x790a", 
+				"M8"
+			]
+		}, 
+		{
+			"start_sample": 39800,
+			"end_sample": 40440,
 			"ann_class": 1,
 			"ann_type": 8,
 			"texts": [
@@ -592,8 +712,8 @@
 			]
 		}, 
 		{
-			"start_sample": 34520,
-			"end_sample": 35135,
+			"start_sample": 39800,
+			"end_sample": 40440,
 			"ann_class": 6,
 			"ann_type": 13,
 			"texts": [
@@ -603,8 +723,8 @@
 			]
 		}, 
 		{
-			"start_sample": 34520,
-			"end_sample": 35135,
+			"start_sample": 39800,
+			"end_sample": 40440,
 			"ann_class": 3,
 			"ann_type": 10,
 			"texts": [
@@ -613,18 +733,19 @@
 			]
 		}, 
 		{
-			"start_sample": 37160,
-			"end_sample": 38390,
+			"start_sample": 42440,
+			"end_sample": 43720,
 			"ann_class": 0,
 			"ann_type": 7,
 			"texts": [
 				"M8 DShot300 0x7d0a", 
+				"M8 0x7d0a", 
 				"M8"
 			]
 		}, 
 		{
-			"start_sample": 37160,
-			"end_sample": 38390,
+			"start_sample": 42440,
+			"end_sample": 43720,
 			"ann_class": 1,
 			"ann_type": 8,
 			"texts": [
@@ -633,8 +754,8 @@
 			]
 		}, 
 		{
-			"start_sample": 37160,
-			"end_sample": 38390,
+			"start_sample": 42440,
+			"end_sample": 43720,
 			"ann_class": 3,
 			"ann_type": 10,
 			"texts": [

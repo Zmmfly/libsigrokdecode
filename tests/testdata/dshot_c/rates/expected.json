@@ -1,0 +1,1027 @@
+{
+	"decoder": "dshot",
+	"samplerate": 48000000,
+	"num_annotations": 96,
+	"annotations": [
+		{
+			"start_sample": 400,
+			"end_sample": 5520,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M1 DShot150 0x9a56", 
+				"M1 0x9a56", 
+				"M1"
+			]
+		}, 
+		{
+			"start_sample": 400,
+			"end_sample": 5520,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Throttle 1234 (59.3%)", 
+				"1234 (59%)", 
+				"59%"
+			]
+		}, 
+		{
+			"start_sample": 400,
+			"end_sample": 5520,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0x6 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 400,
+			"end_sample": 5520,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"Telemetry requested", 
+				"TLM req"
+			]
+		}, 
+		{
+			"start_sample": 9520,
+			"end_sample": 14640,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M1 DShot150 0x9a56", 
+				"M1 0x9a56", 
+				"M1"
+			]
+		}, 
+		{
+			"start_sample": 9520,
+			"end_sample": 14640,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Throttle 1234 (59.3%)", 
+				"1234 (59%)", 
+				"59%"
+			]
+		}, 
+		{
+			"start_sample": 9520,
+			"end_sample": 14640,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0x6 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 9520,
+			"end_sample": 14640,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"Telemetry requested", 
+				"TLM req"
+			]
+		}, 
+		{
+			"start_sample": 18640,
+			"end_sample": 23760,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M1 DShot150 0x9a56", 
+				"M1 0x9a56", 
+				"M1"
+			]
+		}, 
+		{
+			"start_sample": 18640,
+			"end_sample": 23760,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Throttle 1234 (59.3%)", 
+				"1234 (59%)", 
+				"59%"
+			]
+		}, 
+		{
+			"start_sample": 18640,
+			"end_sample": 23760,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0x6 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 18640,
+			"end_sample": 23760,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"Telemetry requested", 
+				"TLM req"
+			]
+		}, 
+		{
+			"start_sample": 27760,
+			"end_sample": 30320,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M1 DShot300 0x9a56", 
+				"M1 0x9a56", 
+				"M1"
+			]
+		}, 
+		{
+			"start_sample": 27760,
+			"end_sample": 30320,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Throttle 1234 (59.3%)", 
+				"1234 (59%)", 
+				"59%"
+			]
+		}, 
+		{
+			"start_sample": 27760,
+			"end_sample": 30320,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0x6 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 27760,
+			"end_sample": 30320,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"Telemetry requested", 
+				"TLM req"
+			]
+		}, 
+		{
+			"start_sample": 34320,
+			"end_sample": 36880,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M1 DShot300 0x9a56", 
+				"M1 0x9a56", 
+				"M1"
+			]
+		}, 
+		{
+			"start_sample": 34320,
+			"end_sample": 36880,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Throttle 1234 (59.3%)", 
+				"1234 (59%)", 
+				"59%"
+			]
+		}, 
+		{
+			"start_sample": 34320,
+			"end_sample": 36880,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0x6 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 34320,
+			"end_sample": 36880,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"Telemetry requested", 
+				"TLM req"
+			]
+		}, 
+		{
+			"start_sample": 40880,
+			"end_sample": 43440,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M1 DShot300 0x9a56", 
+				"M1 0x9a56", 
+				"M1"
+			]
+		}, 
+		{
+			"start_sample": 40880,
+			"end_sample": 43440,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Throttle 1234 (59.3%)", 
+				"1234 (59%)", 
+				"59%"
+			]
+		}, 
+		{
+			"start_sample": 40880,
+			"end_sample": 43440,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0x6 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 40880,
+			"end_sample": 43440,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"Telemetry requested", 
+				"TLM req"
+			]
+		}, 
+		{
+			"start_sample": 47440,
+			"end_sample": 48720,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M1 DShot600 0x9a56", 
+				"M1 0x9a56", 
+				"M1"
+			]
+		}, 
+		{
+			"start_sample": 47440,
+			"end_sample": 48720,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Throttle 1234 (59.3%)", 
+				"1234 (59%)", 
+				"59%"
+			]
+		}, 
+		{
+			"start_sample": 47440,
+			"end_sample": 48720,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0x6 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 47440,
+			"end_sample": 48720,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"Telemetry requested", 
+				"TLM req"
+			]
+		}, 
+		{
+			"start_sample": 52720,
+			"end_sample": 54000,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M1 DShot600 0x9a56", 
+				"M1 0x9a56", 
+				"M1"
+			]
+		}, 
+		{
+			"start_sample": 52720,
+			"end_sample": 54000,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Throttle 1234 (59.3%)", 
+				"1234 (59%)", 
+				"59%"
+			]
+		}, 
+		{
+			"start_sample": 52720,
+			"end_sample": 54000,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0x6 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 52720,
+			"end_sample": 54000,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"Telemetry requested", 
+				"TLM req"
+			]
+		}, 
+		{
+			"start_sample": 58000,
+			"end_sample": 59280,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M1 DShot600 0x9a56", 
+				"M1 0x9a56", 
+				"M1"
+			]
+		}, 
+		{
+			"start_sample": 58000,
+			"end_sample": 59280,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Throttle 1234 (59.3%)", 
+				"1234 (59%)", 
+				"59%"
+			]
+		}, 
+		{
+			"start_sample": 58000,
+			"end_sample": 59280,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0x6 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 58000,
+			"end_sample": 59280,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"Telemetry requested", 
+				"TLM req"
+			]
+		}, 
+		{
+			"start_sample": 63280,
+			"end_sample": 63920,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M1 DShot1200 0x9a56", 
+				"M1 0x9a56", 
+				"M1"
+			]
+		}, 
+		{
+			"start_sample": 63280,
+			"end_sample": 63920,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Throttle 1234 (59.3%)", 
+				"1234 (59%)", 
+				"59%"
+			]
+		}, 
+		{
+			"start_sample": 63280,
+			"end_sample": 63920,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0x6 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 63280,
+			"end_sample": 63920,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"Telemetry requested", 
+				"TLM req"
+			]
+		}, 
+		{
+			"start_sample": 67920,
+			"end_sample": 68560,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M1 DShot1200 0x9a56", 
+				"M1 0x9a56", 
+				"M1"
+			]
+		}, 
+		{
+			"start_sample": 67920,
+			"end_sample": 68560,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Throttle 1234 (59.3%)", 
+				"1234 (59%)", 
+				"59%"
+			]
+		}, 
+		{
+			"start_sample": 67920,
+			"end_sample": 68560,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0x6 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 67920,
+			"end_sample": 68560,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"Telemetry requested", 
+				"TLM req"
+			]
+		}, 
+		{
+			"start_sample": 72560,
+			"end_sample": 73200,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M1 DShot1200 0x9a56", 
+				"M1 0x9a56", 
+				"M1"
+			]
+		}, 
+		{
+			"start_sample": 72560,
+			"end_sample": 73200,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Throttle 1234 (59.3%)", 
+				"1234 (59%)", 
+				"59%"
+			]
+		}, 
+		{
+			"start_sample": 72560,
+			"end_sample": 73200,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0x6 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 72560,
+			"end_sample": 73200,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"Telemetry requested", 
+				"TLM req"
+			]
+		}, 
+		{
+			"start_sample": 81200,
+			"end_sample": 86320,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M1 DShot150 bidir 0x2827", 
+				"M1 0x2827", 
+				"M1"
+			]
+		}, 
+		{
+			"start_sample": 81200,
+			"end_sample": 86320,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Throttle 321 (13.7%)", 
+				"321 (14%)", 
+				"14%"
+			]
+		}, 
+		{
+			"start_sample": 81200,
+			"end_sample": 86320,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0x7 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 87760,
+			"end_sample": 93136,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"eRPM 48701 (period 1232 us, raw 0x534)", 
+				"eRPM 48701 (1232 us)", 
+				"48701 eRPM"
+			]
+		}, 
+		{
+			"start_sample": 94320,
+			"end_sample": 99440,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M1 DShot150 bidir 0x2827", 
+				"M1 0x2827", 
+				"M1"
+			]
+		}, 
+		{
+			"start_sample": 94320,
+			"end_sample": 99440,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Throttle 321 (13.7%)", 
+				"321 (14%)", 
+				"14%"
+			]
+		}, 
+		{
+			"start_sample": 94320,
+			"end_sample": 99440,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0x7 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 100880,
+			"end_sample": 106256,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"eRPM 48701 (period 1232 us, raw 0x534)", 
+				"eRPM 48701 (1232 us)", 
+				"48701 eRPM"
+			]
+		}, 
+		{
+			"start_sample": 107440,
+			"end_sample": 112560,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M1 DShot150 bidir 0x2827", 
+				"M1 0x2827", 
+				"M1"
+			]
+		}, 
+		{
+			"start_sample": 107440,
+			"end_sample": 112560,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Throttle 321 (13.7%)", 
+				"321 (14%)", 
+				"14%"
+			]
+		}, 
+		{
+			"start_sample": 107440,
+			"end_sample": 112560,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0x7 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 114000,
+			"end_sample": 119376,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"eRPM 48701 (period 1232 us, raw 0x534)", 
+				"eRPM 48701 (1232 us)", 
+				"48701 eRPM"
+			]
+		}, 
+		{
+			"start_sample": 120560,
+			"end_sample": 123120,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M1 DShot300 bidir 0x2827", 
+				"M1 0x2827", 
+				"M1"
+			]
+		}, 
+		{
+			"start_sample": 120560,
+			"end_sample": 123120,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Throttle 321 (13.7%)", 
+				"321 (14%)", 
+				"14%"
+			]
+		}, 
+		{
+			"start_sample": 120560,
+			"end_sample": 123120,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0x7 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 124560,
+			"end_sample": 127248,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"eRPM 48701 (period 1232 us, raw 0x534)", 
+				"eRPM 48701 (1232 us)", 
+				"48701 eRPM"
+			]
+		}, 
+		{
+			"start_sample": 131120,
+			"end_sample": 133680,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M1 DShot300 bidir 0x2827", 
+				"M1 0x2827", 
+				"M1"
+			]
+		}, 
+		{
+			"start_sample": 131120,
+			"end_sample": 133680,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Throttle 321 (13.7%)", 
+				"321 (14%)", 
+				"14%"
+			]
+		}, 
+		{
+			"start_sample": 131120,
+			"end_sample": 133680,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0x7 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 135120,
+			"end_sample": 137808,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"eRPM 48701 (period 1232 us, raw 0x534)", 
+				"eRPM 48701 (1232 us)", 
+				"48701 eRPM"
+			]
+		}, 
+		{
+			"start_sample": 141680,
+			"end_sample": 144240,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M1 DShot300 bidir 0x2827", 
+				"M1 0x2827", 
+				"M1"
+			]
+		}, 
+		{
+			"start_sample": 141680,
+			"end_sample": 144240,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Throttle 321 (13.7%)", 
+				"321 (14%)", 
+				"14%"
+			]
+		}, 
+		{
+			"start_sample": 141680,
+			"end_sample": 144240,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0x7 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 145680,
+			"end_sample": 148368,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"eRPM 48701 (period 1232 us, raw 0x534)", 
+				"eRPM 48701 (1232 us)", 
+				"48701 eRPM"
+			]
+		}, 
+		{
+			"start_sample": 152240,
+			"end_sample": 153520,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M1 DShot600 bidir 0x2827", 
+				"M1 0x2827", 
+				"M1"
+			]
+		}, 
+		{
+			"start_sample": 152240,
+			"end_sample": 153520,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Throttle 321 (13.7%)", 
+				"321 (14%)", 
+				"14%"
+			]
+		}, 
+		{
+			"start_sample": 152240,
+			"end_sample": 153520,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0x7 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 154960,
+			"end_sample": 156304,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"eRPM 48701 (period 1232 us, raw 0x534)", 
+				"eRPM 48701 (1232 us)", 
+				"48701 eRPM"
+			]
+		}, 
+		{
+			"start_sample": 161520,
+			"end_sample": 162800,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M1 DShot600 bidir 0x2827", 
+				"M1 0x2827", 
+				"M1"
+			]
+		}, 
+		{
+			"start_sample": 161520,
+			"end_sample": 162800,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Throttle 321 (13.7%)", 
+				"321 (14%)", 
+				"14%"
+			]
+		}, 
+		{
+			"start_sample": 161520,
+			"end_sample": 162800,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0x7 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 164240,
+			"end_sample": 165584,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"eRPM 48701 (period 1232 us, raw 0x534)", 
+				"eRPM 48701 (1232 us)", 
+				"48701 eRPM"
+			]
+		}, 
+		{
+			"start_sample": 170800,
+			"end_sample": 172080,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M1 DShot600 bidir 0x2827", 
+				"M1 0x2827", 
+				"M1"
+			]
+		}, 
+		{
+			"start_sample": 170800,
+			"end_sample": 172080,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Throttle 321 (13.7%)", 
+				"321 (14%)", 
+				"14%"
+			]
+		}, 
+		{
+			"start_sample": 170800,
+			"end_sample": 172080,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0x7 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 173520,
+			"end_sample": 174864,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"eRPM 48701 (period 1232 us, raw 0x534)", 
+				"eRPM 48701 (1232 us)", 
+				"48701 eRPM"
+			]
+		}, 
+		{
+			"start_sample": 180080,
+			"end_sample": 180720,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M1 DShot1200 bidir 0x2827", 
+				"M1 0x2827", 
+				"M1"
+			]
+		}, 
+		{
+			"start_sample": 180080,
+			"end_sample": 180720,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Throttle 321 (13.7%)", 
+				"321 (14%)", 
+				"14%"
+			]
+		}, 
+		{
+			"start_sample": 180080,
+			"end_sample": 180720,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0x7 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 182160,
+			"end_sample": 182832,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"eRPM 48701 (period 1232 us, raw 0x534)", 
+				"eRPM 48701 (1232 us)", 
+				"48701 eRPM"
+			]
+		}, 
+		{
+			"start_sample": 188720,
+			"end_sample": 189360,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M1 DShot1200 bidir 0x2827", 
+				"M1 0x2827", 
+				"M1"
+			]
+		}, 
+		{
+			"start_sample": 188720,
+			"end_sample": 189360,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Throttle 321 (13.7%)", 
+				"321 (14%)", 
+				"14%"
+			]
+		}, 
+		{
+			"start_sample": 188720,
+			"end_sample": 189360,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0x7 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 190800,
+			"end_sample": 191472,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"eRPM 48701 (period 1232 us, raw 0x534)", 
+				"eRPM 48701 (1232 us)", 
+				"48701 eRPM"
+			]
+		}, 
+		{
+			"start_sample": 197360,
+			"end_sample": 198000,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M1 DShot1200 bidir 0x2827", 
+				"M1 0x2827", 
+				"M1"
+			]
+		}, 
+		{
+			"start_sample": 197360,
+			"end_sample": 198000,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Throttle 321 (13.7%)", 
+				"321 (14%)", 
+				"14%"
+			]
+		}, 
+		{
+			"start_sample": 197360,
+			"end_sample": 198000,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0x7 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 199440,
+			"end_sample": 200112,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"eRPM 48701 (period 1232 us, raw 0x534)", 
+				"eRPM 48701 (1232 us)", 
+				"48701 eRPM"
+			]
+		}
+	]
+}

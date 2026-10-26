@@ -19,35 +19,38 @@
 
 '''
 DShot is the digital command protocol which flight controllers use to
-talk to BLHeli_S, BLHeli_32 and Bluejay ESCs. A single wire per motor
-carries 16 bit frames at 150, 300 or 600 kbit/s. DShot1200 transmits 20
-symbols instead, because every 4 bit nibble is spread over 5 bits of
-4b/5b GCR code.
+talk to BLHeli_S, BLHeli_32, Bluejay and AM32 ESCs. A single wire per
+motor carries 16 bit frames at 150, 300, 600 or 1200 kbit/s.
 
-Frame layout of the 16 bit variants, transmitted MSB first:
+Frame layout, transmitted MSB first:
 - Bits 15..5: 11 bit throttle value or command number.
 - Bit 4:      request a telemetry response from the ESC.
 - Bits 3..0:  4 bit checksum, the XOR of the upper three nibbles.
 
 Values 1..47 are commands (beeps, spin direction, 3D mode, save
-settings, LEDs, ...), values 48..2047 are throttle. When 3D mode is
-enabled, 48..1047 selects the negative and 1048..2047 the positive
-direction. A bit period carries the value in its duty cycle: 75% high
-level is a '1', 37.5% high level is a '0'.
+settings, LEDs, telemetry modes, ...), values 48..2047 are throttle.
+When 3D mode is enabled, 48..1047 selects the negative and 1048..2047
+the positive direction. Every bit period starts with the active level,
+whose length carries the value: about 75% of the period is a '1', about
+37.5% a '0'. The decision threshold also fits the 70/35% and 67/33%
+duty cycles of timer-DMA and bit-banged outputs.
 
-With bidirectional DShot the ESC answers on the same wire. The response
-is inverted, GCR encoded, consists of a start bit and 20 payload bits
-which hold a 12 bit value (3 bit exponent, 9 bit mantissa) and a 4 bit
-checksum. Usually the commutation period is reported, from which the
-motor's eRPM is derived. BLHeli_32 and Bluejay can also report
-temperature, voltage, current and debug values instead.
+Bidirectional DShot inverts the line: it idles high, every bit starts
+with a low level, and the checksum is inverted. The decoder recognises
+this from the idle level. About 30 us after each inverted request the
+ESC answers on the same wire. Its response runs at 5/4 of the request's
+bit rate and has 21 bits: a low start bit, then 20 bits in which a level
+change means '1' and a constant level '0' (NRZI). The 20 bits are four
+5 bit GCR symbols which carry 16 bits: a 12 bit value and a 4 bit
+checksum, chosen so that the XOR of all four nibbles is 0xf. The value
+is either the commutation period, eeem mmmm mmmm = mantissa << exponent
+in microseconds (0xfff means the motor stands still), from which
+eRPM = 60000000 / period follows, or an extended telemetry frame (EDT):
+an even, nonzero upper nibble selects temperature, voltage, current,
+debug or state information in the lower 8 bits.
 
-Neither the symbol rate nor the exact gap between the request and the
-response is trusted from a configuration. Both are measured from the
-captured signal, and the checksums decide how a burst is interpreted.
-A burst ends when the line stays idle for longer than five microseconds,
-so the last frame of a capture is only annotated once another edge
-follows it.
+The bit period is measured from each frame, the telemetry bit time from
+the response itself, so ESC clock errors of several percent are fine.
 
 OUTPUT_PYTHON format:
 
@@ -80,23 +83,30 @@ RATE_PERIODS = (
     ('DShot1200', 1e6 / 1200e3),
 )
 
-# A gap longer than this separates two request frames, and also the
-# request from the ESC's telemetry response. Within a frame the longest
-# low level period is 0.625 bit periods, which is less than four
-# microseconds even for the slowest variant.
-IDLE_USEC = 5.0
+# Longest bit period which is accepted (DShot150 plus margin), in us.
+PERIOD_MAX_USEC = 8.0
+# A request whose bits are more than this far from the median period is
+# not a frame.
+PERIOD_TOLERANCE = 0.2
+# Share of the bit period above which the active level is a '1', and the
+# band around it in which the decision is reported as ambiguous.
+DUTY_THRESHOLD = 0.53
+DUTY_AMBIGUOUS = (0.46, 0.60)
+# The ESC starts its response within this time after a request ends.
+RESPONSE_WINDOW_USEC = 60.0
+# Telemetry bits per request bit period.
+TLM_BIT_RATIO = 0.8
+TLM_BITS = 21
 
-# 4b/5b GCR code. DShot1200 spreads each nibble of the frame over five
-# bits, and the ESC's bidirectional telemetry response uses the same
-# code. The values are listed in nibble order.
+# 4b/5b GCR code of the telemetry response, in nibble order.
 GCR_SYMBOLS = (
-    0x19, 0x1b, 0x12, 0x13, 0x1c, 0x15, 0x16, 0x17,
+    0x19, 0x1b, 0x12, 0x13, 0x1d, 0x15, 0x16, 0x17,
     0x1a, 0x09, 0x0a, 0x0b, 0x1e, 0x0d, 0x0e, 0x0f,
 )
 GCR_NIBBLES = {sym: idx for idx, sym in enumerate(GCR_SYMBOLS)}
 
-# Command numbers as defined by BLHeli. Values above DSHOT_CMD_MAX are
-# throttle values instead.
+# Command numbers as defined by BLHeli and Betaflight. Values above
+# THROTTLE_MIN are throttle values instead.
 COMMANDS = {
     1: 'Beep 1',
     2: 'Beep 2',
@@ -124,6 +134,16 @@ COMMANDS = {
     29: 'LED 3 off',
     30: 'Audio stream mode on/off',
     31: 'Silent mode on/off',
+    32: 'Signal line telemetry disable',
+    33: 'Signal line telemetry enable',
+    34: 'Continuous eRPM telemetry',
+    35: 'Continuous eRPM period telemetry',
+    42: 'Temperature telemetry',
+    43: 'Voltage telemetry',
+    44: 'Current telemetry',
+    45: 'Consumption telemetry',
+    46: 'eRPM telemetry',
+    47: 'eRPM period telemetry',
 }
 
 # Throttle value range. Values below the minimum either stop the motor
@@ -132,8 +152,8 @@ THROTTLE_MIN = 48
 THROTTLE_MAX = 2047
 THROTTLE_3D_FORWARD_MIN = 1048
 
-# Extended telemetry types (bird-sanctuary/extended-dshot-telemetry).
-# An odd type, or type zero, carries the commutation period instead.
+# Extended telemetry types (bird-sanctuary/extended-dshot-telemetry),
+# indexed by the upper nibble of the 12 bit value divided by two.
 TLM_TYPES = {
     1: 'Temperature',
     2: 'Voltage',
@@ -172,7 +192,7 @@ class Decoder(srd.Decoder):
             'default': 'on', 'values': ('on', 'off')},
         {'id': '3d', 'desc': '3D mode throttle ranges', 'default': 'off',
             'values': ('off', 'on')},
-        {'id': 'bits', 'desc': 'Show individual symbol bits',
+        {'id': 'bits', 'desc': 'Show individual bits',
             'default': 'off', 'values': ('off', 'on')},
     )
     annotations = (
@@ -181,13 +201,13 @@ class Decoder(srd.Decoder):
         ('command', 'Command'),
         ('crc', 'Checksum'),
         ('tlm', 'Telemetry'),
-        ('bits', 'Symbol bits'),
+        ('bits', 'Bits'),
         ('warn', 'Warning'),
     )
     annotation_rows = (
         ('frames', 'Frames', (Ann.FRAME, Ann.THROTTLE, Ann.COMMAND, Ann.CRC)),
         ('telemetry', 'Telemetry', (Ann.TLM,)),
-        ('symbols', 'Symbols', (Ann.BIT,)),
+        ('symbols', 'Bits', (Ann.BIT,)),
         ('warnings', 'Warnings', (Ann.WARN,)),
     )
 
@@ -196,8 +216,14 @@ class Decoder(srd.Decoder):
 
     def reset(self):
         self.samplerate = None
-        self.idle_samples = 0
-        self.edges = []
+        self.state = 'IDLE'
+        self.burst = []
+        self.dropped = 0
+        self.drop_ss = 0
+        self.last_edge = None
+        self.period = 0.0
+        self.req_end = 0
+        self.resp = []
 
     def metadata(self, key, value):
         if key == srd.SRD_CONF_SAMPLERATE:
@@ -208,213 +234,207 @@ class Decoder(srd.Decoder):
         self.out_py = self.register(srd.OUTPUT_PYTHON)
 
     def putx(self, ann, ss, es, texts):
-        self.put(ss, es, self.out_ann, [ann, texts])
+        self.put(int(ss), int(es), self.out_ann, [ann, texts])
 
-    def putpy(self, ann, ss, es, data):
-        self.put(ss, es, self.out_py, data)
+    def putpy(self, ss, es, data):
+        self.put(int(ss), int(es), self.out_py, data)
 
-    #-- Signal segmentation --------------------------------------------
+    def usec(self, samples):
+        return samples * 1e6 / self.samplerate
+
+    def samples(self, usec):
+        return usec * self.samplerate / 1e6
+
+    #-- Edge stream ----------------------------------------------------
 
     def decode(self):
         if self.samplerate is None:
             raise SamplerateError('Cannot decode without samplerate.')
         if not self.has_channel(0):
             raise ChannelError('Need a DShot signal channel.')
-        self.idle_samples = int(round(self.samplerate * IDLE_USEC * 1e-6))
-        self.idle_samples = max(self.idle_samples, 1)
+        self.wait()
+        self.last_edge = self.samplenum
         while True:
             (level, ) = self.wait({0: 'e'})
             self.handle_edge(self.samplenum, level)
 
+    def end(self):
+        # Complete whatever the end of the capture interrupted: a
+        # response which is still being received, or a burst of pulses.
+        if self.samplerate is None:
+            return
+        if self.state == 'RESP':
+            self.finish_response()
+        elif self.state == 'REQ':
+            self.finish_burst()
+        self.state = 'IDLE'
+
     def handle_edge(self, sample, level):
-        # Split the edge stream into bursts. A level which does not
-        # change for a while separates two bursts, it cannot occur
-        # within a frame nor within a telemetry response.
-        if not self.edges:
-            self.edges.append((sample, level))
-            return
-        if sample - self.edges[-1][0] > self.idle_samples:
-            self.handle_burst()
-            self.edges = [(sample, level)]
-        else:
-            self.edges.append((sample, level))
-
-    def burst_segments(self):
-        # Turn the edge list into (level, start, end) segments. The
-        # trailing idle period behind the last edge is not part of the
-        # burst and is dropped.
-        edges = self.edges
-        segments = []
-        for idx in range(len(edges) - 1):
-            segments.append((edges[idx][1], edges[idx][0], edges[idx + 1][0]))
-        return segments
-
-    def handle_burst(self):
-        segments = self.burst_segments()
-        self.edges = []
-        if len(segments) < 2:
-            return
-        starts_high = segments[0][0] == 1
-        high = [seg for seg in segments if seg[0] == 1]
-        low = [seg for seg in segments if seg[0] == 0]
-        # A request frame starts with a high pulse, and carries exactly
-        # one pulse per symbol. Twenty pulses are DShot1200 frames.
-        if starts_high and len(high) in (16, 20) and len(low) == len(high) - 1:
-            self.handle_request([(ss, es) for _, ss, es in high])
-            return
-        # The telemetry response is inverted: the requesting side leaves
-        # the wire low, the ESC pulls it high and then drives one low
-        # pulse per symbol. That makes 21 low pulses for 21 symbols. The
-        # idle period before the first symbol may or may not be part of
-        # the burst, depending on how long the ESC waits before it
-        # answers, so the leading high level is not required to be here.
-        if len(low) == 21 and self.options['tlm'] == 'on':
-            ss, es = segments[0][1], segments[-1][2]
-            if self.handle_response([(ss, es) for _, ss, es in low]) or \
-                    self.handle_response([(ss, es) for _, ss, es in high]):
+        self.expire(sample)
+        if self.state == 'WAIT':
+            if level == 0:
+                # The ESC pulls the idle-high line low: a response.
+                self.state = 'RESP'
+                self.resp = [(sample, level)]
+                self.last_edge = sample
                 return
-            self.putx(Ann.WARN, ss, es, [
-                'Telemetry response without valid symbols or checksum',
-                'Undecodable telemetry response', 'TLM error'])
+            self.state = 'IDLE'
+        elif self.state == 'RESP':
+            self.resp.append((sample, level))
+            self.last_edge = sample
             return
-        ss, es = segments[0][1], segments[-1][2]
-        self.putx(Ann.WARN, ss, es, [
-            'Unexpected burst, {} high and {} low pulses'.format(
-                len(high), len(low)),
-            'Unexpected burst, {} / {} pulses'.format(len(high), len(low)),
-            'Unexpected burst'])
+        self.request_edge(sample, level)
+        self.last_edge = sample
 
-    #-- Helpers --------------------------------------------------------
+    def expire(self, sample):
+        # Timeouts which elapsed before this edge.
+        if self.state == 'REQ' and self.last_edge is not None:
+            if sample - self.last_edge > self.gap_limit():
+                self.finish_burst()
+        elif self.state == 'WAIT':
+            if sample > self.req_end + self.samples(RESPONSE_WINDOW_USEC):
+                if self.options['tlm'] == 'on':
+                    self.putx(Ann.WARN, self.req_end,
+                              self.req_end + self.samples(RESPONSE_WINDOW_USEC), [
+                                  'No telemetry response', 'No response', 'No TLM'])
+                self.state = 'IDLE'
+        elif self.state == 'RESP':
+            tb = self.period * TLM_BIT_RATIO
+            if sample - self.resp[0][0] > (TLM_BITS + 4) * tb:
+                self.finish_response()
 
-    def sample_period(self, pulses):
-        # Consecutive symbols start exactly one bit period apart, which
-        # makes the first edge of each symbol the most reliable
-        # reference. Do not use the duty cycle of the last symbol.
-        if len(pulses) >= 2:
-            return (pulses[-1][0] - pulses[0][0]) / (len(pulses) - 1)
-        return pulses[-1][1] - pulses[0][0] if pulses else 0.0
+    #-- Request frames -------------------------------------------------
 
-    def pulses_to_bits(self, pulses, period):
-        # A '1' symbol keeps the active level for 75% of the bit period,
-        # a '0' symbol for 37.5%. The threshold is placed in the middle
-        # of the two nominal duty cycles. Also count symbols which are
-        # too far off to be trusted.
-        bits = []
-        dubious = 0
-        for ss, es in pulses:
-            duty = (es - ss) / period if period else 0.0
-            bits.append(1 if duty > 0.5625 else 0)
-            if 0.45 < duty < 0.65:
-                dubious += 1
-        return bits, dubious
+    def gap_limit(self):
+        # Within a frame the line keeps a level for at most one bit
+        # period. Before two leading edges are known, allow the longest
+        # supported period.
+        lead = [s for s, lvl in self.burst[0::2]]
+        if len(lead) >= 2:
+            periods = sorted(b - a for a, b in zip(lead, lead[1:]))
+            return 3 * periods[len(periods) // 2]
+        return 3 * self.samples(PERIOD_MAX_USEC)
+
+    def request_edge(self, sample, level):
+        if self.state == 'IDLE':
+            self.state = 'REQ'
+            self.burst = []
+            self.dropped = 0
+        self.burst.append((sample, level))
+        while len(self.burst) >= 32:
+            if self.try_request():
+                return
+            # Not a frame yet: drop the oldest pulse and retry with the
+            # next edges, which resynchronises in the middle of a burst.
+            if not self.dropped:
+                self.drop_ss = self.burst[0][0]
+            self.burst = self.burst[2:]
+            self.dropped += 1
+
+    def finish_burst(self):
+        pulses = len(self.burst) // 2 + self.dropped
+        if pulses and self.burst:
+            ss = self.burst[0][0] if not self.dropped else self.drop_ss
+            es = self.burst[-1][0]
+            self.putx(Ann.WARN, ss, es, [
+                'Unexpected burst of {} pulses, no frame'.format(pulses),
+                'Unexpected burst ({})'.format(pulses), 'Burst'])
+        self.burst = []
+        self.dropped = 0
+        self.state = 'IDLE'
+
+    def try_request(self):
+        edges = self.burst[:32]
+        active = edges[0][1]
+        if any(lvl != active for _, lvl in edges[0::2]) or \
+                any(lvl == active for _, lvl in edges[1::2]):
+            return False
+        lead = [s for s, _ in edges[0::2]]
+        trail = [s for s, _ in edges[1::2]]
+        periods = sorted(b - a for a, b in zip(lead, lead[1:]))
+        period = periods[len(periods) // 2]
+        if period <= 0 or self.usec(period) > PERIOD_MAX_USEC:
+            return False
+        if periods[0] < period * (1 - PERIOD_TOLERANCE) or \
+                periods[-1] > period * (1 + PERIOD_TOLERANCE):
+            return False
+        duties = [(t - l) / period for l, t in zip(lead, trail)]
+        if min(duties) <= 0.1 or max(duties) >= 0.92:
+            return False
+        if self.dropped:
+            self.putx(Ann.WARN, self.drop_ss, lead[0], [
+                'Unexpected burst of {} pulses, no frame'.format(self.dropped),
+                'Unexpected burst ({})'.format(self.dropped), 'Burst'])
+        self.burst = self.burst[32:]
+        self.dropped = 0
+        # The mean of the 15 periods is far more precise than any single
+        # one, which matters at low sample rates.
+        period = (lead[-1] - lead[0]) / 15.0
+        duties = [(t - l) / period for l, t in zip(lead, trail)]
+        self.handle_request(lead, duties, period, active == 0)
+        return True
 
     def rate_name(self, period):
         # Name the symbol rate which matches the measured bit period.
         # Never silently pretend that a configured rate was measured.
-        if not self.samplerate or not period:
-            return None, False
-        usec = period * 1e6 / self.samplerate
+        usec = self.usec(period)
         best = None
         for name, nominal in RATE_PERIODS:
             delta = abs(usec - nominal) / nominal
             if best is None or delta < best[1]:
                 best = (name, delta)
         if best is None or best[1] > 0.25:
-            return None, False
-        return best[0], True
+            return None
+        return best[0]
 
     @staticmethod
     def crc4(value):
         value &= 0xfff
         return (value ^ (value >> 4) ^ (value >> 8)) & 0xf
 
-    def gcr_to_value(self, bits):
-        # Collect five bit symbols from the 20 bit stream and look up
-        # the GCR code. Neither the nibble order of DShot1200 frames nor
-        # the bit order of the telemetry response is documented, so both
-        # orders are tried and the checksum decides.
-        symbols = []
-        for idx in range(0, len(bits), 5):
-            chunk = bits[idx:idx + 5]
-            if len(chunk) < 5:
-                return None, None, False
-            symbol = 0
-            for bit in chunk:
-                symbol = (symbol << 1) | bit
-            if symbol not in GCR_NIBBLES:
-                return None, None, False
-            symbols.append(GCR_NIBBLES[symbol])
-        # The check sum sits in the low nibble of the decoded value, so
-        # the nibble order which puts it there is the correct one.
-        for order, label in ((symbols, 'high first'),
-                             (list(reversed(symbols)), 'low first')):
-            value = 0
-            for nibble in order:
-                value = (value << 4) | nibble
-            if (value & 0xf) == self.crc4(value >> 4):
-                return value, label, True
-        value = 0
-        for nibble in symbols:
-            value = (value << 4) | nibble
-        return value, None, False
-
-    def annotate_bits(self, pulses, bits, period):
-        if self.options['bits'] != 'on':
-            return
-        for (ss, es), bit in zip(pulses, bits):
-            usec = (es - ss) * 1e6 / self.samplerate if self.samplerate else 0
-            self.putx(Ann.BIT, ss, es, [
-                '{} ({:.2f} us)'.format(bit, usec), '{}'.format(bit)])
-
-    #-- Request frames -------------------------------------------------
-
-    def handle_request(self, pulses):
-        nsym = len(pulses)
-        period = self.sample_period(pulses)
-        ss, es = pulses[0][0], pulses[-1][1]
-        bits, dubious = self.pulses_to_bits(pulses, period)
-        self.annotate_bits(pulses, bits, period)
-        gcr_order = None
-        if nsym == 20:
-            value16, gcr_order, crc_ok = self.gcr_to_value(bits)
-            if value16 is None:
-                self.putx(Ann.WARN, ss, es, [
-                    'Invalid GCR symbol in DShot1200 frame',
-                    'Invalid GCR symbol', 'GCR error'])
-                return
-        else:
-            value16 = 0
-            for bit in bits:
-                value16 = (value16 << 1) | bit
-            crc_ok = (value16 & 0xf) == self.crc4(value16 >> 4)
+    def handle_request(self, lead, duties, period, inverted):
+        ss = lead[0]
+        es = lead[0] + 16 * period
+        bits = [1 if duty > DUTY_THRESHOLD else 0 for duty in duties]
+        dubious = sum(1 for duty in duties
+                      if DUTY_AMBIGUOUS[0] < duty < DUTY_AMBIGUOUS[1])
+        value16 = 0
+        for bit in bits:
+            value16 = (value16 << 1) | bit
         value11 = value16 >> 5
         tlm_req = bool((value16 >> 4) & 1)
         crc_rx = value16 & 0xf
         crc_calc = self.crc4(value16 >> 4)
-        rate, rate_ok = self.rate_name(period)
+        if inverted:
+            crc_calc ^= 0xf
+        crc_ok = crc_rx == crc_calc
+        rate = self.rate_name(period)
         motor = self.options['motor']
 
+        if self.options['bits'] == 'on':
+            for idx, (start, bit) in enumerate(zip(lead, bits)):
+                width = self.usec(duties[idx] * period)
+                self.putx(Ann.BIT, start, start + period, [
+                    '{} ({:.2f} us)'.format(bit, width), '{}'.format(bit)])
+
         # The configured rate is a hint for the user, not a constraint.
-        # A mismatch keeps the measurement and raises a warning.
         configured = self.options['rate']
-        if configured != 'auto' and rate_ok and configured != rate:
+        if configured != 'auto' and rate and configured != rate:
             self.putx(Ann.WARN, ss, es, [
                 'Measured {} instead of configured {}'.format(rate, configured),
                 'Measured {}, not {}'.format(rate, configured),
                 'Rate mismatch'])
         if dubious:
             self.putx(Ann.WARN, ss, es, [
-                '{} symbol(s) with ambiguous duty cycle'.format(dubious),
-                '{} ambiguous symbol(s)'.format(dubious),
-                'Ambiguous timing'])
+                '{} bit(s) with ambiguous duty cycle'.format(dubious),
+                '{} ambiguous bit(s)'.format(dubious), 'Ambiguous timing'])
 
-        rate_txt = rate if rate else 'unknown rate'
-        summary = 'M{} {} 0x{:04x}'.format(motor, rate_txt, value16)
-        if gcr_order and gcr_order != 'high first':
-            summary += ' ({})'.format(gcr_order)
-        self.putx(Ann.FRAME, ss, es, [summary, 'M{}'.format(motor)])
-        self.putpy(Ann.FRAME, ss, es, [
-            'FRAME', (motor, value11, tlm_req, crc_ok, rate)])
+        rate_txt = rate if rate else '{:.0f} kbit/s'.format(1e3 / self.usec(period))
+        mode = ' bidir' if inverted else ''
+        self.putx(Ann.FRAME, ss, es, [
+            'M{} {}{} 0x{:04x}'.format(motor, rate_txt, mode, value16),
+            'M{} 0x{:04x}'.format(motor, value16), 'M{}'.format(motor)])
+        self.putpy(ss, es, ['FRAME', (motor, value11, tlm_req, crc_ok, rate)])
 
         # Throttle values and command numbers share the same field.
         if value11 in COMMANDS:
@@ -422,19 +442,17 @@ class Decoder(srd.Decoder):
             self.putx(Ann.COMMAND, ss, es, [
                 'Command {} ({})'.format(value11, name),
                 '{} ({})'.format(value11, name), name])
-            self.putpy(Ann.COMMAND, ss, es, ['COMMAND', (value11, name)])
+            self.putpy(ss, es, ['COMMAND', (value11, name)])
         elif value11 == 0:
-            self.putx(Ann.THROTTLE, ss, es,
-                      ['Motor stop (0)', 'Stop'])
-            self.putpy(Ann.THROTTLE, ss, es, ['THROTTLE', (0, 0.0)])
+            self.putx(Ann.THROTTLE, ss, es, ['Motor stop (0)', 'Stop'])
+            self.putpy(ss, es, ['THROTTLE', (0, 0.0)])
         else:
             self.annotate_throttle(ss, es, value11)
 
         if crc_ok:
             crc_text = 'Checksum 0x{:x} correct'.format(crc_rx)
         else:
-            crc_text = 'Checksum 0x{:x}, expected 0x{:x}'.format(
-                crc_rx, crc_calc)
+            crc_text = 'Checksum 0x{:x}, expected 0x{:x}'.format(crc_rx, crc_calc)
             self.putx(Ann.WARN, ss, es, [
                 'Checksum mismatch, got 0x{:x} expected 0x{:x}'.format(
                     crc_rx, crc_calc),
@@ -444,11 +462,19 @@ class Decoder(srd.Decoder):
         if tlm_req:
             self.putx(Ann.TLM, ss, es, ['Telemetry requested', 'TLM req'])
 
+        self.period = period
+        if inverted:
+            # Bidirectional DShot: the ESC answers every frame.
+            self.state = 'WAIT'
+            self.req_end = es
+        else:
+            self.state = 'IDLE'
+
     def annotate_throttle(self, ss, es, value11):
         if value11 < THROTTLE_MIN:
             self.putx(Ann.THROTTLE, ss, es, [
                 'Reserved value {}'.format(value11), 'Reserved'])
-            self.putpy(Ann.THROTTLE, ss, es, ['THROTTLE', (value11, None)])
+            self.putpy(ss, es, ['THROTTLE', (value11, None)])
             return
         if self.options['3d'] == 'on':
             if value11 < THROTTLE_3D_FORWARD_MIN:
@@ -458,15 +484,14 @@ class Decoder(srd.Decoder):
                     value11, percent)
                 self.putx(Ann.THROTTLE, ss, es, [
                     text, '{} reverse {:.0f}%'.format(value11, percent)])
-                self.putpy(Ann.THROTTLE, ss, es,
-                           ['THROTTLE', (value11, -percent)])
+                self.putpy(ss, es, ['THROTTLE', (value11, -percent)])
                 return
             span = THROTTLE_MAX - THROTTLE_3D_FORWARD_MIN
             percent = 100.0 * (value11 - THROTTLE_3D_FORWARD_MIN) / span
             text = 'Throttle {} (3D forward {:.1f}%)'.format(value11, percent)
             self.putx(Ann.THROTTLE, ss, es, [
                 text, '{} forward {:.0f}%'.format(value11, percent)])
-            self.putpy(Ann.THROTTLE, ss, es, ['THROTTLE', (value11, percent)])
+            self.putpy(ss, es, ['THROTTLE', (value11, percent)])
             return
         span = THROTTLE_MAX - THROTTLE_MIN
         percent = 100.0 * (value11 - THROTTLE_MIN) / span
@@ -474,60 +499,93 @@ class Decoder(srd.Decoder):
             'Throttle {} ({:.1f}%)'.format(value11, percent),
             '{} ({:.0f}%)'.format(value11, percent),
             '{:.0f}%'.format(percent)])
-        self.putpy(Ann.THROTTLE, ss, es, ['THROTTLE', (value11, percent)])
+        self.putpy(ss, es, ['THROTTLE', (value11, percent)])
 
     #-- Telemetry responses --------------------------------------------
 
-    def handle_response(self, pulses):
-        # The response has a start bit and 20 payload bits, all of them
-        # GCR encoded, which makes 21 symbols.
-        if len(pulses) != 21:
-            return False
-        period = self.sample_period(pulses)
-        bits, dubious = self.pulses_to_bits(pulses, period)
-        if bits[0] != 0:
-            return False
-        value16, order, crc_ok = self.gcr_to_value(bits[1:])
-        if value16 is None:
-            return False
-        ss, es = pulses[0][0], pulses[-1][1]
+    def finish_response(self):
+        edges = self.resp
+        self.resp = []
+        self.state = 'IDLE'
+        if self.options['tlm'] != 'on' or not edges:
+            return
+        self.handle_response(edges)
+
+    def response_slots(self, edges, tb):
+        # Bit slot of every edge: first from the rounded run lengths, then
+        # once more from the bit time fitted to those slots, which follows
+        # an ESC clock that is a few percent off.
+        t0 = edges[0][0]
+        slots = [0]
+        for (a, _), (b, _) in zip(edges, edges[1:]):
+            slots.append(slots[-1] + max(1, int(round((b - a) / tb))))
+        den = sum(k * k for k in slots)
+        if den:
+            fit = sum(k * (s - t0) for k, (s, _) in zip(slots, edges)) / den
+            if abs(fit / tb - 1) < 0.15:
+                tb = fit
+                refined = [0]
+                for s, _ in edges[1:]:
+                    refined.append(max(refined[-1] + 1, int(round((s - t0) / tb))))
+                slots = refined
+        return slots, tb
+
+    def handle_response(self, edges):
+        tb = self.period * TLM_BIT_RATIO
+        slots, tb = self.response_slots(edges, tb)
+        ss = edges[0][0]
+        es = ss + TLM_BITS * tb
+        if slots[-1] > TLM_BITS or edges[-1][1] != 1:
+            self.putx(Ann.WARN, ss, max(es, edges[-1][0]), [
+                'Telemetry response longer than {} bits'.format(TLM_BITS),
+                'Telemetry too long', 'TLM error'])
+            return
+        levels = []
+        idx = 0
+        for slot in range(TLM_BITS):
+            while idx + 1 < len(edges) and slots[idx + 1] <= slot:
+                idx += 1
+            levels.append(edges[idx][1])
+        gcr = 0
+        for slot in range(1, TLM_BITS):
+            gcr = (gcr << 1) | (levels[slot] ^ levels[slot - 1])
+
         if self.options['bits'] == 'on':
-            self.annotate_bits(pulses, bits, period)
+            for slot in range(TLM_BITS):
+                text = 'S' if slot == 0 else str(levels[slot] ^ levels[slot - 1])
+                self.putx(Ann.BIT, ss + slot * tb, ss + (slot + 1) * tb,
+                          [text])
 
-        raw12 = value16 & 0xfff
-        crc_rx = value16 >> 12
-        crc_calc = self.crc4(raw12)
-        kind, value, text = self.decode_tlm_value(raw12)
-        if kind == 'eRPM':
-            self.putx(Ann.TLM, ss, es, [
-                'Telemetry: {} eRPM (raw 0x{:03x})'.format(value, raw12),
-                '{} eRPM'.format(value), 'eRPM'])
-        else:
-            self.putx(Ann.TLM, ss, es, [
-                'Telemetry: {} (raw 0x{:03x})'.format(text, raw12),
-                text, kind])
-        self.putpy(Ann.TLM, ss, es, ['TLM', (kind, value, raw12)])
+        value16 = 0
+        for idx in range(3, -1, -1):
+            symbol = (gcr >> (5 * idx)) & 0x1f
+            if symbol not in GCR_NIBBLES:
+                self.putx(Ann.WARN, ss, es, [
+                    'Invalid GCR symbol 0x{:02x} in telemetry response'.format(symbol),
+                    'Invalid GCR symbol', 'GCR error'])
+                return
+            value16 = (value16 << 4) | GCR_NIBBLES[symbol]
 
-        if not crc_ok:
+        raw12 = value16 >> 4
+        csum = value16 ^ (value16 >> 4) ^ (value16 >> 8) ^ (value16 >> 12)
+        csum_ok = (csum & 0xf) == 0xf
+        kind, value, texts = self.decode_tlm_value(raw12)
+        if not csum_ok:
+            texts = [texts[0] + ' (checksum error)'] + texts[1:]
+        self.putx(Ann.TLM, ss, es, texts)
+        self.putpy(ss, es, ['TLM', (kind, value, raw12)])
+        if not csum_ok:
             self.putx(Ann.WARN, ss, es, [
-                'Telemetry checksum 0x{:x}, expected 0x{:x}'.format(
-                    crc_rx, crc_calc),
+                'Telemetry checksum mismatch, nibble XOR 0x{:x}'.format(csum & 0xf),
                 'Telemetry checksum error', 'TLM CRC error'])
-        if dubious:
-            self.putx(Ann.WARN, ss, es, [
-                'Telemetry with {} ambiguous symbol(s)'.format(dubious),
-                '{} ambiguous TLM symbol(s)'.format(dubious),
-                'Ambiguous timing'])
-        return True
 
     def decode_tlm_value(self, raw12):
-        # Bits 11..8 hold the telemetry type, bits 7..0 the value. An
-        # odd type (or type zero) selects the plain commutation period
-        # which every ESC reports.
+        # An even, nonzero upper nibble selects an extended telemetry
+        # frame with the value in the lower 8 bits. Everything else is
+        # the commutation period.
         tlm_type = (raw12 >> 8) & 0xf
-        if not tlm_type & 1 and tlm_type:
-            index = tlm_type >> 1
-            name = TLM_TYPES.get(index, 'Type {}'.format(index))
+        if tlm_type and not tlm_type & 1:
+            name = TLM_TYPES[tlm_type >> 1]
             value = raw12 & 0xff
             if name == 'Temperature':
                 text = '{} degC'.format(value)
@@ -536,14 +594,15 @@ class Decoder(srd.Decoder):
             elif name == 'Current':
                 text = '{} A'.format(value)
             else:
-                text = '{} {}'.format(name, value)
-            return name, value, text
-        exponent = (raw12 >> 9) & 0x7
-        mantissa = raw12 & 0x1ff
-        period = mantissa << exponent
-        if not period:
-            return 'eRPM', 0, '0 eRPM'
-        # The same conversion which the flight controller firmware
-        # applies to the commutation period.
-        erpm = (600000 + period // 2) // period
-        return 'eRPM', erpm, '{} eRPM'.format(erpm)
+                text = '0x{:02x}'.format(value)
+            return name, value, [
+                '{}: {} (raw 0x{:03x})'.format(name, text, raw12),
+                '{} {}'.format(name, text), text]
+        period = (raw12 & 0x1ff) << (raw12 >> 9)
+        if raw12 == 0xfff or not period:
+            return 'eRPM', 0, ['eRPM 0, motor stopped (raw 0x{:03x})'.format(raw12),
+                               'eRPM 0 (stopped)', '0 eRPM']
+        erpm = (60000000 + period // 2) // period
+        return 'eRPM', erpm, [
+            'eRPM {} (period {} us, raw 0x{:03x})'.format(erpm, period, raw12),
+            'eRPM {} ({} us)'.format(erpm, period), '{} eRPM'.format(erpm)]

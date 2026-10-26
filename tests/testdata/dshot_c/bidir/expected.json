@@ -1,0 +1,8533 @@
+{
+	"decoder": "dshot",
+	"samplerate": 48000000,
+	"num_annotations": 890,
+	"annotations": [
+		{
+			"start_sample": 400,
+			"end_sample": 480,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 480,
+			"end_sample": 560,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 560,
+			"end_sample": 640,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 640,
+			"end_sample": 720,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 720,
+			"end_sample": 800,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 800,
+			"end_sample": 880,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 880,
+			"end_sample": 960,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 960,
+			"end_sample": 1040,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 1040,
+			"end_sample": 1120,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 1120,
+			"end_sample": 1200,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 1200,
+			"end_sample": 1280,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 1280,
+			"end_sample": 1360,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 1360,
+			"end_sample": 1440,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 1440,
+			"end_sample": 1520,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 1520,
+			"end_sample": 1600,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 1600,
+			"end_sample": 1680,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 400,
+			"end_sample": 1680,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M3 DShot600 bidir 0x7d05", 
+				"M3 0x7d05", 
+				"M3"
+			]
+		}, 
+		{
+			"start_sample": 400,
+			"end_sample": 1680,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Throttle 1000 (47.6%)", 
+				"1000 (48%)", 
+				"48%"
+			]
+		}, 
+		{
+			"start_sample": 400,
+			"end_sample": 1680,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0x5 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 3120,
+			"end_sample": 3184,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"S"
+			]
+		}, 
+		{
+			"start_sample": 3184,
+			"end_sample": 3248,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 3248,
+			"end_sample": 3312,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 3312,
+			"end_sample": 3376,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 3376,
+			"end_sample": 3440,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 3440,
+			"end_sample": 3504,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 3504,
+			"end_sample": 3568,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 3568,
+			"end_sample": 3632,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 3632,
+			"end_sample": 3696,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 3696,
+			"end_sample": 3760,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 3760,
+			"end_sample": 3824,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 3824,
+			"end_sample": 3888,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 3888,
+			"end_sample": 3952,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 3952,
+			"end_sample": 4016,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 4016,
+			"end_sample": 4080,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 4080,
+			"end_sample": 4144,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 4144,
+			"end_sample": 4208,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 4208,
+			"end_sample": 4272,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 4272,
+			"end_sample": 4336,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 4336,
+			"end_sample": 4400,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 4400,
+			"end_sample": 4464,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 3120,
+			"end_sample": 4464,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"eRPM 3000000 (period 20 us, raw 0x014)", 
+				"eRPM 3000000 (20 us)", 
+				"3000000 eRPM"
+			]
+		}, 
+		{
+			"start_sample": 7680,
+			"end_sample": 7760,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 7760,
+			"end_sample": 7840,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 7840,
+			"end_sample": 7920,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 7920,
+			"end_sample": 8000,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 8000,
+			"end_sample": 8080,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 8080,
+			"end_sample": 8160,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 8160,
+			"end_sample": 8240,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 8240,
+			"end_sample": 8320,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 8320,
+			"end_sample": 8400,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 8400,
+			"end_sample": 8480,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 8480,
+			"end_sample": 8560,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 8560,
+			"end_sample": 8640,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 8640,
+			"end_sample": 8720,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 8720,
+			"end_sample": 8800,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 8800,
+			"end_sample": 8880,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 8880,
+			"end_sample": 8960,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 7680,
+			"end_sample": 8960,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M3 DShot600 bidir 0x7d05", 
+				"M3 0x7d05", 
+				"M3"
+			]
+		}, 
+		{
+			"start_sample": 7680,
+			"end_sample": 8960,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Throttle 1000 (47.6%)", 
+				"1000 (48%)", 
+				"48%"
+			]
+		}, 
+		{
+			"start_sample": 7680,
+			"end_sample": 8960,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0x5 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 10400,
+			"end_sample": 10464,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"S"
+			]
+		}, 
+		{
+			"start_sample": 10464,
+			"end_sample": 10528,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 10528,
+			"end_sample": 10592,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 10592,
+			"end_sample": 10656,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 10656,
+			"end_sample": 10720,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 10720,
+			"end_sample": 10784,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 10784,
+			"end_sample": 10848,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 10848,
+			"end_sample": 10912,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 10912,
+			"end_sample": 10976,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 10976,
+			"end_sample": 11040,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 11040,
+			"end_sample": 11104,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 11104,
+			"end_sample": 11168,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 11168,
+			"end_sample": 11232,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 11232,
+			"end_sample": 11296,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 11296,
+			"end_sample": 11360,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 11360,
+			"end_sample": 11424,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 11424,
+			"end_sample": 11488,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 11488,
+			"end_sample": 11552,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 11552,
+			"end_sample": 11616,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 11616,
+			"end_sample": 11680,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 11680,
+			"end_sample": 11744,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 10400,
+			"end_sample": 11744,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"eRPM 120000 (period 500 us, raw 0x1f4)", 
+				"eRPM 120000 (500 us)", 
+				"120000 eRPM"
+			]
+		}, 
+		{
+			"start_sample": 14960,
+			"end_sample": 15040,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 15040,
+			"end_sample": 15120,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 15120,
+			"end_sample": 15200,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 15200,
+			"end_sample": 15280,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 15280,
+			"end_sample": 15360,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 15360,
+			"end_sample": 15440,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 15440,
+			"end_sample": 15520,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 15520,
+			"end_sample": 15600,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 15600,
+			"end_sample": 15680,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 15680,
+			"end_sample": 15760,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 15760,
+			"end_sample": 15840,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 15840,
+			"end_sample": 15920,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 15920,
+			"end_sample": 16000,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 16000,
+			"end_sample": 16080,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 16080,
+			"end_sample": 16160,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 16160,
+			"end_sample": 16240,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 14960,
+			"end_sample": 16240,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M3 DShot600 bidir 0x7d05", 
+				"M3 0x7d05", 
+				"M3"
+			]
+		}, 
+		{
+			"start_sample": 14960,
+			"end_sample": 16240,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Throttle 1000 (47.6%)", 
+				"1000 (48%)", 
+				"48%"
+			]
+		}, 
+		{
+			"start_sample": 14960,
+			"end_sample": 16240,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0x5 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 17680,
+			"end_sample": 17744,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"S"
+			]
+		}, 
+		{
+			"start_sample": 17744,
+			"end_sample": 17808,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 17808,
+			"end_sample": 17872,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 17872,
+			"end_sample": 17936,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 17936,
+			"end_sample": 18000,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 18000,
+			"end_sample": 18064,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 18064,
+			"end_sample": 18128,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 18128,
+			"end_sample": 18192,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 18192,
+			"end_sample": 18256,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 18256,
+			"end_sample": 18320,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 18320,
+			"end_sample": 18384,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 18384,
+			"end_sample": 18448,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 18448,
+			"end_sample": 18512,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 18512,
+			"end_sample": 18576,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 18576,
+			"end_sample": 18640,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 18640,
+			"end_sample": 18704,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 18704,
+			"end_sample": 18768,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 18768,
+			"end_sample": 18832,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 18832,
+			"end_sample": 18896,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 18896,
+			"end_sample": 18960,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 18960,
+			"end_sample": 19024,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 17680,
+			"end_sample": 19024,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"eRPM 60000 (period 1000 us, raw 0x3f4)", 
+				"eRPM 60000 (1000 us)", 
+				"60000 eRPM"
+			]
+		}, 
+		{
+			"start_sample": 22240,
+			"end_sample": 22320,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 22320,
+			"end_sample": 22400,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 22400,
+			"end_sample": 22480,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 22480,
+			"end_sample": 22560,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 22560,
+			"end_sample": 22640,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 22640,
+			"end_sample": 22720,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 22720,
+			"end_sample": 22800,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 22800,
+			"end_sample": 22880,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 22880,
+			"end_sample": 22960,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 22960,
+			"end_sample": 23040,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 23040,
+			"end_sample": 23120,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 23120,
+			"end_sample": 23200,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 23200,
+			"end_sample": 23280,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 23280,
+			"end_sample": 23360,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 23360,
+			"end_sample": 23440,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 23440,
+			"end_sample": 23520,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 22240,
+			"end_sample": 23520,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M3 DShot600 bidir 0x7d05", 
+				"M3 0x7d05", 
+				"M3"
+			]
+		}, 
+		{
+			"start_sample": 22240,
+			"end_sample": 23520,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Throttle 1000 (47.6%)", 
+				"1000 (48%)", 
+				"48%"
+			]
+		}, 
+		{
+			"start_sample": 22240,
+			"end_sample": 23520,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0x5 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 24960,
+			"end_sample": 25024,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"S"
+			]
+		}, 
+		{
+			"start_sample": 25024,
+			"end_sample": 25088,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 25088,
+			"end_sample": 25152,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 25152,
+			"end_sample": 25216,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 25216,
+			"end_sample": 25280,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 25280,
+			"end_sample": 25344,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 25344,
+			"end_sample": 25408,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 25408,
+			"end_sample": 25472,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 25472,
+			"end_sample": 25536,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 25536,
+			"end_sample": 25600,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 25600,
+			"end_sample": 25664,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 25664,
+			"end_sample": 25728,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 25728,
+			"end_sample": 25792,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 25792,
+			"end_sample": 25856,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 25856,
+			"end_sample": 25920,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 25920,
+			"end_sample": 25984,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 25984,
+			"end_sample": 26048,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 26048,
+			"end_sample": 26112,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 26112,
+			"end_sample": 26176,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 26176,
+			"end_sample": 26240,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 26240,
+			"end_sample": 26304,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 24960,
+			"end_sample": 26304,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"eRPM 12019 (period 4992 us, raw 0x938)", 
+				"eRPM 12019 (4992 us)", 
+				"12019 eRPM"
+			]
+		}, 
+		{
+			"start_sample": 29520,
+			"end_sample": 29600,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 29600,
+			"end_sample": 29680,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 29680,
+			"end_sample": 29760,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 29760,
+			"end_sample": 29840,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 29840,
+			"end_sample": 29920,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 29920,
+			"end_sample": 30000,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 30000,
+			"end_sample": 30080,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 30080,
+			"end_sample": 30160,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 30160,
+			"end_sample": 30240,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 30240,
+			"end_sample": 30320,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 30320,
+			"end_sample": 30400,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 30400,
+			"end_sample": 30480,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 30480,
+			"end_sample": 30560,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 30560,
+			"end_sample": 30640,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 30640,
+			"end_sample": 30720,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 30720,
+			"end_sample": 30800,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 29520,
+			"end_sample": 30800,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M3 DShot600 bidir 0x7d05", 
+				"M3 0x7d05", 
+				"M3"
+			]
+		}, 
+		{
+			"start_sample": 29520,
+			"end_sample": 30800,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Throttle 1000 (47.6%)", 
+				"1000 (48%)", 
+				"48%"
+			]
+		}, 
+		{
+			"start_sample": 29520,
+			"end_sample": 30800,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0x5 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 32240,
+			"end_sample": 32304,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"S"
+			]
+		}, 
+		{
+			"start_sample": 32304,
+			"end_sample": 32368,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 32368,
+			"end_sample": 32432,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 32432,
+			"end_sample": 32496,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 32496,
+			"end_sample": 32560,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 32560,
+			"end_sample": 32624,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 32624,
+			"end_sample": 32688,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 32688,
+			"end_sample": 32752,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 32752,
+			"end_sample": 32816,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 32816,
+			"end_sample": 32880,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 32880,
+			"end_sample": 32944,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 32944,
+			"end_sample": 33008,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 33008,
+			"end_sample": 33072,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 33072,
+			"end_sample": 33136,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 33136,
+			"end_sample": 33200,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 33200,
+			"end_sample": 33264,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 33264,
+			"end_sample": 33328,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 33328,
+			"end_sample": 33392,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 33392,
+			"end_sample": 33456,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 33456,
+			"end_sample": 33520,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 33520,
+			"end_sample": 33584,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 32240,
+			"end_sample": 33584,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"eRPM 3005 (period 19968 us, raw 0xd38)", 
+				"eRPM 3005 (19968 us)", 
+				"3005 eRPM"
+			]
+		}, 
+		{
+			"start_sample": 36800,
+			"end_sample": 36880,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 36880,
+			"end_sample": 36960,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 36960,
+			"end_sample": 37040,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 37040,
+			"end_sample": 37120,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 37120,
+			"end_sample": 37200,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 37200,
+			"end_sample": 37280,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 37280,
+			"end_sample": 37360,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 37360,
+			"end_sample": 37440,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 37440,
+			"end_sample": 37520,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 37520,
+			"end_sample": 37600,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 37600,
+			"end_sample": 37680,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 37680,
+			"end_sample": 37760,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 37760,
+			"end_sample": 37840,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 37840,
+			"end_sample": 37920,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 37920,
+			"end_sample": 38000,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 38000,
+			"end_sample": 38080,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 36800,
+			"end_sample": 38080,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M3 DShot600 bidir 0x7d05", 
+				"M3 0x7d05", 
+				"M3"
+			]
+		}, 
+		{
+			"start_sample": 36800,
+			"end_sample": 38080,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Throttle 1000 (47.6%)", 
+				"1000 (48%)", 
+				"48%"
+			]
+		}, 
+		{
+			"start_sample": 36800,
+			"end_sample": 38080,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0x5 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 39520,
+			"end_sample": 39584,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"S"
+			]
+		}, 
+		{
+			"start_sample": 39584,
+			"end_sample": 39648,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 39648,
+			"end_sample": 39712,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 39712,
+			"end_sample": 39776,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 39776,
+			"end_sample": 39840,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 39840,
+			"end_sample": 39904,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 39904,
+			"end_sample": 39968,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 39968,
+			"end_sample": 40032,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 40032,
+			"end_sample": 40096,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 40096,
+			"end_sample": 40160,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 40160,
+			"end_sample": 40224,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 40224,
+			"end_sample": 40288,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 40288,
+			"end_sample": 40352,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 40352,
+			"end_sample": 40416,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 40416,
+			"end_sample": 40480,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 40480,
+			"end_sample": 40544,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 40544,
+			"end_sample": 40608,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 40608,
+			"end_sample": 40672,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 40672,
+			"end_sample": 40736,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 40736,
+			"end_sample": 40800,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 40800,
+			"end_sample": 40864,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 39520,
+			"end_sample": 40864,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"eRPM 925 (period 64896 us, raw 0xffb)", 
+				"eRPM 925 (64896 us)", 
+				"925 eRPM"
+			]
+		}, 
+		{
+			"start_sample": 44080,
+			"end_sample": 44160,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 44160,
+			"end_sample": 44240,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 44240,
+			"end_sample": 44320,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 44320,
+			"end_sample": 44400,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 44400,
+			"end_sample": 44480,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 44480,
+			"end_sample": 44560,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 44560,
+			"end_sample": 44640,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 44640,
+			"end_sample": 44720,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 44720,
+			"end_sample": 44800,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 44800,
+			"end_sample": 44880,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 44880,
+			"end_sample": 44960,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 44960,
+			"end_sample": 45040,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 45040,
+			"end_sample": 45120,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 45120,
+			"end_sample": 45200,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 45200,
+			"end_sample": 45280,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 45280,
+			"end_sample": 45360,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 44080,
+			"end_sample": 45360,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M3 DShot600 bidir 0x000f", 
+				"M3 0x000f", 
+				"M3"
+			]
+		}, 
+		{
+			"start_sample": 44080,
+			"end_sample": 45360,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Motor stop (0)", 
+				"Stop"
+			]
+		}, 
+		{
+			"start_sample": 44080,
+			"end_sample": 45360,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0xf correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 46800,
+			"end_sample": 46864,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"S"
+			]
+		}, 
+		{
+			"start_sample": 46864,
+			"end_sample": 46928,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 46928,
+			"end_sample": 46992,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 46992,
+			"end_sample": 47056,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 47056,
+			"end_sample": 47120,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 47120,
+			"end_sample": 47184,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 47184,
+			"end_sample": 47248,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 47248,
+			"end_sample": 47312,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 47312,
+			"end_sample": 47376,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 47376,
+			"end_sample": 47440,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 47440,
+			"end_sample": 47504,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 47504,
+			"end_sample": 47568,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 47568,
+			"end_sample": 47632,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 47632,
+			"end_sample": 47696,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 47696,
+			"end_sample": 47760,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 47760,
+			"end_sample": 47824,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 47824,
+			"end_sample": 47888,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 47888,
+			"end_sample": 47952,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 47952,
+			"end_sample": 48016,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 48016,
+			"end_sample": 48080,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 48080,
+			"end_sample": 48144,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 46800,
+			"end_sample": 48144,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"eRPM 0, motor stopped (raw 0xfff)", 
+				"eRPM 0 (stopped)", 
+				"0 eRPM"
+			]
+		}, 
+		{
+			"start_sample": 51360,
+			"end_sample": 51440,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 51440,
+			"end_sample": 51520,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 51520,
+			"end_sample": 51600,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 51600,
+			"end_sample": 51680,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 51680,
+			"end_sample": 51760,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 51760,
+			"end_sample": 51840,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 51840,
+			"end_sample": 51920,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 51920,
+			"end_sample": 52000,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 52000,
+			"end_sample": 52080,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 52080,
+			"end_sample": 52160,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 52160,
+			"end_sample": 52240,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 52240,
+			"end_sample": 52320,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 52320,
+			"end_sample": 52400,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 52400,
+			"end_sample": 52480,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 52480,
+			"end_sample": 52560,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 52560,
+			"end_sample": 52640,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 51360,
+			"end_sample": 52640,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M3 DShot600 bidir 0x0618", 
+				"M3 0x0618", 
+				"M3"
+			]
+		}, 
+		{
+			"start_sample": 51360,
+			"end_sample": 52640,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Throttle 48 (0.0%)", 
+				"48 (0%)", 
+				"0%"
+			]
+		}, 
+		{
+			"start_sample": 51360,
+			"end_sample": 52640,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0x8 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 51360,
+			"end_sample": 52640,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"Telemetry requested", 
+				"TLM req"
+			]
+		}, 
+		{
+			"start_sample": 54080,
+			"end_sample": 54144,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"S"
+			]
+		}, 
+		{
+			"start_sample": 54144,
+			"end_sample": 54208,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 54208,
+			"end_sample": 54272,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 54272,
+			"end_sample": 54336,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 54336,
+			"end_sample": 54400,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 54400,
+			"end_sample": 54464,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 54464,
+			"end_sample": 54528,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 54528,
+			"end_sample": 54592,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 54592,
+			"end_sample": 54656,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 54656,
+			"end_sample": 54720,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 54720,
+			"end_sample": 54784,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 54784,
+			"end_sample": 54848,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 54848,
+			"end_sample": 54912,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 54912,
+			"end_sample": 54976,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 54976,
+			"end_sample": 55040,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 55040,
+			"end_sample": 55104,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 55104,
+			"end_sample": 55168,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 55168,
+			"end_sample": 55232,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 55232,
+			"end_sample": 55296,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 55296,
+			"end_sample": 55360,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 55360,
+			"end_sample": 55424,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 54080,
+			"end_sample": 55424,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"Temperature: 45 degC (raw 0x22d)", 
+				"Temperature 45 degC", 
+				"45 degC"
+			]
+		}, 
+		{
+			"start_sample": 58640,
+			"end_sample": 58720,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 58720,
+			"end_sample": 58800,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 58800,
+			"end_sample": 58880,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 58880,
+			"end_sample": 58960,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 58960,
+			"end_sample": 59040,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 59040,
+			"end_sample": 59120,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 59120,
+			"end_sample": 59200,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 59200,
+			"end_sample": 59280,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 59280,
+			"end_sample": 59360,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 59360,
+			"end_sample": 59440,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 59440,
+			"end_sample": 59520,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 59520,
+			"end_sample": 59600,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 59600,
+			"end_sample": 59680,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 59680,
+			"end_sample": 59760,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 59760,
+			"end_sample": 59840,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 59840,
+			"end_sample": 59920,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 58640,
+			"end_sample": 59920,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M3 DShot600 bidir 0x0618", 
+				"M3 0x0618", 
+				"M3"
+			]
+		}, 
+		{
+			"start_sample": 58640,
+			"end_sample": 59920,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Throttle 48 (0.0%)", 
+				"48 (0%)", 
+				"0%"
+			]
+		}, 
+		{
+			"start_sample": 58640,
+			"end_sample": 59920,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0x8 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 58640,
+			"end_sample": 59920,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"Telemetry requested", 
+				"TLM req"
+			]
+		}, 
+		{
+			"start_sample": 61360,
+			"end_sample": 61424,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"S"
+			]
+		}, 
+		{
+			"start_sample": 61424,
+			"end_sample": 61488,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 61488,
+			"end_sample": 61552,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 61552,
+			"end_sample": 61616,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 61616,
+			"end_sample": 61680,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 61680,
+			"end_sample": 61744,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 61744,
+			"end_sample": 61808,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 61808,
+			"end_sample": 61872,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 61872,
+			"end_sample": 61936,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 61936,
+			"end_sample": 62000,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 62000,
+			"end_sample": 62064,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 62064,
+			"end_sample": 62128,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 62128,
+			"end_sample": 62192,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 62192,
+			"end_sample": 62256,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 62256,
+			"end_sample": 62320,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 62320,
+			"end_sample": 62384,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 62384,
+			"end_sample": 62448,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 62448,
+			"end_sample": 62512,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 62512,
+			"end_sample": 62576,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 62576,
+			"end_sample": 62640,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 62640,
+			"end_sample": 62704,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 61360,
+			"end_sample": 62704,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"Voltage: 12.50 V (raw 0x432)", 
+				"Voltage 12.50 V", 
+				"12.50 V"
+			]
+		}, 
+		{
+			"start_sample": 65920,
+			"end_sample": 66000,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 66000,
+			"end_sample": 66080,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 66080,
+			"end_sample": 66160,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 66160,
+			"end_sample": 66240,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 66240,
+			"end_sample": 66320,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 66320,
+			"end_sample": 66400,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 66400,
+			"end_sample": 66480,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 66480,
+			"end_sample": 66560,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 66560,
+			"end_sample": 66640,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 66640,
+			"end_sample": 66720,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 66720,
+			"end_sample": 66800,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 66800,
+			"end_sample": 66880,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 66880,
+			"end_sample": 66960,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 66960,
+			"end_sample": 67040,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 67040,
+			"end_sample": 67120,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 67120,
+			"end_sample": 67200,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 65920,
+			"end_sample": 67200,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M3 DShot600 bidir 0x0618", 
+				"M3 0x0618", 
+				"M3"
+			]
+		}, 
+		{
+			"start_sample": 65920,
+			"end_sample": 67200,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Throttle 48 (0.0%)", 
+				"48 (0%)", 
+				"0%"
+			]
+		}, 
+		{
+			"start_sample": 65920,
+			"end_sample": 67200,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0x8 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 65920,
+			"end_sample": 67200,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"Telemetry requested", 
+				"TLM req"
+			]
+		}, 
+		{
+			"start_sample": 68640,
+			"end_sample": 68704,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"S"
+			]
+		}, 
+		{
+			"start_sample": 68704,
+			"end_sample": 68768,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 68768,
+			"end_sample": 68832,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 68832,
+			"end_sample": 68896,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 68896,
+			"end_sample": 68960,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 68960,
+			"end_sample": 69024,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 69024,
+			"end_sample": 69088,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 69088,
+			"end_sample": 69152,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 69152,
+			"end_sample": 69216,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 69216,
+			"end_sample": 69280,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 69280,
+			"end_sample": 69344,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 69344,
+			"end_sample": 69408,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 69408,
+			"end_sample": 69472,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 69472,
+			"end_sample": 69536,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 69536,
+			"end_sample": 69600,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 69600,
+			"end_sample": 69664,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 69664,
+			"end_sample": 69728,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 69728,
+			"end_sample": 69792,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 69792,
+			"end_sample": 69856,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 69856,
+			"end_sample": 69920,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 69920,
+			"end_sample": 69984,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 68640,
+			"end_sample": 69984,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"Current: 20 A (raw 0x614)", 
+				"Current 20 A", 
+				"20 A"
+			]
+		}, 
+		{
+			"start_sample": 73200,
+			"end_sample": 73280,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 73280,
+			"end_sample": 73360,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 73360,
+			"end_sample": 73440,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 73440,
+			"end_sample": 73520,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 73520,
+			"end_sample": 73600,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 73600,
+			"end_sample": 73680,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 73680,
+			"end_sample": 73760,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 73760,
+			"end_sample": 73840,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 73840,
+			"end_sample": 73920,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 73920,
+			"end_sample": 74000,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 74000,
+			"end_sample": 74080,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 74080,
+			"end_sample": 74160,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 74160,
+			"end_sample": 74240,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 74240,
+			"end_sample": 74320,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 74320,
+			"end_sample": 74400,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 74400,
+			"end_sample": 74480,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 73200,
+			"end_sample": 74480,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M3 DShot600 bidir 0x0618", 
+				"M3 0x0618", 
+				"M3"
+			]
+		}, 
+		{
+			"start_sample": 73200,
+			"end_sample": 74480,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Throttle 48 (0.0%)", 
+				"48 (0%)", 
+				"0%"
+			]
+		}, 
+		{
+			"start_sample": 73200,
+			"end_sample": 74480,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0x8 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 73200,
+			"end_sample": 74480,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"Telemetry requested", 
+				"TLM req"
+			]
+		}, 
+		{
+			"start_sample": 75920,
+			"end_sample": 75984,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"S"
+			]
+		}, 
+		{
+			"start_sample": 75984,
+			"end_sample": 76048,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 76048,
+			"end_sample": 76112,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 76112,
+			"end_sample": 76176,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 76176,
+			"end_sample": 76240,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 76240,
+			"end_sample": 76304,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 76304,
+			"end_sample": 76368,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 76368,
+			"end_sample": 76432,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 76432,
+			"end_sample": 76496,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 76496,
+			"end_sample": 76560,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 76560,
+			"end_sample": 76624,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 76624,
+			"end_sample": 76688,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 76688,
+			"end_sample": 76752,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 76752,
+			"end_sample": 76816,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 76816,
+			"end_sample": 76880,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 76880,
+			"end_sample": 76944,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 76944,
+			"end_sample": 77008,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 77008,
+			"end_sample": 77072,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 77072,
+			"end_sample": 77136,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 77136,
+			"end_sample": 77200,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 77200,
+			"end_sample": 77264,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 75920,
+			"end_sample": 77264,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"Debug 1: 0x07 (raw 0x807)", 
+				"Debug 1 0x07", 
+				"0x07"
+			]
+		}, 
+		{
+			"start_sample": 80480,
+			"end_sample": 80560,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 80560,
+			"end_sample": 80640,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 80640,
+			"end_sample": 80720,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 80720,
+			"end_sample": 80800,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 80800,
+			"end_sample": 80880,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 80880,
+			"end_sample": 80960,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 80960,
+			"end_sample": 81040,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 81040,
+			"end_sample": 81120,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 81120,
+			"end_sample": 81200,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 81200,
+			"end_sample": 81280,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 81280,
+			"end_sample": 81360,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 81360,
+			"end_sample": 81440,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 81440,
+			"end_sample": 81520,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 81520,
+			"end_sample": 81600,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 81600,
+			"end_sample": 81680,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 81680,
+			"end_sample": 81760,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 80480,
+			"end_sample": 81760,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M3 DShot600 bidir 0x0618", 
+				"M3 0x0618", 
+				"M3"
+			]
+		}, 
+		{
+			"start_sample": 80480,
+			"end_sample": 81760,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Throttle 48 (0.0%)", 
+				"48 (0%)", 
+				"0%"
+			]
+		}, 
+		{
+			"start_sample": 80480,
+			"end_sample": 81760,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0x8 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 80480,
+			"end_sample": 81760,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"Telemetry requested", 
+				"TLM req"
+			]
+		}, 
+		{
+			"start_sample": 83200,
+			"end_sample": 83264,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"S"
+			]
+		}, 
+		{
+			"start_sample": 83264,
+			"end_sample": 83328,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 83328,
+			"end_sample": 83392,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 83392,
+			"end_sample": 83456,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 83456,
+			"end_sample": 83520,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 83520,
+			"end_sample": 83584,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 83584,
+			"end_sample": 83648,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 83648,
+			"end_sample": 83712,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 83712,
+			"end_sample": 83776,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 83776,
+			"end_sample": 83840,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 83840,
+			"end_sample": 83904,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 83904,
+			"end_sample": 83968,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 83968,
+			"end_sample": 84032,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 84032,
+			"end_sample": 84096,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 84096,
+			"end_sample": 84160,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 84160,
+			"end_sample": 84224,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 84224,
+			"end_sample": 84288,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 84288,
+			"end_sample": 84352,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 84352,
+			"end_sample": 84416,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 84416,
+			"end_sample": 84480,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 84480,
+			"end_sample": 84544,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 83200,
+			"end_sample": 84544,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"Debug 2: 0x08 (raw 0xa08)", 
+				"Debug 2 0x08", 
+				"0x08"
+			]
+		}, 
+		{
+			"start_sample": 87760,
+			"end_sample": 87840,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 87840,
+			"end_sample": 87920,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 87920,
+			"end_sample": 88000,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 88000,
+			"end_sample": 88080,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 88080,
+			"end_sample": 88160,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 88160,
+			"end_sample": 88240,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 88240,
+			"end_sample": 88320,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 88320,
+			"end_sample": 88400,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 88400,
+			"end_sample": 88480,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 88480,
+			"end_sample": 88560,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 88560,
+			"end_sample": 88640,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 88640,
+			"end_sample": 88720,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 88720,
+			"end_sample": 88800,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 88800,
+			"end_sample": 88880,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 88880,
+			"end_sample": 88960,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 88960,
+			"end_sample": 89040,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 87760,
+			"end_sample": 89040,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M3 DShot600 bidir 0x0618", 
+				"M3 0x0618", 
+				"M3"
+			]
+		}, 
+		{
+			"start_sample": 87760,
+			"end_sample": 89040,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Throttle 48 (0.0%)", 
+				"48 (0%)", 
+				"0%"
+			]
+		}, 
+		{
+			"start_sample": 87760,
+			"end_sample": 89040,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0x8 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 87760,
+			"end_sample": 89040,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"Telemetry requested", 
+				"TLM req"
+			]
+		}, 
+		{
+			"start_sample": 90480,
+			"end_sample": 90544,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"S"
+			]
+		}, 
+		{
+			"start_sample": 90544,
+			"end_sample": 90608,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 90608,
+			"end_sample": 90672,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 90672,
+			"end_sample": 90736,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 90736,
+			"end_sample": 90800,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 90800,
+			"end_sample": 90864,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 90864,
+			"end_sample": 90928,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 90928,
+			"end_sample": 90992,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 90992,
+			"end_sample": 91056,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 91056,
+			"end_sample": 91120,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 91120,
+			"end_sample": 91184,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 91184,
+			"end_sample": 91248,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 91248,
+			"end_sample": 91312,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 91312,
+			"end_sample": 91376,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 91376,
+			"end_sample": 91440,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 91440,
+			"end_sample": 91504,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 91504,
+			"end_sample": 91568,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 91568,
+			"end_sample": 91632,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 91632,
+			"end_sample": 91696,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 91696,
+			"end_sample": 91760,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 91760,
+			"end_sample": 91824,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 90480,
+			"end_sample": 91824,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"Debug 3: 0x09 (raw 0xc09)", 
+				"Debug 3 0x09", 
+				"0x09"
+			]
+		}, 
+		{
+			"start_sample": 95040,
+			"end_sample": 95120,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 95120,
+			"end_sample": 95200,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 95200,
+			"end_sample": 95280,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 95280,
+			"end_sample": 95360,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 95360,
+			"end_sample": 95440,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 95440,
+			"end_sample": 95520,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 95520,
+			"end_sample": 95600,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 95600,
+			"end_sample": 95680,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 95680,
+			"end_sample": 95760,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 95760,
+			"end_sample": 95840,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 95840,
+			"end_sample": 95920,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 95920,
+			"end_sample": 96000,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 96000,
+			"end_sample": 96080,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 96080,
+			"end_sample": 96160,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 96160,
+			"end_sample": 96240,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 96240,
+			"end_sample": 96320,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 95040,
+			"end_sample": 96320,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M3 DShot600 bidir 0x0618", 
+				"M3 0x0618", 
+				"M3"
+			]
+		}, 
+		{
+			"start_sample": 95040,
+			"end_sample": 96320,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Throttle 48 (0.0%)", 
+				"48 (0%)", 
+				"0%"
+			]
+		}, 
+		{
+			"start_sample": 95040,
+			"end_sample": 96320,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0x8 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 95040,
+			"end_sample": 96320,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"Telemetry requested", 
+				"TLM req"
+			]
+		}, 
+		{
+			"start_sample": 97760,
+			"end_sample": 97824,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"S"
+			]
+		}, 
+		{
+			"start_sample": 97824,
+			"end_sample": 97888,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 97888,
+			"end_sample": 97952,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 97952,
+			"end_sample": 98016,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 98016,
+			"end_sample": 98080,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 98080,
+			"end_sample": 98144,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 98144,
+			"end_sample": 98208,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 98208,
+			"end_sample": 98272,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 98272,
+			"end_sample": 98336,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 98336,
+			"end_sample": 98400,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 98400,
+			"end_sample": 98464,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 98464,
+			"end_sample": 98528,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 98528,
+			"end_sample": 98592,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 98592,
+			"end_sample": 98656,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 98656,
+			"end_sample": 98720,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 98720,
+			"end_sample": 98784,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 98784,
+			"end_sample": 98848,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 98848,
+			"end_sample": 98912,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 98912,
+			"end_sample": 98976,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 98976,
+			"end_sample": 99040,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 99040,
+			"end_sample": 99104,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 97760,
+			"end_sample": 99104,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"State: 0x03 (raw 0xe03)", 
+				"State 0x03", 
+				"0x03"
+			]
+		}, 
+		{
+			"start_sample": 102320,
+			"end_sample": 102400,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 102400,
+			"end_sample": 102480,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 102480,
+			"end_sample": 102560,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 102560,
+			"end_sample": 102640,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 102640,
+			"end_sample": 102720,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 102720,
+			"end_sample": 102800,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 102800,
+			"end_sample": 102880,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 102880,
+			"end_sample": 102960,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 102960,
+			"end_sample": 103040,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 103040,
+			"end_sample": 103120,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 103120,
+			"end_sample": 103200,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 103200,
+			"end_sample": 103280,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 103280,
+			"end_sample": 103360,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 103360,
+			"end_sample": 103440,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 103440,
+			"end_sample": 103520,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 103520,
+			"end_sample": 103600,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 102320,
+			"end_sample": 103600,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M3 DShot600 bidir 0x5785", 
+				"M3 0x5785", 
+				"M3"
+			]
+		}, 
+		{
+			"start_sample": 102320,
+			"end_sample": 103600,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Throttle 700 (32.6%)", 
+				"700 (33%)", 
+				"33%"
+			]
+		}, 
+		{
+			"start_sample": 102320,
+			"end_sample": 103600,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0x5 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 105040,
+			"end_sample": 105104,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"S"
+			]
+		}, 
+		{
+			"start_sample": 105104,
+			"end_sample": 105168,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 105168,
+			"end_sample": 105232,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 105232,
+			"end_sample": 105296,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 105296,
+			"end_sample": 105360,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 105360,
+			"end_sample": 105424,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 105424,
+			"end_sample": 105488,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 105488,
+			"end_sample": 105552,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 105552,
+			"end_sample": 105616,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 105616,
+			"end_sample": 105680,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 105680,
+			"end_sample": 105744,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 105744,
+			"end_sample": 105808,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 105808,
+			"end_sample": 105872,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 105872,
+			"end_sample": 105936,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 105936,
+			"end_sample": 106000,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 106000,
+			"end_sample": 106064,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 106064,
+			"end_sample": 106128,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 106128,
+			"end_sample": 106192,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 106192,
+			"end_sample": 106256,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 106256,
+			"end_sample": 106320,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 106320,
+			"end_sample": 106384,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 105040,
+			"end_sample": 106384,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"eRPM 20000 (period 3000 us, raw 0x777) (checksum error)", 
+				"eRPM 20000 (3000 us)", 
+				"20000 eRPM"
+			]
+		}, 
+		{
+			"start_sample": 105040,
+			"end_sample": 106384,
+			"ann_class": 6,
+			"ann_type": 13,
+			"texts": [
+				"Telemetry checksum mismatch, nibble XOR 0xa", 
+				"Telemetry checksum error", 
+				"TLM CRC error"
+			]
+		}, 
+		{
+			"start_sample": 109600,
+			"end_sample": 109680,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 109680,
+			"end_sample": 109760,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 109760,
+			"end_sample": 109840,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 109840,
+			"end_sample": 109920,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 109920,
+			"end_sample": 110000,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 110000,
+			"end_sample": 110080,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 110080,
+			"end_sample": 110160,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 110160,
+			"end_sample": 110240,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 110240,
+			"end_sample": 110320,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 110320,
+			"end_sample": 110400,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 110400,
+			"end_sample": 110480,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 110480,
+			"end_sample": 110560,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 110560,
+			"end_sample": 110640,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 110640,
+			"end_sample": 110720,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 110720,
+			"end_sample": 110800,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 110800,
+			"end_sample": 110880,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 109600,
+			"end_sample": 110880,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M3 DShot600 bidir 0x5785", 
+				"M3 0x5785", 
+				"M3"
+			]
+		}, 
+		{
+			"start_sample": 109600,
+			"end_sample": 110880,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Throttle 700 (32.6%)", 
+				"700 (33%)", 
+				"33%"
+			]
+		}, 
+		{
+			"start_sample": 109600,
+			"end_sample": 110880,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0x5 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 112320,
+			"end_sample": 112384,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"S"
+			]
+		}, 
+		{
+			"start_sample": 112384,
+			"end_sample": 112448,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 112448,
+			"end_sample": 112512,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 112512,
+			"end_sample": 112576,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 112576,
+			"end_sample": 112640,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 112640,
+			"end_sample": 112704,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 112704,
+			"end_sample": 112768,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 112768,
+			"end_sample": 112832,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 112832,
+			"end_sample": 112896,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 112896,
+			"end_sample": 112960,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 112960,
+			"end_sample": 113024,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 113024,
+			"end_sample": 113088,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 113088,
+			"end_sample": 113152,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 113152,
+			"end_sample": 113216,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 113216,
+			"end_sample": 113280,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 113280,
+			"end_sample": 113344,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 113344,
+			"end_sample": 113408,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 113408,
+			"end_sample": 113472,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 113472,
+			"end_sample": 113536,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 113536,
+			"end_sample": 113600,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 113600,
+			"end_sample": 113664,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 112320,
+			"end_sample": 113664,
+			"ann_class": 6,
+			"ann_type": 13,
+			"texts": [
+				"Invalid GCR symbol 0x00 in telemetry response", 
+				"Invalid GCR symbol", 
+				"GCR error"
+			]
+		}, 
+		{
+			"start_sample": 116880,
+			"end_sample": 116960,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 116960,
+			"end_sample": 117040,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 117040,
+			"end_sample": 117120,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 117120,
+			"end_sample": 117200,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 117200,
+			"end_sample": 117280,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 117280,
+			"end_sample": 117360,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 117360,
+			"end_sample": 117440,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 117440,
+			"end_sample": 117520,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 117520,
+			"end_sample": 117600,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 117600,
+			"end_sample": 117680,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 117680,
+			"end_sample": 117760,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 117760,
+			"end_sample": 117840,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 117840,
+			"end_sample": 117920,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 117920,
+			"end_sample": 118000,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 118000,
+			"end_sample": 118080,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 118080,
+			"end_sample": 118160,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 116880,
+			"end_sample": 118160,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M3 DShot600 bidir 0x5785", 
+				"M3 0x5785", 
+				"M3"
+			]
+		}, 
+		{
+			"start_sample": 116880,
+			"end_sample": 118160,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Throttle 700 (32.6%)", 
+				"700 (33%)", 
+				"33%"
+			]
+		}, 
+		{
+			"start_sample": 116880,
+			"end_sample": 118160,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0x5 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 118160,
+			"end_sample": 121040,
+			"ann_class": 6,
+			"ann_type": 13,
+			"texts": [
+				"No telemetry response", 
+				"No response", 
+				"No TLM"
+			]
+		}, 
+		{
+			"start_sample": 124160,
+			"end_sample": 124240,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 124240,
+			"end_sample": 124320,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 124320,
+			"end_sample": 124400,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 124400,
+			"end_sample": 124480,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 124480,
+			"end_sample": 124560,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 124560,
+			"end_sample": 124640,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 124640,
+			"end_sample": 124720,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 124720,
+			"end_sample": 124800,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 124800,
+			"end_sample": 124880,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 124880,
+			"end_sample": 124960,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 124960,
+			"end_sample": 125040,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 125040,
+			"end_sample": 125120,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 125120,
+			"end_sample": 125200,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 125200,
+			"end_sample": 125280,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 125280,
+			"end_sample": 125360,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 125360,
+			"end_sample": 125440,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 124160,
+			"end_sample": 125440,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M3 DShot600 bidir 0xbb87", 
+				"M3 0xbb87", 
+				"M3"
+			]
+		}, 
+		{
+			"start_sample": 124160,
+			"end_sample": 125440,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Throttle 1500 (72.6%)", 
+				"1500 (73%)", 
+				"73%"
+			]
+		}, 
+		{
+			"start_sample": 124160,
+			"end_sample": 125440,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0x7 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 126880,
+			"end_sample": 126947,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"S"
+			]
+		}, 
+		{
+			"start_sample": 126947,
+			"end_sample": 127014,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 127014,
+			"end_sample": 127081,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 127081,
+			"end_sample": 127148,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 127148,
+			"end_sample": 127215,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 127215,
+			"end_sample": 127283,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 127283,
+			"end_sample": 127350,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 127350,
+			"end_sample": 127417,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 127417,
+			"end_sample": 127484,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 127484,
+			"end_sample": 127551,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 127551,
+			"end_sample": 127619,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 127619,
+			"end_sample": 127686,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 127686,
+			"end_sample": 127753,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 127753,
+			"end_sample": 127820,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 127820,
+			"end_sample": 127887,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 127887,
+			"end_sample": 127955,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 127955,
+			"end_sample": 128022,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 128022,
+			"end_sample": 128089,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 128089,
+			"end_sample": 128156,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 128156,
+			"end_sample": 128223,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 128223,
+			"end_sample": 128291,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 126880,
+			"end_sample": 128291,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"eRPM 77320 (period 776 us, raw 0x384)", 
+				"eRPM 77320 (776 us)", 
+				"77320 eRPM"
+			]
+		}, 
+		{
+			"start_sample": 131440,
+			"end_sample": 131520,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 131520,
+			"end_sample": 131600,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 131600,
+			"end_sample": 131680,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 131680,
+			"end_sample": 131760,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 131760,
+			"end_sample": 131840,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 131840,
+			"end_sample": 131920,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 131920,
+			"end_sample": 132000,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 132000,
+			"end_sample": 132080,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 132080,
+			"end_sample": 132160,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 132160,
+			"end_sample": 132240,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 132240,
+			"end_sample": 132320,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 132320,
+			"end_sample": 132400,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 132400,
+			"end_sample": 132480,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 132480,
+			"end_sample": 132560,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 132560,
+			"end_sample": 132640,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 132640,
+			"end_sample": 132720,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 131440,
+			"end_sample": 132720,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M3 DShot600 bidir 0xbb87", 
+				"M3 0xbb87", 
+				"M3"
+			]
+		}, 
+		{
+			"start_sample": 131440,
+			"end_sample": 132720,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Throttle 1500 (72.6%)", 
+				"1500 (73%)", 
+				"73%"
+			]
+		}, 
+		{
+			"start_sample": 131440,
+			"end_sample": 132720,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0x7 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 134160,
+			"end_sample": 134220,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"S"
+			]
+		}, 
+		{
+			"start_sample": 134220,
+			"end_sample": 134281,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 134281,
+			"end_sample": 134342,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 134342,
+			"end_sample": 134403,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 134403,
+			"end_sample": 134464,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 134464,
+			"end_sample": 134524,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 134524,
+			"end_sample": 134585,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 134585,
+			"end_sample": 134646,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 134646,
+			"end_sample": 134707,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 134707,
+			"end_sample": 134768,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 134768,
+			"end_sample": 134828,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 134828,
+			"end_sample": 134889,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 134889,
+			"end_sample": 134950,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 134950,
+			"end_sample": 135011,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 135011,
+			"end_sample": 135072,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 135072,
+			"end_sample": 135132,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 135132,
+			"end_sample": 135193,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 135193,
+			"end_sample": 135254,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 135254,
+			"end_sample": 135315,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 135315,
+			"end_sample": 135376,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 135376,
+			"end_sample": 135436,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 134160,
+			"end_sample": 135436,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"eRPM 77320 (period 776 us, raw 0x384)", 
+				"eRPM 77320 (776 us)", 
+				"77320 eRPM"
+			]
+		}, 
+		{
+			"start_sample": 138720,
+			"end_sample": 138800,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 138800,
+			"end_sample": 138880,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 138880,
+			"end_sample": 138960,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 138960,
+			"end_sample": 139040,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 139040,
+			"end_sample": 139120,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 139120,
+			"end_sample": 139200,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 139200,
+			"end_sample": 139280,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 139280,
+			"end_sample": 139360,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 139360,
+			"end_sample": 139440,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 139440,
+			"end_sample": 139520,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 139520,
+			"end_sample": 139600,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 139600,
+			"end_sample": 139680,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 139680,
+			"end_sample": 139760,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 139760,
+			"end_sample": 139840,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 139840,
+			"end_sample": 139920,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 139920,
+			"end_sample": 140000,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 138720,
+			"end_sample": 140000,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M3 DShot600 bidir 0xbb87", 
+				"M3 0xbb87", 
+				"M3"
+			]
+		}, 
+		{
+			"start_sample": 138720,
+			"end_sample": 140000,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Throttle 1500 (72.6%)", 
+				"1500 (73%)", 
+				"73%"
+			]
+		}, 
+		{
+			"start_sample": 138720,
+			"end_sample": 140000,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0x7 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 140960,
+			"end_sample": 141024,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"S"
+			]
+		}, 
+		{
+			"start_sample": 141024,
+			"end_sample": 141088,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 141088,
+			"end_sample": 141152,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 141152,
+			"end_sample": 141216,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 141216,
+			"end_sample": 141280,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 141280,
+			"end_sample": 141344,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 141344,
+			"end_sample": 141408,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 141408,
+			"end_sample": 141472,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 141472,
+			"end_sample": 141536,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 141536,
+			"end_sample": 141600,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 141600,
+			"end_sample": 141664,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 141664,
+			"end_sample": 141728,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 141728,
+			"end_sample": 141792,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 141792,
+			"end_sample": 141856,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 141856,
+			"end_sample": 141920,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 141920,
+			"end_sample": 141984,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 141984,
+			"end_sample": 142048,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 142048,
+			"end_sample": 142112,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 142112,
+			"end_sample": 142176,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 142176,
+			"end_sample": 142240,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 142240,
+			"end_sample": 142304,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 140960,
+			"end_sample": 142304,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"eRPM 67568 (period 888 us, raw 0x3bc)", 
+				"eRPM 67568 (888 us)", 
+				"67568 eRPM"
+			]
+		}, 
+		{
+			"start_sample": 146000,
+			"end_sample": 146080,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 146080,
+			"end_sample": 146160,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 146160,
+			"end_sample": 146240,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 146240,
+			"end_sample": 146320,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 146320,
+			"end_sample": 146400,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 146400,
+			"end_sample": 146480,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 146480,
+			"end_sample": 146560,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 146560,
+			"end_sample": 146640,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 146640,
+			"end_sample": 146720,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 146720,
+			"end_sample": 146800,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 146800,
+			"end_sample": 146880,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 146880,
+			"end_sample": 146960,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 146960,
+			"end_sample": 147040,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 147040,
+			"end_sample": 147120,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 147120,
+			"end_sample": 147200,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 147200,
+			"end_sample": 147280,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 146000,
+			"end_sample": 147280,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M3 DShot600 bidir 0xbb87", 
+				"M3 0xbb87", 
+				"M3"
+			]
+		}, 
+		{
+			"start_sample": 146000,
+			"end_sample": 147280,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Throttle 1500 (72.6%)", 
+				"1500 (73%)", 
+				"73%"
+			]
+		}, 
+		{
+			"start_sample": 146000,
+			"end_sample": 147280,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0x7 correct", 
+				"CRC ok"
+			]
+		}, 
+		{
+			"start_sample": 149440,
+			"end_sample": 149504,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"S"
+			]
+		}, 
+		{
+			"start_sample": 149504,
+			"end_sample": 149568,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 149568,
+			"end_sample": 149632,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 149632,
+			"end_sample": 149696,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 149696,
+			"end_sample": 149760,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 149760,
+			"end_sample": 149824,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 149824,
+			"end_sample": 149888,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 149888,
+			"end_sample": 149952,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 149952,
+			"end_sample": 150016,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 150016,
+			"end_sample": 150080,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 150080,
+			"end_sample": 150144,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 150144,
+			"end_sample": 150208,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 150208,
+			"end_sample": 150272,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 150272,
+			"end_sample": 150336,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 150336,
+			"end_sample": 150400,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 150400,
+			"end_sample": 150464,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 150464,
+			"end_sample": 150528,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 150528,
+			"end_sample": 150592,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 150592,
+			"end_sample": 150656,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 150656,
+			"end_sample": 150720,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 150720,
+			"end_sample": 150784,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 149440,
+			"end_sample": 150784,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"eRPM 67568 (period 888 us, raw 0x3bc)", 
+				"eRPM 67568 (888 us)", 
+				"67568 eRPM"
+			]
+		}, 
+		{
+			"start_sample": 153280,
+			"end_sample": 153360,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 153360,
+			"end_sample": 153440,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 153440,
+			"end_sample": 153520,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 153520,
+			"end_sample": 153600,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 153600,
+			"end_sample": 153680,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 153680,
+			"end_sample": 153760,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 153760,
+			"end_sample": 153840,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 153840,
+			"end_sample": 153920,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 153920,
+			"end_sample": 154000,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 154000,
+			"end_sample": 154080,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 154080,
+			"end_sample": 154160,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 154160,
+			"end_sample": 154240,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 154240,
+			"end_sample": 154320,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 154320,
+			"end_sample": 154400,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 154400,
+			"end_sample": 154480,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1 (1.25 us)", 
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 154480,
+			"end_sample": 154560,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0 (0.62 us)", 
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 153280,
+			"end_sample": 154560,
+			"ann_class": 0,
+			"ann_type": 7,
+			"texts": [
+				"M3 DShot600 bidir 0x7d0a", 
+				"M3 0x7d0a", 
+				"M3"
+			]
+		}, 
+		{
+			"start_sample": 153280,
+			"end_sample": 154560,
+			"ann_class": 1,
+			"ann_type": 8,
+			"texts": [
+				"Throttle 1000 (47.6%)", 
+				"1000 (48%)", 
+				"48%"
+			]
+		}, 
+		{
+			"start_sample": 153280,
+			"end_sample": 154560,
+			"ann_class": 6,
+			"ann_type": 13,
+			"texts": [
+				"Checksum mismatch, got 0xa expected 0x5", 
+				"Checksum mismatch", 
+				"CRC error"
+			]
+		}, 
+		{
+			"start_sample": 153280,
+			"end_sample": 154560,
+			"ann_class": 3,
+			"ann_type": 10,
+			"texts": [
+				"Checksum 0xa, expected 0x5", 
+				"CRC bad"
+			]
+		}, 
+		{
+			"start_sample": 156000,
+			"end_sample": 156064,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"S"
+			]
+		}, 
+		{
+			"start_sample": 156064,
+			"end_sample": 156128,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 156128,
+			"end_sample": 156192,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 156192,
+			"end_sample": 156256,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 156256,
+			"end_sample": 156320,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 156320,
+			"end_sample": 156384,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 156384,
+			"end_sample": 156448,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 156448,
+			"end_sample": 156512,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 156512,
+			"end_sample": 156576,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 156576,
+			"end_sample": 156640,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 156640,
+			"end_sample": 156704,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 156704,
+			"end_sample": 156768,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 156768,
+			"end_sample": 156832,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 156832,
+			"end_sample": 156896,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 156896,
+			"end_sample": 156960,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 156960,
+			"end_sample": 157024,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 157024,
+			"end_sample": 157088,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 157088,
+			"end_sample": 157152,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 157152,
+			"end_sample": 157216,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 157216,
+			"end_sample": 157280,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"0"
+			]
+		}, 
+		{
+			"start_sample": 157280,
+			"end_sample": 157344,
+			"ann_class": 5,
+			"ann_type": 12,
+			"texts": [
+				"1"
+			]
+		}, 
+		{
+			"start_sample": 156000,
+			"end_sample": 157344,
+			"ann_class": 4,
+			"ann_type": 11,
+			"texts": [
+				"eRPM 60120 (period 998 us, raw 0x3f3)", 
+				"eRPM 60120 (998 us)", 
+				"60120 eRPM"
+			]
+		}
+	]
+}
