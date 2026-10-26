@@ -507,6 +507,41 @@ static GVariant *lookup_option_default(struct srd_decoder *dec, const char *opt_
     return NULL;
 }
 
+/* Build the option table of a decoder instance from a JSON object. Numbers
+ * become int64 or double according to the type of the option's default.
+ * Without the lookup, whole-number floats like 70.0 would be converted to
+ * int64, causing type mismatch errors with Python decoders that expect
+ * double. */
+static GHashTable *options_from_json(struct srd_decoder *dec, cJSON *j_options)
+{
+    GHashTable *opt_hash = g_hash_table_new_full(g_str_hash, g_str_equal, g_free,
+                                                 (GDestroyNotify)g_variant_unref);
+    if (!j_options || !cJSON_IsObject(j_options))
+        return opt_hash;
+    for (cJSON *opt = j_options->child; opt; opt = opt->next) {
+        GVariant *gvar = NULL;
+        if (cJSON_IsString(opt)) {
+            gvar = g_variant_new_string(opt->valuestring);
+        } else if (cJSON_IsNumber(opt)) {
+            double v = opt->valuedouble;
+            GVariant *def = lookup_option_default(dec, opt->string);
+            if (def && g_variant_is_of_type(def, G_VARIANT_TYPE_DOUBLE))
+                gvar = g_variant_new_double(v);
+            else if (def && g_variant_is_of_type(def, G_VARIANT_TYPE_INT64))
+                gvar = g_variant_new_int64((int64_t)v);
+            else if (v == (double)(int64_t)v)
+                gvar = g_variant_new_int64((int64_t)v);
+            else
+                gvar = g_variant_new_double(v);
+        } else if (cJSON_IsBool(opt)) {
+            gvar = g_variant_new_boolean(cJSON_IsTrue(opt));
+        }
+        if (gvar)
+            g_hash_table_insert(opt_hash, g_strdup(opt->string), g_variant_ref_sink(gvar));
+    }
+    return opt_hash;
+}
+
 /* ------------------------------------------------------------------ */
 /*  Main                                                               */
 /* ------------------------------------------------------------------ */
@@ -723,33 +758,7 @@ int main(int argc, char **argv)
         return 2;
     }
 
-    GHashTable *opt_hash = g_hash_table_new_full(g_str_hash, g_str_equal, g_free, (GDestroyNotify)g_variant_unref);
-    if (j_options && cJSON_IsObject(j_options)) {
-        cJSON *opt = j_options->child;
-        while (opt) {
-            GVariant *gvar = NULL;
-            if (cJSON_IsString(opt)) gvar = g_variant_new_string(opt->valuestring);
-            else if (cJSON_IsNumber(opt)) {
-                double v = opt->valuedouble;
-                /* Look up the option's default type from the decoder definition
-                 * to determine whether to create int64 or double GVariant.
-                 * Without this, whole-number floats like 70.0 would be
-                 * incorrectly converted to int64, causing type mismatch errors
-                 * with Python decoders that expect double. */
-                GVariant *def = lookup_option_default(dec, opt->string);
-                if (def && g_variant_is_of_type(def, G_VARIANT_TYPE_DOUBLE))
-                    gvar = g_variant_new_double(v);
-                else if (def && g_variant_is_of_type(def, G_VARIANT_TYPE_INT64))
-                    gvar = g_variant_new_int64((int64_t)v);
-                else if (v == (double)(int64_t)v)
-                    gvar = g_variant_new_int64((int64_t)v);
-                else
-                    gvar = g_variant_new_double(v);
-            } else if (cJSON_IsBool(opt)) gvar = g_variant_new_boolean(cJSON_IsTrue(opt));
-            if (gvar) g_hash_table_insert(opt_hash, g_strdup(opt->string), g_variant_ref_sink(gvar));
-            opt = opt->next;
-        }
-    }
+    GHashTable *opt_hash = options_from_json(dec, j_options);
 
     struct srd_decoder_inst *di = srd_inst_new(sess, get_real_decoder_id(args.decoder_name), opt_hash);
     g_hash_table_destroy(opt_hash);
@@ -790,7 +799,10 @@ int main(int argc, char **argv)
             } else {
                 mapped_sid = strdup(sid);
             }
-            struct srd_decoder_inst *s_di = srd_inst_new(sess, get_real_decoder_id(mapped_sid), NULL);
+            struct srd_decoder *s_dec = srd_decoder_get_by_id(get_real_decoder_id(mapped_sid));
+            GHashTable *s_opts = options_from_json(s_dec, cJSON_GetObjectItem(item, "options"));
+            struct srd_decoder_inst *s_di = srd_inst_new(sess, get_real_decoder_id(mapped_sid), s_opts);
+            g_hash_table_destroy(s_opts);
             free(mapped_sid);
             if (!s_di) continue;
             cJSON *sch = cJSON_GetObjectItem(item, "channels");
