@@ -185,20 +185,32 @@ static uint8_t crsf_crc8(uint8_t byte, uint8_t crc)
     return crc;
 }
 
+/* Big-endian unsigned value of `n` bytes. */
+static uint32_t crsf_be(const uint8_t *p, int n)
+{
+    uint32_t v = 0;
+    for (int i = 0; i < n; i++)
+        v = (v << 8) | p[i];
+    return v;
+}
+
 static void crsf_handle_gps(struct srd_decoder_inst *di, crsf_state *s)
 {
     if (s->payload_len < 15)
         return;
-    int32_t lat = s->payload[0] | (s->payload[1] << 8) | (s->payload[2] << 16) | (s->payload[3] << 24);
-    int32_t lon = s->payload[4] | (s->payload[5] << 8) | (s->payload[6] << 16) | (s->payload[7] << 24);
-    uint16_t speed = s->payload[8] | (s->payload[9] << 8);
-    uint16_t heading = s->payload[10] | (s->payload[11] << 8);
-    uint16_t altitude = s->payload[12] | (s->payload[13] << 8);
+    /* CRSF transmits multi-byte fields big-endian. */
+    int32_t lat = (int32_t)crsf_be(s->payload, 4);
+    int32_t lon = (int32_t)crsf_be(s->payload + 4, 4);
+    uint16_t speed = (uint16_t)crsf_be(s->payload + 8, 2);
+    uint16_t heading = (uint16_t)crsf_be(s->payload + 10, 2);
+    uint16_t altitude = (uint16_t)crsf_be(s->payload + 12, 2);
     uint8_t satellites = s->payload[14];
 
     char t[256];
-    snprintf(t, sizeof(t), "GPS: Lat=%d/1e7 Lon=%d/1e7 Speed=%u Heading=%u Alt=%u Sats=%u",
-             lat, lon, speed, heading, altitude, satellites);
+    /* deg * 1e7, km/h * 10, deg * 100, m + 1000 */
+    snprintf(t, sizeof(t), "GPS: %.7f, %.7f, %u.%u km/h, heading %u.%02u deg, %d m, %u satellite(s)",
+             lat / 1e7, lon / 1e7, speed / 10, speed % 10, heading / 100, heading % 100,
+             (int)altitude - 1000, satellites);
     c_put(di, s->ss_block, s->es, s->out_ann, ANN_TEXT, t);
 }
 
@@ -206,14 +218,15 @@ static void crsf_handle_battery(struct srd_decoder_inst *di, crsf_state *s)
 {
     if (s->payload_len < 8)
         return;
-    uint16_t voltage = s->payload[0] | (s->payload[1] << 8);
-    uint16_t current = s->payload[2] | (s->payload[3] << 8);
-    uint32_t capacity = s->payload[4] | (s->payload[5] << 8) | (s->payload[6] << 16);
+    uint16_t voltage = (uint16_t)crsf_be(s->payload, 2);
+    uint16_t current = (uint16_t)crsf_be(s->payload + 2, 2);
+    uint32_t capacity = crsf_be(s->payload + 4, 3);
     uint8_t remaining = s->payload[7];
 
     char t[128];
-    snprintf(t, sizeof(t), "Battery: V=%umV I=%umA Cap=%umAh Rem=%u%%",
-             voltage, current, capacity, remaining);
+    /* 0.1 V, 0.1 A, mAh, % */
+    snprintf(t, sizeof(t), "Battery: %u.%u V, %u.%u A, %u mAh, %u%%",
+             voltage / 10, voltage % 10, current / 10, current % 10, capacity, remaining);
     c_put(di, s->ss_block, s->es, s->out_ann, ANN_TEXT, t);
 }
 
@@ -221,12 +234,14 @@ static void crsf_handle_attitude(struct srd_decoder_inst *di, crsf_state *s)
 {
     if (s->payload_len < 6)
         return;
-    int16_t pitch = s->payload[0] | (s->payload[1] << 8);
-    int16_t roll = s->payload[2] | (s->payload[3] << 8);
-    int16_t yaw = s->payload[4] | (s->payload[5] << 8);
+    int16_t pitch = (int16_t)crsf_be(s->payload, 2);
+    int16_t roll = (int16_t)crsf_be(s->payload + 2, 2);
+    int16_t yaw = (int16_t)crsf_be(s->payload + 4, 2);
 
     char t[128];
-    snprintf(t, sizeof(t), "Attitude: Pitch=%d Roll=%d Yaw=%d", pitch, roll, yaw);
+    /* rad * 10000 */
+    snprintf(t, sizeof(t), "Attitude: pitch %.4f rad, roll %.4f rad, yaw %.4f rad",
+             pitch / 10000.0, roll / 10000.0, yaw / 10000.0);
     c_put(di, s->ss_block, s->es, s->out_ann, ANN_TEXT, t);
 }
 
