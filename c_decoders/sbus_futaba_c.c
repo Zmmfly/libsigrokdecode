@@ -12,6 +12,7 @@
  * GNU General Public License for more details.
  */
 
+#include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -282,12 +283,15 @@ static void sbus_recv_proto(struct srd_decoder_inst *di, uint64_t start_sample, 
     if (strcmp(cmd, "DATA") == 0) {
         if (n_fields < 1) return;
         uint8_t byte_val = fields[0].u8;
-        /* Expand byte to 8 bits LSB-first */
+        /* Expand byte to 8 bits LSB-first. uart_c reports the span of the
+         * data bits only, split it evenly into the bit slots (the Python
+         * uart rounds every bit boundary, at most one sample apart). */
+        double width = (double)(end_sample - start_sample) / 8.0;
         for (int i = 0; i < 8; i++) {
             if (s->num_bits < 256) {
                 s->bit_vals[s->num_bits] = (byte_val >> i) & 1;
-                s->bit_ss[s->num_bits] = start_sample;
-                s->bit_es[s->num_bits] = end_sample;
+                s->bit_ss[s->num_bits] = start_sample + (uint64_t)llround(i * width);
+                s->bit_es[s->num_bits] = start_sample + (uint64_t)llround((i + 1) * width);
                 s->num_bits++;
             }
         }
