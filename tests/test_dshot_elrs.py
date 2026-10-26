@@ -461,6 +461,32 @@ def test_elrs_parameter_entry(elrs):
         texts(decoder)
 
 
+def test_elrs_vario_and_baro(elrs):
+    vario = bytes([0x07]) + (-56 & 0xffff).to_bytes(2, 'big')
+    decoder = run_elrs(elrs, crsf_frame(vario))
+    assert has_text(decoder, 'Vario: -0.56 m/s'), texts(decoder)
+    # Altitude in dm + 10000 and the packed vertical speed: -50 stands
+    # for -(e^(50 * 0.026) - 1) m/s.
+    baro = bytes([0x09]) + (10000 + 1234).to_bytes(2, 'big') + bytes([0xce])
+    decoder = run_elrs(elrs, crsf_frame(baro))
+    assert has_text(decoder, 'Baro altitude: 123.4 m, vertical speed -2.67 m/s'), \
+        texts(decoder)
+    # Bit 15 selects metres; the four byte frame of TBS has no vertical
+    # speed.
+    baro = bytes([0x09]) + (0x8000 | 3000).to_bytes(2, 'big') + bytes(2)
+    decoder = run_elrs(elrs, crsf_frame(baro))
+    assert has_text(decoder, 'Baro altitude: 3000 m'), texts(decoder)
+    assert not has_text(decoder, 'vertical speed'), texts(decoder)
+
+
+def test_elrs_tx_power_levels(elrs):
+    # Crossfire numbers 250 mW and 50 mW behind 2000 mW.
+    for level, name in ((7, '250 mW'), (8, '50 mW'), (9, 'level 9')):
+        payload = bytes([60, 62, 100, 8, 0, 27, level, 55, 97, 5])
+        decoder = run_elrs(elrs, crsf_frame(bytes([0x14]) + payload))
+        assert has_text(decoder, 'TX power ' + name), texts(decoder)
+
+
 def test_elrs_bad_checksum(elrs):
     frame = bytearray(crsf_frame(bytes([0x14]) + bytes(10)))
     frame[-1] ^= 0xff
@@ -558,6 +584,8 @@ def main():
         ('elrs_device_info', lambda: test_elrs_device_info(elrs)),
         ('elrs_bind_command', lambda: test_elrs_bind_command(elrs)),
         ('elrs_parameter_entry', lambda: test_elrs_parameter_entry(elrs)),
+        ('elrs_vario_and_baro', lambda: test_elrs_vario_and_baro(elrs)),
+        ('elrs_tx_power_levels', lambda: test_elrs_tx_power_levels(elrs)),
         ('elrs_bad_checksum', lambda: test_elrs_bad_checksum(elrs)),
         ('elrs_noise_and_bad_length', lambda: test_elrs_noise_and_bad_length(elrs)),
         ('frames_split_into_chunks', lambda: test_frames_split_into_chunks(elrs)),

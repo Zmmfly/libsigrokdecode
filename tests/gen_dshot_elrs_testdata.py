@@ -515,6 +515,20 @@ def generate_elrs_c():
         # Lengths which are no lengths, the second one is an address.
         bytes([0xc8, 0x01]),
         bytes([0xc8]) + crsf(0xee, [0x32, 0xee, 0xea, 0x10, 0x01]),
+        # Vario and barometric altitude, in dm + 10000 or in m, with and
+        # without the packed vertical speed, and too short.
+        crsf(0xea, b'\x07' + be16(-56)),
+        crsf(0xea, b'\x07' + be16(199)),
+        crsf(0xea, [0x07, 5]),
+        crsf(0xea, b'\x09' + be16(10000 + 1234) + bytes([0xce])),
+        crsf(0xea, b'\x09' + be16(10000 - 55) + bytes([0x00])),
+        crsf(0xea, b'\x09' + be16(10001) + bytes([0x80])),
+        crsf(0xea, b'\x09' + be16(0x8000 | 3000) + bytes([0x7f])),
+        crsf(0xea, b'\x09' + be16(10500) + be16(123)),
+        crsf(0xea, [0x09, 0x27]),
+        # Crossfire numbers 250 mW and 50 mW behind 2000 mW.
+        crsf(0xc8, [0x14, 60, 62, 100, 8, 0, 27, 7, 55, 97, 5]),
+        crsf(0xc8, [0x14, 60, 62, 100, 8, 0, 27, 8, 55, 97, 5]),
     ]
     elrs_case('frames', frames, {})
     elrs_case('options', [
