@@ -22,7 +22,6 @@
 # Link stats and channel packed has been implimented. More packet 
 # types needs to be implimented. 
 # Needs testing with different CRSF modes
-# Be nice to verify the CRC checksums and display if they are correct or not.
 
 import sigrokdecode as srd
 
@@ -66,6 +65,7 @@ class Decoder(srd.Decoder):
     0x07: ['Vario'],
     0x08: ['Battery sensor'],
     0x09: ['Baro altitude'],
+    0x0B: ['Heartbeat'],
     0x10: ['OpenTX sync'],
     0x14: ['LINK_STATISTICS'],
     0x1E: ['Attitude'],
@@ -94,6 +94,27 @@ class Decoder(srd.Decoder):
         self.count = 0
         self.payload = []
         self.frame_type = ''
+        self.frame_bytes = []  # type, payload and CRC byte values
+        self.frame_ss = 0
+
+    @staticmethod
+    def crc8(data):
+        # CRC-8/DVB-S2, polynomial 0xD5, over the type and the payload.
+        crc = 0
+        for byte in data:
+            crc ^= byte
+            for _ in range(8):
+                crc = ((crc << 1) ^ 0xD5) & 0xFF if crc & 0x80 else (crc << 1) & 0xFF
+        return crc
+
+    def put_checksum(self, ss, es):
+        crc = self.crc8(self.frame_bytes[:-1])
+        if crc == self.frame_bytes[-1]:
+            self.put(ss, es, self.out_ann, [0, ['Checksum crc8 poly 0xD5.']])
+        else:
+            self.put(ss, es, self.out_ann, [1, [
+                'Checksum 0x{:02x}, expected 0x{:02x}'.format(self.frame_bytes[-1], crc),
+                'Checksum error']])
 
     def start(self):
         self.out_ann = self.register(srd.OUTPUT_ANN)
@@ -110,6 +131,7 @@ class Decoder(srd.Decoder):
             ann = self.sync_bytes.get(serial_byte,0)
             if ann:
                 self.sync_byte = 1
+                self.frame_ss = ss
                 self.put(ss, es, self.out_ann, [0,ann])
                 self.count = 1
                 return
@@ -133,12 +155,17 @@ class Decoder(srd.Decoder):
             if self.frame_type:
                 self.put(ss, es, self.out_ann, [0,self.frame_type])
                 self.count = 3
+                self.frame_bytes = [serial_byte]
+                if self.len_byte == 2:
+                    # No payload, only the CRC byte follows.
+                    self.frame_type = ['No payload']
                 return
             else:
                 self.put(ss, es, self.out_ann, [0,['Unknown packet type' + str(serial_byte) ]])
                 self.reset()
                 return
 
+        self.frame_bytes.append(serial_byte)
         if self.frame_type[0] == 'CRSF_FRAMETYPE_RC_CHANNELS_PACKED': #Accumilate channel data bits
             self.payload = self.payload + pdata[1]
             self.count = self.count + 1
@@ -156,7 +183,7 @@ class Decoder(srd.Decoder):
                         chan11bits += str(self.payload[bit + (chan * 11)][0])
                     value = int(chan11bits[::-1], 2)  # little edian 'RC' value
                     self.put(chan_ss, chan_es, self.out_ann, [0,['Chan:' + str(chan) + ' Value:' + str(value)]])
-                self.put(ss, es, self.out_ann, [0,['Checksum crc8 poly 0xD5.']])
+                self.put_checksum(ss, es)
                 self.reset()
                 return
         elif self.frame_type[0] == 'LINK_STATISTICS':
@@ -173,10 +200,17 @@ class Decoder(srd.Decoder):
                 self.put(self.payload[15][0][1], self.payload[15][7][2], self.out_ann, [0,['Downlink RSSI: -' + str(self.payload[14]) + 'dB']])
                 self.put(self.payload[17][0][1], self.payload[17][7][2], self.out_ann, [0,['Downlink Link Quality: ' + str(self.payload[16]) ]])
                 self.put(self.payload[19][0][1], self.payload[19][7][2], self.out_ann, [0,['Downlink SNR: ' + str(self.payload[18]) + 'dB']])
-                self.put(ss, es, self.out_ann, [0,['Checksum crc8 poly 0xD5.']])
+                self.put_checksum(ss, es)
                 self.reset()
                 return
         else:
-            self.put(ss, es, self.out_ann, [0,['Unknown packet type' + str(serial_byte) ]])
-            self.reset()
+            # Other frame types: skip the payload by its length, then
+            # check the CRC byte.
+            self.count = self.count + 1
+            if self.count == self.len_byte + 2:
+                if self.frame_type[0] != 'No payload':
+                    self.put(self.frame_ss, es, self.out_ann, [0, ['{} ({} bytes payload)'.format(
+                        self.frame_type[0], self.len_byte - 2)]])
+                self.put_checksum(ss, es)
+                self.reset()
 

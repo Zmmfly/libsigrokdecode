@@ -59,6 +59,7 @@ static const struct {
     {0x07, "Vario"},
     {0x08, "Battery sensor"},
     {0x09, "Baro altitude"},
+    {0x0B, "Heartbeat"},
     {0x10, "OpenTX sync"},
     {0x14, "LINK_STATISTICS"},
     {0x16, "RC_CHANNELS_PACKED"},
@@ -175,6 +176,15 @@ static void crsf_handle_link_statistics(struct srd_decoder_inst *di, crsf_state 
     c_put(di, s->ss_block, s->es, s->out_ann, ANN_TEXT, t);
 }
 
+/* CRC-8/DVB-S2 (polynomial 0xD5) of one more byte. */
+static uint8_t crsf_crc8(uint8_t byte, uint8_t crc)
+{
+    crc ^= byte;
+    for (int i = 0; i < 8; i++)
+        crc = (crc & 0x80) ? (uint8_t)((crc << 1) ^ 0xD5) : (uint8_t)(crc << 1);
+    return crc;
+}
+
 static void crsf_handle_gps(struct srd_decoder_inst *di, crsf_state *s)
 {
     if (s->payload_len < 15)
@@ -261,8 +271,18 @@ static void crsf_process_frame(struct srd_decoder_inst *di, crsf_state *s)
         c_put(di, s->ss_block, s->es, s->out_ann, ANN_TEXT, t);
     }
 
-    /* CRC byte */
-    c_put(di, s->ss_block, s->es, s->out_ann, ANN_TEXT, "Checksum crc8 poly 0xD5");
+    /* The CRC byte ends the payload; it covers the type and the payload. */
+    uint8_t crc = crsf_crc8(s->frame_type, 0);
+    for (int i = 0; i + 1 < s->payload_len; i++)
+        crc = crsf_crc8(s->payload[i], crc);
+    uint8_t got = s->payload_len ? s->payload[s->payload_len - 1] : 0;
+    if (crc == got) {
+        c_put(di, s->ss_block, s->es, s->out_ann, ANN_TEXT, "Checksum crc8 poly 0xD5");
+    } else {
+        char t[64];
+        snprintf(t, sizeof(t), "Checksum 0x%02x, expected 0x%02x", got, crc);
+        c_put(di, s->ss_block, s->es, s->out_ann, ANN_ERROR, t);
+    }
 }
 
 static void crsf_recv_proto(struct srd_decoder_inst *di, uint64_t start_sample, uint64_t end_sample, const char *cmd, const c_field *fields, int n_fields)
@@ -327,15 +347,8 @@ static void crsf_recv_proto(struct srd_decoder_inst *di, uint64_t start_sample, 
                 break;
             }
         }
-        /* Payload length = len_byte - 2 (type + crc) */
-        if (s->len_byte <= 2) {
-            /* No payload, just CRC */
-            s->state = CRSF_WAIT_SYNC;
-            c_put(di, s->ss_block, end_sample, s->out_ann, ANN_TEXT,
-                      "Checksum crc8 poly 0xD5");
-        } else {
-            s->state = CRSF_WAIT_PAYLOAD;
-        }
+        /* Payload and CRC follow, even when the payload is empty. */
+        s->state = CRSF_WAIT_PAYLOAD;
         break;
 
     case CRSF_WAIT_PAYLOAD:
