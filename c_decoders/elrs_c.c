@@ -693,6 +693,47 @@ static void elrs_handle_battery(struct srd_decoder_inst *di, elrs_state *s,
     elrs_put(di, s, ss, es, ANN_FRAME, text, NULL, NULL);
 }
 
+/* The vertical speed in cm/s. */
+static void elrs_handle_vario(struct srd_decoder_inst *di, elrs_state *s,
+                              const uint8_t *payload, int len,
+                              uint64_t ss, uint64_t es)
+{
+    char text[64];
+
+    if (len < 2)
+        return;
+    int speed = (int16_t)elrs_be(payload, 2);
+    snprintf(text, sizeof(text), "Vario: %.2f m/s", speed / 100.0);
+    elrs_put(di, s, ss, es, ANN_FRAME, text, NULL, NULL);
+}
+
+/* The altitude is in dm + 10000, or in m when bit 15 is set. A third byte
+ * carries the vertical speed, packed as sign * (e^(|v| * 0.026) - 1) m/s.
+ * The four byte frame of TBS has no vertical speed. */
+static void elrs_handle_baro(struct srd_decoder_inst *di, elrs_state *s,
+                             const uint8_t *payload, int len,
+                             uint64_t ss, uint64_t es)
+{
+    char text[96];
+    int pos;
+
+    if (len < 2)
+        return;
+    unsigned altitude = elrs_be(payload, 2);
+    if (altitude & 0x8000)
+        pos = snprintf(text, sizeof(text), "Baro altitude: %u m", altitude & 0x7fff);
+    else
+        pos = snprintf(text, sizeof(text), "Baro altitude: %.1f m",
+                       ((int)altitude - 10000) / 10.0);
+    if (len == 3 && pos > 0 && (size_t)pos < sizeof(text)) {
+        int packed = (int8_t)payload[2];
+        double speed = exp((packed < 0 ? -packed : packed) * 0.026) - 1.0;
+        snprintf(text + pos, sizeof(text) - (size_t)pos, ", vertical speed %.2f m/s",
+                 packed < 0 ? -speed : speed);
+    }
+    elrs_put(di, s, ss, es, ANN_FRAME, text, NULL, NULL);
+}
+
 static void elrs_handle_text(struct srd_decoder_inst *di, elrs_state *s,
                              const uint8_t *payload, int len,
                              uint64_t ss, uint64_t es, const char *label)
@@ -759,8 +800,14 @@ static void elrs_handle_payload(struct srd_decoder_inst *di, elrs_state *s,
     case 0x02:
         elrs_handle_gps(di, s, payload, len, ss, es);
         break;
+    case 0x07:
+        elrs_handle_vario(di, s, payload, len, ss, es);
+        break;
     case 0x08:
         elrs_handle_battery(di, s, payload, len, ss, es);
+        break;
+    case 0x09:
+        elrs_handle_baro(di, s, payload, len, ss, es);
         break;
     case 0x21:
         elrs_handle_text(di, s, payload, len, ss, es, "Flight mode");

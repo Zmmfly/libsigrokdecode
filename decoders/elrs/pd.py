@@ -58,6 +58,8 @@ This is the list of <ptype> codes and their respective <pdata> values:
  - 'BIND': <True>
 '''
 
+import math
+
 import sigrokdecode as srd
 
 
@@ -382,8 +384,12 @@ class Decoder(srd.Decoder):
             self.handle_attitude(payload, ss, es)
         elif ftype == 0x02:
             self.handle_gps(payload, ss, es)
+        elif ftype == 0x07:
+            self.handle_vario(payload, ss, es)
         elif ftype == 0x08:
             self.handle_battery(payload, ss, es)
+        elif ftype == 0x09:
+            self.handle_baro(payload, ss, es)
         elif ftype == 0x21:
             self.handle_text(payload, ss, es, 'Flight mode')
         elif ftype in (0x7a, 0x7b, 0x7c):
@@ -617,6 +623,31 @@ class Decoder(srd.Decoder):
             voltage / 10.0, current / 10.0, capacity)
         if remaining is not None:
             text += ', {}%'.format(remaining)
+        self.putx(Ann.FRAME, ss, es, [text])
+
+    def handle_vario(self, payload, ss, es):
+        # The vertical speed in cm/s.
+        if len(payload) < 2:
+            return
+        speed = int.from_bytes(bytes(payload[0:2]), byteorder='big', signed=True)
+        self.putx(Ann.FRAME, ss, es, ['Vario: {:.2f} m/s'.format(speed / 100.0)])
+
+    def handle_baro(self, payload, ss, es):
+        # The altitude is in dm + 10000, or in m when bit 15 is set. A third
+        # byte carries the vertical speed, packed as sign * (e^(|v| * 0.026)
+        # - 1) m/s. The four byte frame of TBS has no vertical speed.
+        if len(payload) < 2:
+            return
+        altitude = int.from_bytes(bytes(payload[0:2]), byteorder='big')
+        if altitude & 0x8000:
+            text = 'Baro altitude: {} m'.format(altitude & 0x7fff)
+        else:
+            text = 'Baro altitude: {:.1f} m'.format((altitude - 10000) / 10.0)
+        if len(payload) == 3:
+            packed = payload[2] - 256 if payload[2] > 127 else payload[2]
+            speed = math.exp(abs(packed) * 0.026) - 1.0
+            text += ', vertical speed {:.2f} m/s'.format(
+                -speed if packed < 0 else speed)
         self.putx(Ann.FRAME, ss, es, [text])
 
     def handle_text(self, payload, ss, es, label):
